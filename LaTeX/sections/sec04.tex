@@ -1,0 +1,136 @@
+%==============================================================================
+% Section 4: P-channel dictionary and topology response
+%==============================================================================
+\section{P-channel dictionary and topology response}
+\label{sec:pchannel}
+
+\subsection{Channel separation}
+\label{sec:pchannel:separation}
+
+The Pontryagin-type quantities are separated into three channels:
+
+\begin{table}[H]
+\centering
+\begingroup
+\renewcommand{\arraystretch}{2.0}
+\begin{tabular}{lL{4.5cm}L{3.5cm}L{3.5cm}}
+\toprule
+Channel & Result & Role & Distinction \\
+\midrule
+$\Pform$ & Exactly zero on active torsion branches
+         & Structural cancellation
+         & Distinct from dynamical / orbit stability \\
+$\Pint$  & MX internal-pair diagnostic; $\Ctop=-9\chi$
+         & Diagnostic topology response
+         & Not a true Pontryagin density \\
+$\QNY$   & Endpoint / boundary channel: zero on $\VT$,
+           on-shell trivial on $\AX$, boundary-conditional on $\MX$
+         & Boundary bookkeeping
+         & Not a bulk dynamical mechanism \\
+\bottomrule
+\end{tabular}
+\endgroup
+\caption{P-channel dictionary.}
+\label{tab:pchannel_dict}
+\end{table}
+
+$\Pint$ is a diagnostic quantity based on the contraction of internal index
+pairs in the orthonormal frame, and is \emph{not} a form-Hodge Pontryagin
+density~\cite{ChandiaZanelli1997}.  This distinction is essential for the
+interpretation given in this paper.
+
+\subsection{$\Pform$ cancellation by block orthogonality}
+\label{sec:pchannel:Pform}
+
+$\Pform$ is defined as the form-Hodge contraction of the curvature 2-form.
+In components,
+\begin{equation}
+  \Pform = \frac{1}{4}\sum_{a,b,c,d} R^{ab\,cd}\,(*R_{ab})_{cd},
+  \qquad
+  (*R_{ab})_{cd} = \frac{1}{2}\epsilon_{cd\,ef}\,R_{ab}{}^{ef},
+\end{equation}
+with the Hodge dual taken in the Lorentzian metric-aware form-index sense.
+
+\begin{lemma}[Block-orthogonality cancellation]\label{lem:pform}
+In the Lorentzian isotropic EC+NY reduced sector studied here, for each
+active torsion branch $\AX$, $\VT$, $\MX$ and for each topology $\Sthree$,
+$\Tthree$, $\Nilthree$, $\Solthree$, the form-Hodge Pontryagin density
+satisfies
+\begin{equation}
+  \Pform = 0
+\end{equation}
+identically.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+Under the reduced coframe $e^{0}=N\,dt$, $e^{i}=q\,\sigma^{i}$, the
+non-zero curvature 2-forms split, for each internal pair, into a
+lapse-space block and a purely spatial block.  The form-Hodge dual maps
+each block to its complement, but no internal pair admits a contractible
+partner, so the pairwise contraction vanishes.  Symbolic verification of all
+branches is recorded in Appendix~\ref{app:B}.  This cancellation is a
+structural result of the isotropic reduced setting considered here, and
+does not hold in general in the full theory or under anisotropic
+extensions.  Moreover, $\Pform=0$ is not a claim of dynamical stability.
+\end{proof}
+
+\subsection{$\PintMX$ as internal-pair diagnostic}
+\label{sec:pchannel:Pint}
+
+On $\AX$ and on $\VT$, the off-shell expression for $\Pint$ vanishes
+identically.  On $\MX$ an off-shell non-zero channel appears, but it
+returns to zero on the auxiliary shell ($\eta=V=0$ under the real-branch
+condition).  This off-shell behaviour does not violate the Hamiltonian
+admissibility.
+
+On the $\MX$ branch, the off-shell $\PintMX$ takes the common functional
+template across the four topologies,
+\begin{equation}
+  \PintMX
+  = \frac{2V\eta\!\left(-V^{2}q^{2}+9\eta^{2}+\Ctop\right)}{9q^{3}},
+\end{equation}
+and the topology dependence is localised entirely in the single coefficient
+$\Ctop$:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrrr}
+\toprule
+Topology & $\chi$ & $\Ctop$ & $\Ctop+9\chi$ \\
+\midrule
+$\Sthree$   & $4$     & $-36$  & $0$ \\
+$\Tthree$   & $0$     & $0$    & $0$ \\
+$\Nilthree$ & $-1/12$ & $3/4$  & $0$ \\
+$\Solthree$ & $-1/3$  & $3$    & $0$ \\
+\bottomrule
+\end{tabular}
+\caption{$\Ctop = -9\chi$ bridge table.}
+\label{tab:ctop_bridge}
+\end{table}
+
+The coefficient $\Ctop$ is extracted from the raw symbolic expression of
+$\PintMX$ by template fitting, without reference to $\chi$.  The scalar
+$\chi$ is obtained independently from the $\EH$ / spatial-curvature sector
+(see Section~\ref{sec:setup:chi}).  The agreement of these two quantities
+is the substance of the $\chi$-bridge result discussed in
+Section~\ref{sec:bridge}.
+
+\subsection{$\QNY$ as endpoint channel}
+\label{sec:pchannel:QNY}
+
+The Nieh--Yan primitive~\cite{NiehYan1982,ChandiaZanelli1997} is
+$\QNY = e^{a}\wedge T_{a}$, and we treat it as an exact-form endpoint
+quantity independent of $\Pform$ and $\Pint$.  The branches $\AX$ and
+$\MX$ carry an active axial torsion $\eta$, and the reduced pullback reads
+\begin{equation}
+  \QNY = \frac{6\eta}{q}\,e^{123},
+  \qquad
+  \int_{\topo} \QNY = 6\Vol_{\topo}\, q^{2}\eta,
+\end{equation}
+with orientation fixed by $Q(t_{f})-Q(t_{i})$.  Here $\Vol_{\topo}$ is the
+unit-coframe volume normalisation factor, which is distinguished from the
+torsion variable $V(t)$.  On the $\VT$ branch, the EOM imposes
+$\eta=0$, so $\QNY=0$ already off-shell.  On the auxiliary shell, $\AX$ is
+on-shell trivial and $\MX$ is boundary-conditional.  Thus $\QNY$ is not a
+bulk dynamical mechanism but should be treated as endpoint / boundary
+bookkeeping.

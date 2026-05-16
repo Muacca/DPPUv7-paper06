@@ -1,0 +1,126 @@
+%==============================================================================
+% Appendix A: Topology conventions, local reductions, and caveats
+%==============================================================================
+\section{Topology conventions, local reductions, and caveats}
+\label{app:A}
+
+\subsection{Structure constants and $\chi$ values}
+\label{app:A:structure}
+
+The spatial structure constants for the four topologies are given as
+specialisations of the five-parameter LZ-native isotropic family.  The
+family parameters are $(a,b,c,u,v)$, and the antisymmetrised structure
+constants are defined by
+\begin{equation}
+  C^{1}{}_{23}=\frac{a}{q},\quad
+  C^{2}{}_{31}=\frac{b}{q},\quad
+  C^{3}{}_{12}=\frac{c}{q},\quad
+  C^{2}{}_{12}=\frac{u}{q},\quad
+  C^{3}{}_{13}=\frac{v}{q}.
+\end{equation}
+The three-dimensional Ricci scalar then reads
+\begin{equation}
+  {}^{(3)}R\,q^{2} = -\tfrac{1}{2}\,\Disc,
+  \qquad
+  \Disc = a^{2}-2ab-2ac+b^{2}-2bc+c^{2}+4u^{2}+4uv+4v^{2},
+\end{equation}
+and the $\chi$ of this paper is defined by
+\begin{equation}
+  \chi = -\frac{\Disc}{12}.
+\end{equation}
+The parameter values and $\chi$ values for each topology are listed in
+Table~\ref{tab:appA_topology}.
+
+\begin{table}[H]
+\centering
+\begingroup
+\renewcommand{\arraystretch}{2.0}
+\begin{tabularx}{\linewidth}{lcrrYY}
+\toprule
+Topology & $(a,b,c,u,v)$ & $\Disc$ & $\chi$ & Reduction status & Caveat \\
+\midrule
+$\Sthree$   & $(4,4,4,0,0)$  & $-48$ & $4$     & closed isotropic reference   & --- \\
+$\Tthree$   & $(0,0,0,0,0)$  & $0$   & $0$     & flat reference               & --- \\
+$\Nilthree$ & $(0,0,-1,0,0)$ & $1$   & $-1/12$ & isotropic-scale local branch & anisotropic EOM left to future work \\
+$\Solthree$ & $(0,0,0,1,-1)$ & $4$   & $-1/3$  & isotropic-scale local branch & compact quotient outside the scope of this paper \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\caption{Topology conventions, $\chi$ values, and reduction status.}
+\label{tab:appA_topology}
+\end{table}
+
+\paragraph{Verification.}
+$\Sthree$: $\Disc=(16-32-32+16-32+16)=-48$, $\chi=4$.
+$\Nilthree$: $\Disc=1$, $\chi=-1/12$.
+$\Solthree$: $\Disc=(4-4+4)=4$, $\chi=-1/3$.
+
+\subsection{Distinguished loci in the five-parameter family}
+\label{app:A:loci}
+
+Table~\ref{tab:appA_loci} records, on top of the topology ordering and the
+$(\Disc,\chi)$ conventions fixed in Table~\ref{tab:appA_topology}, only the
+additional bridge-facing information.  Here $\Ctop$ is computed from
+$\Ctop = 3\Disc/4$ of Appendix~\ref{app:B:bridge}, and each row satisfies
+$\Ctop+9\chi=0$.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrll}
+\toprule
+Topology & $\Ctop=3\Disc/4$ & Structural locus & paper~IV echo \\
+\midrule
+$\Sthree$   & $-36$ & isotropic class-A diagonal      & triaxial \\
+$\Tthree$   & $0$   & origin                          & none \\
+$\Nilthree$ & $3/4$ & single class-A axis             & uniaxial \\
+$\Solthree$ & $3$   & balanced class-B diagonal pair  & biaxial \\
+\bottomrule
+\end{tabular}
+\caption{Bridge-facing structural loci.}
+\label{tab:appA_loci}
+\end{table}
+
+The paper~IV echo column is interpretive only.  It records a structural
+resonance with the response dictionary of paper~IV, not an equivalence of
+mechanisms or a shared theorem.
+
+\subsection{Reduction scope for $\Nilthree$ and $\Solthree$}
+\label{app:A:reduction}
+
+$\Nilthree$ is the non-Abelian homogeneous geometry determined by the
+left-invariant metric on the Heisenberg
+group~\cite{Thurston1997,Scott1983}; the sign convention adopted here is
+$C^{3}{}_{12}=-1/q$ (that is, $c=-1$).  Under the isotropic-scale reduction
+a single scale parameter $q$ is shared across all directions.  The
+anisotropic EOM obtained by introducing independent scale factors is not
+derived in this paper.
+
+$\Solthree$ is the geometry based on a solvable Lie
+group~\cite{Thurston1997,Scott1983} and enters the five-parameter family
+as a balanced class-B diagonal pair $u=1$, $v=-1$.  This is the
+isotropic-scale reduced entry of the present paper.  A compact realisation
+of $\Solthree$ requires a mapping-torus construction; the choice of lattice
+normalisation, the classification of spin structures, and the determination
+of spectral data are outside the scope of the present paper.  The
+$\Solthree$ entries of Table~\ref{tab:four_topology_admissibility} and
+Table~\ref{tab:chi_sign_atlas} are restricted to this local / isotropic
+reduced branch.
+
+\subsection{Lorentzian EC+NY action conventions}
+\label{app:A:action}
+
+We adopt the orthonormal frame in Lorentzian signature $(-,+,+,+)$, and the
+Nieh--Yan coupling is parametrised by real $\thetaNY$.  The frame
+block-diagonal structure of $\Pform$ is common to the Lorentzian and
+Euclidean settings, but the sign convention of the Hamiltonian constraint
+follows the Lorentzian convention
+(Section~\ref{sec:hamiltonian:constraint}).  The definition of $\Pint$ and
+the orientation of $\QNY$ inherit the conventions of
+paper~V~\cite{paper5}.
+
+The constant term $\Ctop=-36$ of the $\Sthree$ specialisation agrees with
+the constant term of the $\MX$-$P$ expression of paper~III (``Unified
+Geometric Landau EFT'')~\cite{paper3}.  On the other hand, the sign of the
+$V^{2}q^{2}$ term originates from the difference between the Euclidean
+convention of paper~III~\cite{paper3} and the Lorentzian metric-aware
+epsilon / legacy temporal-index map of the present paper.

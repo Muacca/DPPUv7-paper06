@@ -1,0 +1,103 @@
+%==============================================================================
+% Section 2: Lorentzian-native setup and topology conventions
+%==============================================================================
+\section{Lorentzian-native setup and topology conventions}
+\label{sec:setup}
+
+\subsection{Reduced Lorentzian frame}
+\label{sec:setup:frame}
+
+We use the orthonormal frame of Lorentzian signature $(-,+,+,+)$.  The
+coframe is written as
+\begin{equation}
+  e^{0} = N(t)\,dt, \qquad e^{i} = q(t)\,\sigma^{i}_{\topo},
+\end{equation}
+where $N(t)$ is the lapse, $q(t)$ is the isotropic scale common to all
+topologies $\topo$, and $\sigma^{i}_{\topo}$ are the left-invariant coframes
+on $\topo$.  Torsion variables are taken to be the axial component $\eta(t)$
+and the vector-trace component $V(t)$, giving the pure branches $\AX$ and
+$\VT$ and the mixed branch $\MX$.
+
+The normalisation of the spatial 3-curvature is fixed by
+\begin{equation}
+  {}^{(3)}R = \frac{6\chi}{q^{2}},
+\end{equation}
+and $\chi$ is used as the topology scalar throughout this paper.  The scalar
+$\chi$ is derived from the $\EH$ (pure Einstein--Hilbert) sector only and
+does not depend on the torsion variables.
+
+\subsection{Topology structure constants and $\chi$ values}
+\label{sec:setup:chi}
+
+The structure constants of the four topologies are specialisations of the
+five-parameter LZ-native isotropic family, following the class-A / class-B
+classification of Bianchi-type homogeneous spaces~\cite{EllisMacCallum1969}
+and the three-topology mode dictionary developed earlier in the DPPU
+series~\cite{paper3ec}:
+\begin{equation}
+  C^{1}{}_{23}=\frac{a}{q},\quad
+  C^{2}{}_{31}=\frac{b}{q},\quad
+  C^{3}{}_{12}=\frac{c}{q},\quad
+  C^{2}{}_{12}=\frac{u}{q},\quad
+  C^{3}{}_{13}=\frac{v}{q},
+\end{equation}
+where the subscripts are antisymmetric.  Then
+\begin{equation}
+  {}^{(3)}R\,q^{2}
+  = -\tfrac{1}{2}\!\left(a^{2}-2ab-2ac+b^{2}-2bc+c^{2}+4u^{2}+4uv+4v^{2}\right)
+  =: -\tfrac{1}{2}\,\Disc,
+\end{equation}
+and comparison with the defining relation ${}^{(3)}R=6\chi/q^{2}$ gives
+\begin{equation}
+  6\chi = -\frac{\Disc}{2},
+  \qquad
+  \chi = -\frac{\Disc}{12}.
+\end{equation}
+The specialised values for each topology are listed in
+Table~\ref{tab:topology_chi}.
+
+\begin{table}[H]
+\centering
+\begingroup
+\renewcommand{\arraystretch}{2.0}
+\begin{tabularx}{\linewidth}{lcrYY}
+\toprule
+Topology & $(a,b,c,u,v)$ & $\chi$ & Reduction status & Caveat \\
+\midrule
+$\Sthree$   & $(4,4,4,0,0)$  & $4$    & closed isotropic reference & --- \\
+$\Tthree$   & $(0,0,0,0,0)$  & $0$    & flat reference             & --- \\
+$\Nilthree$ & $(0,0,-1,0,0)$ & $-1/12$ & isotropic-scale local branch & anisotropic EOM left to future work \\
+$\Solthree$ & $(0,0,0,1,-1)$ & $-1/3$  & isotropic-scale local branch & compact quotient outside the scope of this paper \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\caption{Topology conventions, $\chi$ values, and caveats.}
+\label{tab:topology_chi}
+\end{table}
+
+We treat all four geometries in a common reduced-topology table.  For
+$\Nilthree$ and $\Solthree$, the entries refer to the isotropic-scale
+reductions used in this paper; global quotient and anisotropic extensions
+are left to future work.
+
+\subsection{EC+NY reduced action}
+\label{sec:setup:action}
+
+The Lorentzian EC+NY reduced action~\cite{Hehl1976,NiehYan1982} for each
+topology $\topo$ and torsion mode is written in the form
+\begin{equation}
+  S_{\topo} = \int dt\, A_{\topo}\, q\!\left(N\,F_{\topo}(q,\eta,V;\chi)
+  - \frac{\dot q^{2}}{N}\right).
+\end{equation}
+Here $A_{\topo}$ is a spatial normalisation factor independent of $\chi$.
+The effective potential $F_{\topo}$ is determined by the topology and the
+torsion branch, and its explicit form is used in
+Section~\ref{sec:hamiltonian}.  The auxiliary variables $\eta(t)$ and $V(t)$
+carry no velocity terms in the action and are treated algebraically as an
+auxiliary sector.
+
+The Nieh--Yan term $\thetaNY$~\cite{NiehYan1982} does not appear in the bulk
+$F_{\topo}$ on $\AX$ and $\VT$, and appears on $\MX$ only as a mixing term
+$\propto V\eta\,\kap^{2}\thetaNY$.  In this paper the bulk dynamical
+analysis is taken as primary, and $\QNY$ is separated as an endpoint /
+boundary channel (Section~\ref{sec:pchannel:QNY}).

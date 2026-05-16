@@ -1,0 +1,46 @@
+Paper06 P_form cancellation check (Table B1 check 3)
+=================================================================
+computing: topology=S3  mode=AX
+  pform_status=EXACT_ZERO  overall=PASS
+  row_detail {"overall_status": "PASS", "pform_status": "EXACT_ZERO", "pform_value": "0", "topology": "S3", "torsion_mode": "AX"}
+computing: topology=S3  mode=VT
+  pform_status=EXACT_ZERO  overall=PASS
+  row_detail {"overall_status": "PASS", "pform_status": "EXACT_ZERO", "pform_value": "0", "topology": "S3", "torsion_mode": "VT"}
+computing: topology=S3  mode=MX
+  pform_status=EXACT_ZERO  overall=PASS
+  row_detail {"overall_status": "PASS", "pform_status": "EXACT_ZERO", "pform_value": "0", "topology": "S3", "torsion_mode": "MX"}
+computing: topology=T3  mode=AX
+  pform_status=EXACT_ZERO  overall=PASS
+  row_detail {"overall_status": "PASS", "pform_status": "EXACT_ZERO", "pform_value": "0", "topology": "T3", "torsion_mode": "AX"}
+computing: topology=T3  mode=VT
+  pform_status=EXACT_ZERO  overall=PASS
+  row_detail {"overall_status": "PASS", "pform_status": "EXACT_ZERO", "pform_value": "0", "topology": "T3", "torsion_mode": "VT"}
+computing: topology=T3  mode=MX
+  pform_status=EXACT_ZERO  overall=PASS
+  row_detail {"overall_status": "PASS", "pform_status": "EXACT_ZERO", "pform_value": "0", "topology": "T3", "torsion_mode": "MX"}
+computing: topology=Nil3  mode=AX
+  pform_status=EXACT_ZERO  overall=PASS
+  row_detail {"overall_status": "PASS", "pform_status": "EXACT_ZERO", "pform_value": "0", "topology": "Nil3", "torsion_mode": "AX"}
+computing: topology=Nil3  mode=VT
+  pform_status=EXACT_ZERO  overall=PASS
+  row_detail {"overall_status": "PASS", "pform_status": "EXACT_ZERO", "pform_value": "0", "topology": "Nil3", "torsion_mode": "VT"}
+computing: topology=Nil3  mode=MX
+  pform_status=EXACT_ZERO  overall=PASS
+  row_detail {"overall_status": "PASS", "pform_status": "EXACT_ZERO", "pform_value": "0", "topology": "Nil3", "torsion_mode": "MX"}
+computing: topology=Sol3  mode=AX
+  pform_status=EXACT_ZERO  overall=PASS
+  row_detail {"overall_status": "PASS", "pform_status": "EXACT_ZERO", "pform_value": "0", "topology": "Sol3", "torsion_mode": "AX"}
+computing: topology=Sol3  mode=VT
+  pform_status=EXACT_ZERO  overall=PASS
+  row_detail {"overall_status": "PASS", "pform_status": "EXACT_ZERO", "pform_value": "0", "topology": "Sol3", "torsion_mode": "VT"}
+computing: topology=Sol3  mode=MX
+  pform_status=EXACT_ZERO  overall=PASS
+  row_detail {"overall_status": "PASS", "pform_status": "EXACT_ZERO", "pform_value": "0", "topology": "Sol3", "torsion_mode": "MX"}
+
+total_combinations=12
+fail_count=0
+overall_verdict=PASS
+
+Computation time: 0.4s
+
+*Script: scripts/paper06/pform_cancellation.py

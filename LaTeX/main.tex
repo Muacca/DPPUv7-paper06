@@ -1,0 +1,336 @@
+%==============================================================================
+% Reduced-Sector chi-Universality in Lorentzian EC+NY Minisuperspace:
+% Topology-Robust Admissibility, P-Channel Diagnostics,
+% and Reduced Vacuum Orbits
+%==============================================================================
+\documentclass[12pt,a4paper]{article}
+
+%------------------------------------------------------------------------------
+% Packages
+%------------------------------------------------------------------------------
+
+% Fonts / encoding
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage[final]{microtype}
+
+% Math
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{mathtools}
+\usepackage{bm}
+
+% Graphics and figures
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{xurl}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\code}[1]{\path{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+% Layout and formatting
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% Misc (xcolor before hyperref)
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+% References and links
+\definecolor{linkblue}{RGB}{0,0,180}
+\usepackage[colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue]{hyperref}
+\usepackage{cleveref}
+
+% Code listings
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  language=Python
+}
+
+% Section break
+\usepackage{titlesec}
+\newcommand{\sectionbreak}{\clearpage}
+
+%------------------------------------------------------------------------------
+% Theorem environments
+%------------------------------------------------------------------------------
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+%------------------------------------------------------------------------------
+% Custom commands
+%------------------------------------------------------------------------------
+% Math shortcuts
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\Sthree}{S^{3}}
+\newcommand{\Tthree}{T^{3}}
+\newcommand{\Nilthree}{\mathrm{Nil}^{3}}
+\newcommand{\Solthree}{\mathrm{Sol}^{3}}
+\newcommand{\kap}{\kappa}
+
+% Topology bookkeeping
+\newcommand{\topo}{\Sigma}
+\newcommand{\Ctop}{C_{\mathrm{topology}}}
+\newcommand{\Disc}{\Delta}
+
+% Diagnostic quantities
+\newcommand{\Pform}{P_{\mathrm{form}}}
+\newcommand{\Pint}{P_{\mathrm{int}}}
+\newcommand{\PintMX}{P_{\mathrm{int}}^{\mathrm{MX}}}
+\newcommand{\QNY}{Q_{\mathrm{NY}}}
+\newcommand{\thetaNY}{\theta_{\mathrm{NY}}}
+
+% Branch labels
+\newcommand{\EH}{\mathrm{EH}}
+\newcommand{\AX}{\mathrm{AX}}
+\newcommand{\VT}{\mathrm{VT}}
+\newcommand{\MX}{\mathrm{MX}}
+
+% Hamiltonian
+\newcommand{\Ham}{\mathcal{H}}
+
+% Geometry
+\newcommand{\Vol}{\mathcal{V}}
+\newcommand{\tr}{\mathrm{tr}}
+\newcommand{\Tr}{\mathrm{Tr}}
+
+%------------------------------------------------------------------------------
+% Title and author
+%------------------------------------------------------------------------------
+\title{Reduced-Sector $\chi$-Universality\\in Lorentzian EC+NY Minisuperspace:\\
+Topology-Robust Admissibility, P-Channel Diagnostics,\\
+and Reduced Vacuum Orbits}
+
+\author{Muacca}
+
+\date{}
+
+%==============================================================================
+\begin{document}
+%==============================================================================
+
+\maketitle
+\begin{center}
+Version: v1\\
+First release: 2026-05-16
+\end{center}
+
+%------------------------------------------------------------------------------
+% Abstract
+%------------------------------------------------------------------------------
+\begin{abstract}
+We analyse the topology dependence of the Lorentzian Einstein--Cartan plus
+Nieh--Yan (EC+NY) reduced sector across the four homogeneous three-geometries
+$\Sthree$, $\Tthree$, $\Nilthree$, and $\Solthree$, restricted to the
+$\alpha=0$ EC+NY reduced branch.  For $\Nilthree$ and $\Solthree$ the
+treatment is confined to the isotropic-scale reduction.
+
+In this reduced sector the Hamiltonian constraint and the torsion auxiliary
+equations exhibit a topology-robust admissibility pattern: the EH, AX, and VT
+branches are admissible, while the MX branch is conditionally admissible
+through a real auxiliary branch.  For Pontryagin-type quantities we separate
+the form-Hodge density $\Pform$, the internal-pair diagnostic $\Pint$, and the
+Nieh--Yan endpoint channel $\QNY$.  The form-Hodge density $\Pform$ vanishes
+exactly on the active torsion branches by block orthogonality.  The
+diagnostic $\Pint$ on the MX branch carries the topology dependence in a
+single coefficient, $\Ctop = -9\chi$.
+
+Furthermore, the reduced vacuum orbit atlas on the auxiliary shell reduces to
+$\dot q^{2} + \chi = 0$.
+
+Consequently, $\chi>0$ admits no real initial data on the reduced vacuum
+atlas, $\chi=0$ gives static or degenerate behaviour, and $\chi<0$ gives
+monotonic expansion together with singular-approach collapse sheets.
+
+The two relations $\Ctop=-9\chi$ and $\dot q^{2}+\chi=0$ are obtained from
+independent computational routes and converge on the same scalar $\chi$;
+this convergence is the content of the $\chi$-controlled topology
+universality.  The results are a classification within the reduced
+Lorentzian EC+NY sector; global, anisotropic, and matter-coupled extensions
+are left to future work.
+\end{abstract}
+
+%------------------------------------------------------------------------------
+% Main text
+%------------------------------------------------------------------------------
+\input{sections/sec01}   % Introduction
+\input{sections/sec02}   % Lorentzian-native setup and topology conventions
+\input{sections/sec03}   % Hamiltonian admissibility by topology
+\input{sections/sec04}   % P-channel dictionary and topology response
+\input{sections/sec05}   % chi-universality across diagnostic and reduced-orbit levels
+\input{sections/sec06}   % Four-topology admissibility classification
+\input{sections/sec07}   % Reduced orbit atlas and chi-sign separation
+\input{sections/sec08}   % Discussion
+
+%------------------------------------------------------------------------------
+% Acknowledgments
+%------------------------------------------------------------------------------
+\section*{Acknowledgments}
+
+The author acknowledges the use of the following AI tools during manuscript
+preparation: Claude Opus~4.7 (Anthropic; accessed 2026-05),
+Gemini~3.1 Pro (Google; accessed 2026-05), Grok~4.3 (xAI; accessed 2026-05),
+and GPT-5.5 Thinking via ChatGPT (OpenAI; accessed 2026-05).
+These tools were used for language editing (including Japanese--English
+translation), outlining and improving exposition, drafting and reviewing
+auxiliary code (scripts and pseudocode) that was subsequently tested and
+validated by the author, and proposing candidate consistency checks and
+alternative derivations to be independently verified by the author.
+
+The AI tools did not determine the scientific claims of this work and were not
+used to generate or modify research data or evidentiary figures.  The author
+takes full responsibility for the content and for any remaining errors.
+
+This work was developed within the informal collaborative project
+\textbf{DPPU} (\textbf{D}onut-like topology, \textbf{P}lanck-scale
+compactness, \textbf{P}recession dynamics, \textbf{U}niverse).
+
+%------------------------------------------------------------------------------
+% Availability and Contact
+%------------------------------------------------------------------------------
+\section*{Availability and Contact}
+
+\paragraph{Code and Data Availability}
+The code and supplemental data associated with this work are available at:
+
+\begin{itemize}
+  \item Zenodo: 10.5281/zenodo.20228881
+  \item GitHub: \texttt{https://github.com/Muacca/DPPUv7-paper06}
+\end{itemize}
+
+They are released under the MIT License.
+
+\paragraph{Citation}
+If you use these materials, please cite the associated manuscript and Zenodo
+record:
+
+\begin{quote}
+\small
+Muacca, ``Reduced-Sector $\chi$-Universality in Lorentzian EC+NY
+Minisuperspace: Topology-Robust Admissibility, P-Channel Diagnostics,
+and Reduced Vacuum Orbits.''
+\end{quote}
+
+\paragraph{Contact}
+For questions, bug reports, or collaboration inquiries:
+
+\begin{itemize}
+  \item Email: \texttt{muacca@dmwp.jp}
+  \item GitHub Issues: \texttt{https://github.com/Muacca/DPPUv7-paper06/issues}
+\end{itemize}
+
+%------------------------------------------------------------------------------
+% Appendices
+%------------------------------------------------------------------------------
+\appendix
+\input{appendices/appA}  % Topology conventions, local reductions, and caveats
+\input{appendices/appB}  % Tables, computational checks, and reproducibility notes
+\input{appendices/appC}  % Bianchi I lite comparison and reduced-atlas scope guard
+
+%------------------------------------------------------------------------------
+% References
+%------------------------------------------------------------------------------
+\bibliographystyle{unsrt}
+
+\begin{thebibliography}{99}
+
+\bibitem{paper1}
+Muacca,
+``Topology-Dependent Phase Classification of Effective Potentials
+in Einstein--Cartan + Nieh--Yan Minisuperspace,''
+Zenodo.\ \texttt{10.5281/zenodo.18213677} (2026).
+
+\bibitem{paper2}
+Muacca,
+``Structural Robustness of Isotropic $\Sthree$ Vacua in
+Einstein--Cartan Minisuperspace via Chiral Equilibrium and Weyl Stability,''
+Zenodo.\ \texttt{10.5281/zenodo.18815498} (2026).
+
+\bibitem{paper3}
+Muacca,
+``Unified Geometric Landau EFT of Homogeneous $\Sthree\times S^{1}$
+Minisuperspace in Einstein--Cartan + Nieh--Yan Theory,''
+Zenodo.\ \texttt{10.5281/zenodo.19144481} (2026).
+
+\bibitem{paper3ec}
+Muacca,
+``Homogeneous Three-Topology Comparison and Mode Dictionary
+in Einstein--Cartan + Nieh--Yan Theory: Geometric Structure of EC--Weyl
+Coupling,''
+Zenodo.\ \texttt{10.5281/zenodo.19425147} (2026).
+
+\bibitem{paper4}
+Muacca,
+``Euclidean Geometric Response Dictionary and Selection Rules
+for Four Thurston Geometries,''
+Zenodo.\ \texttt{10.5281/zenodo.19775695} (2026).
+
+\bibitem{paper5}
+Muacca,
+``Lorentzian Einstein--Cartan Minisuperspace with Nieh--Yan Torsion:
+Hamiltonian Branches, Pontryagin Diagnostics,
+and Weyl-Source Obstructions,''
+DPPUv7-paper05 (2026).
+
+\bibitem{Hehl1976}
+F.~W.~Hehl, P.~von der Heyde, G.~D.~Kerlick, and J.~M.~Nester,
+``General relativity with spin and torsion: Foundations and prospects,''
+Rev.\ Mod.\ Phys.\ \textbf{48}, 393--416 (1976).
+
+\bibitem{NiehYan1982}
+H.~T.~Nieh and M.~L.~Yan,
+``An identity in Riemann--Cartan geometry,''
+J.\ Math.\ Phys.\ \textbf{23}, 373--374 (1982).
+
+\bibitem{Thurston1997}
+W.~P.~Thurston,
+\emph{Three-Dimensional Geometry and Topology, Volume 1},
+edited by S.~Levy
+(Princeton University Press, Princeton, NJ, 1997).
+
+\bibitem{Scott1983}
+P.~Scott,
+``The geometries of 3-manifolds,''
+Bull.\ London Math.\ Soc.\ \textbf{15}, 401--487 (1983).
+
+\bibitem{EllisMacCallum1969}
+G.~F.~R.~Ellis and M.~A.~H.~MacCallum,
+``A class of homogeneous cosmological models,''
+Commun.\ Math.\ Phys.\ \textbf{12}, 108--141 (1969).
+
+\bibitem{BrandenbergerPeter2017}
+R.~Brandenberger and P.~Peter,
+``Bouncing Cosmologies: Progress and Problems,''
+Found.\ Phys.\ \textbf{47}, 797--850 (2017),
+arXiv:1603.05834, doi:10.1007/s10701-016-0057-0.
+
+\bibitem{ChandiaZanelli1997}
+O.~Chandia and J.~Zanelli,
+``Topological invariants, instantons, and the chiral anomaly on spaces with
+torsion,''
+Phys.\ Rev.\ D \textbf{55}, 7580--7585 (1997).
+
+\end{thebibliography}
+
+%==============================================================================
+\end{document}
+%==============================================================================

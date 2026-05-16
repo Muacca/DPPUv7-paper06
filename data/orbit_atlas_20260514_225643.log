@@ -1,0 +1,62 @@
+Paper06 reduced orbit atlas derivation
+=================================================================
+  S3xEH: sheet=none class=NO_REAL_AUX_SHELL_ORBIT constraint=PASS status=PASS
+  S3xAX: sheet=none class=NO_REAL_AUX_SHELL_ORBIT constraint=PASS status=PASS
+  S3xVT: sheet=none class=NO_REAL_AUX_SHELL_ORBIT constraint=PASS status=PASS
+  S3xMX: sheet=none class=NO_REAL_AUX_SHELL_ORBIT constraint=PASS status=PASS
+  T3xEH: sheet=zero class=STATIC_OR_DEGENERATE constraint=PASS status=PASS
+  T3xAX: sheet=zero class=STATIC_OR_DEGENERATE constraint=PASS status=PASS
+  T3xVT: sheet=zero class=STATIC_OR_DEGENERATE constraint=PASS status=PASS
+  T3xMX: sheet=zero class=STATIC_OR_DEGENERATE constraint=PASS status=PASS
+  Nil3xEH: sheet=expanding class=MONOTONIC_EXPANSION constraint=PASS status=PASS
+  Nil3xEH: sheet=collapsing class=SINGULAR_APPROACH constraint=PASS status=PASS
+  Nil3xAX: sheet=expanding class=MONOTONIC_EXPANSION constraint=PASS status=PASS
+  Nil3xAX: sheet=collapsing class=SINGULAR_APPROACH constraint=PASS status=PASS
+  Nil3xVT: sheet=expanding class=MONOTONIC_EXPANSION constraint=PASS status=PASS
+  Nil3xVT: sheet=collapsing class=SINGULAR_APPROACH constraint=PASS status=PASS
+  Nil3xMX: sheet=expanding class=MONOTONIC_EXPANSION constraint=PASS status=PASS
+  Nil3xMX: sheet=collapsing class=SINGULAR_APPROACH constraint=PASS status=PASS
+  Sol3xEH: sheet=expanding class=MONOTONIC_EXPANSION constraint=PASS status=PASS
+  Sol3xEH: sheet=collapsing class=SINGULAR_APPROACH constraint=PASS status=PASS
+  Sol3xAX: sheet=expanding class=MONOTONIC_EXPANSION constraint=PASS status=PASS
+  Sol3xAX: sheet=collapsing class=SINGULAR_APPROACH constraint=PASS status=PASS
+  Sol3xVT: sheet=expanding class=MONOTONIC_EXPANSION constraint=PASS status=PASS
+  Sol3xVT: sheet=collapsing class=SINGULAR_APPROACH constraint=PASS status=PASS
+  Sol3xMX: sheet=expanding class=MONOTONIC_EXPANSION constraint=PASS status=PASS
+  Sol3xMX: sheet=collapsing class=SINGULAR_APPROACH constraint=PASS status=PASS
+row_details_begin
+  row_detail {"topology": "S3", "mode": "EH", "chi_from_lc_curvature": "4", "F_on_shell": "4", "orbit_equation": "qdot**2 + 4", "sheet": "none", "qdot0_analytic": "no_real_solution", "orbit_class": "NO_REAL_AUX_SHELL_ORBIT", "constraint_residual_max": "n/a", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "S3", "mode": "AX", "chi_from_lc_curvature": "4", "F_on_shell": "4", "orbit_equation": "qdot**2 + 4", "sheet": "none", "qdot0_analytic": "no_real_solution", "orbit_class": "NO_REAL_AUX_SHELL_ORBIT", "constraint_residual_max": "n/a", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "S3", "mode": "VT", "chi_from_lc_curvature": "4", "F_on_shell": "4", "orbit_equation": "qdot**2 + 4", "sheet": "none", "qdot0_analytic": "no_real_solution", "orbit_class": "NO_REAL_AUX_SHELL_ORBIT", "constraint_residual_max": "n/a", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "S3", "mode": "MX", "chi_from_lc_curvature": "4", "F_on_shell": "4", "orbit_equation": "qdot**2 + 4", "sheet": "none", "qdot0_analytic": "no_real_solution", "orbit_class": "NO_REAL_AUX_SHELL_ORBIT", "constraint_residual_max": "n/a", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "T3", "mode": "EH", "chi_from_lc_curvature": "0", "F_on_shell": "0", "orbit_equation": "qdot**2", "sheet": "zero", "qdot0_analytic": "0", "orbit_class": "STATIC_OR_DEGENERATE", "constraint_residual_max": "0", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "T3", "mode": "AX", "chi_from_lc_curvature": "0", "F_on_shell": "0", "orbit_equation": "qdot**2", "sheet": "zero", "qdot0_analytic": "0", "orbit_class": "STATIC_OR_DEGENERATE", "constraint_residual_max": "0", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "T3", "mode": "VT", "chi_from_lc_curvature": "0", "F_on_shell": "0", "orbit_equation": "qdot**2", "sheet": "zero", "qdot0_analytic": "0", "orbit_class": "STATIC_OR_DEGENERATE", "constraint_residual_max": "0", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "T3", "mode": "MX", "chi_from_lc_curvature": "0", "F_on_shell": "0", "orbit_equation": "qdot**2", "sheet": "zero", "qdot0_analytic": "0", "orbit_class": "STATIC_OR_DEGENERATE", "constraint_residual_max": "0", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "Nil3", "mode": "EH", "chi_from_lc_curvature": "-1/12", "F_on_shell": "-1/12", "orbit_equation": "(12*qdot**2 - 1)/12", "sheet": "expanding", "qdot0_analytic": "sqrt(3)/6", "orbit_class": "MONOTONIC_EXPANSION", "constraint_residual_max": "0.000000e+00", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "Nil3", "mode": "EH", "chi_from_lc_curvature": "-1/12", "F_on_shell": "-1/12", "orbit_equation": "(12*qdot**2 - 1)/12", "sheet": "collapsing", "qdot0_analytic": "-sqrt(3)/6", "orbit_class": "SINGULAR_APPROACH", "constraint_residual_max": "0.000000e+00", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "Nil3", "mode": "AX", "chi_from_lc_curvature": "-1/12", "F_on_shell": "-1/12", "orbit_equation": "(12*qdot**2 - 1)/12", "sheet": "expanding", "qdot0_analytic": "sqrt(3)/6", "orbit_class": "MONOTONIC_EXPANSION", "constraint_residual_max": "0.000000e+00", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "Nil3", "mode": "AX", "chi_from_lc_curvature": "-1/12", "F_on_shell": "-1/12", "orbit_equation": "(12*qdot**2 - 1)/12", "sheet": "collapsing", "qdot0_analytic": "-sqrt(3)/6", "orbit_class": "SINGULAR_APPROACH", "constraint_residual_max": "0.000000e+00", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "Nil3", "mode": "VT", "chi_from_lc_curvature": "-1/12", "F_on_shell": "-1/12", "orbit_equation": "(12*qdot**2 - 1)/12", "sheet": "expanding", "qdot0_analytic": "sqrt(3)/6", "orbit_class": "MONOTONIC_EXPANSION", "constraint_residual_max": "0.000000e+00", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "Nil3", "mode": "VT", "chi_from_lc_curvature": "-1/12", "F_on_shell": "-1/12", "orbit_equation": "(12*qdot**2 - 1)/12", "sheet": "collapsing", "qdot0_analytic": "-sqrt(3)/6", "orbit_class": "SINGULAR_APPROACH", "constraint_residual_max": "0.000000e+00", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "Nil3", "mode": "MX", "chi_from_lc_curvature": "-1/12", "F_on_shell": "-1/12", "orbit_equation": "(12*qdot**2 - 1)/12", "sheet": "expanding", "qdot0_analytic": "sqrt(3)/6", "orbit_class": "MONOTONIC_EXPANSION", "constraint_residual_max": "0.000000e+00", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "Nil3", "mode": "MX", "chi_from_lc_curvature": "-1/12", "F_on_shell": "-1/12", "orbit_equation": "(12*qdot**2 - 1)/12", "sheet": "collapsing", "qdot0_analytic": "-sqrt(3)/6", "orbit_class": "SINGULAR_APPROACH", "constraint_residual_max": "0.000000e+00", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "Sol3", "mode": "EH", "chi_from_lc_curvature": "-1/3", "F_on_shell": "-1/3", "orbit_equation": "(3*qdot**2 - 1)/3", "sheet": "expanding", "qdot0_analytic": "sqrt(3)/3", "orbit_class": "MONOTONIC_EXPANSION", "constraint_residual_max": "0.000000e+00", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "Sol3", "mode": "EH", "chi_from_lc_curvature": "-1/3", "F_on_shell": "-1/3", "orbit_equation": "(3*qdot**2 - 1)/3", "sheet": "collapsing", "qdot0_analytic": "-sqrt(3)/3", "orbit_class": "SINGULAR_APPROACH", "constraint_residual_max": "0.000000e+00", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "Sol3", "mode": "AX", "chi_from_lc_curvature": "-1/3", "F_on_shell": "-1/3", "orbit_equation": "(3*qdot**2 - 1)/3", "sheet": "expanding", "qdot0_analytic": "sqrt(3)/3", "orbit_class": "MONOTONIC_EXPANSION", "constraint_residual_max": "0.000000e+00", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "Sol3", "mode": "AX", "chi_from_lc_curvature": "-1/3", "F_on_shell": "-1/3", "orbit_equation": "(3*qdot**2 - 1)/3", "sheet": "collapsing", "qdot0_analytic": "-sqrt(3)/3", "orbit_class": "SINGULAR_APPROACH", "constraint_residual_max": "0.000000e+00", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "Sol3", "mode": "VT", "chi_from_lc_curvature": "-1/3", "F_on_shell": "-1/3", "orbit_equation": "(3*qdot**2 - 1)/3", "sheet": "expanding", "qdot0_analytic": "sqrt(3)/3", "orbit_class": "MONOTONIC_EXPANSION", "constraint_residual_max": "0.000000e+00", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "Sol3", "mode": "VT", "chi_from_lc_curvature": "-1/3", "F_on_shell": "-1/3", "orbit_equation": "(3*qdot**2 - 1)/3", "sheet": "collapsing", "qdot0_analytic": "-sqrt(3)/3", "orbit_class": "SINGULAR_APPROACH", "constraint_residual_max": "0.000000e+00", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "Sol3", "mode": "MX", "chi_from_lc_curvature": "-1/3", "F_on_shell": "-1/3", "orbit_equation": "(3*qdot**2 - 1)/3", "sheet": "expanding", "qdot0_analytic": "sqrt(3)/3", "orbit_class": "MONOTONIC_EXPANSION", "constraint_residual_max": "0.000000e+00", "constraint_check": "PASS", "overall_status": "PASS"}
+  row_detail {"topology": "Sol3", "mode": "MX", "chi_from_lc_curvature": "-1/3", "F_on_shell": "-1/3", "orbit_equation": "(3*qdot**2 - 1)/3", "sheet": "collapsing", "qdot0_analytic": "-sqrt(3)/3", "orbit_class": "SINGULAR_APPROACH", "constraint_residual_max": "0.000000e+00", "constraint_check": "PASS", "overall_status": "PASS"}
+row_details_end
+
+total_orbit_entries=24
+class_counts={'NO_REAL_AUX_SHELL_ORBIT': 4, 'STATIC_OR_DEGENERATE': 4, 'MONOTONIC_EXPANSION': 8, 'SINGULAR_APPROACH': 8}
+bounce_or_recollapse_count=0
+fail_count=0
+overall_verdict=PASS
+
+Computation time: 1.2s
+
+*Script: scripts/paper06/orbit_atlas.py

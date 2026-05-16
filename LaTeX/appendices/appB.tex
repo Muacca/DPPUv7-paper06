@@ -1,0 +1,162 @@
+%==============================================================================
+% Appendix B: Computational checks and reproducibility
+%==============================================================================
+\section{Computational checks and reproducibility}
+\label{app:B}
+
+\subsection{Algebraic core of the $\chi$-bridge identity}
+\label{app:B:bridge}
+
+We record the algebraic core of the family-level identity
+$\Ctop+9\chi=0$ of Section~\ref{sec:bridge:family}.  With the auxiliary
+quantity $\Disc$ defined as
+\begin{equation}
+  \Disc = a^{2}-2ab-2ac+b^{2}-2bc+c^{2}+4u^{2}+4uv+4v^{2},
+\end{equation}
+the two quantities $\chi$ and $\Ctop$ are expressed as
+\begin{equation}
+  \chi = -\frac{\Disc}{12},
+  \qquad
+  \Ctop = \frac{3\Disc}{4}.
+\end{equation}
+Then
+\begin{equation}
+  \Ctop + 9\chi = \frac{3\Disc}{4} - \frac{9\Disc}{12} = 0.
+\end{equation}
+This identity holds for arbitrary values of $\Disc$ and does not assume any
+specific topology.  The specialised values for the four topologies
+(Table~\ref{tab:appA_topology}) are substitutions into this identity.
+
+\subsection{Full topology branch taxonomy}
+\label{app:B:branch_taxonomy}
+
+The main admissibility classification across all 16 branches
+($\Sthree/\Tthree/\Nilthree/\Solthree$ $\times$ $\EH/\AX/\VT/\MX$) is
+given in Table~\ref{tab:appB1}.  Table~\ref{tab:four_topology_admissibility}
+(Section~\ref{sec:classification}) is the summary of this classification
+pattern.  The full $F$-branch expressions, the Hamiltonian constraints,
+the auxiliary equations, and the auxiliary-shell solutions can be
+reproduced with \code{admissibility_classification.py}.
+
+\begin{table}[H]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llcccl}
+\toprule
+Topology & Mode & $\chi$ & $F_{\mathrm{shell}}$ & Hessian determinant & Label \\
+\midrule
+$\Sthree$   & $\EH$ & $4$ & $4$ & n/a & \code{L_ADMISSIBLE} \\
+$\Sthree$   & $\AX$ & $4$ & $4$ & $-2$ & \code{L_ADMISSIBLE} \\
+$\Sthree$   & $\VT$ & $4$ & $4$ & $2q^{2}/9$ & \code{L_ADMISSIBLE} \\
+$\Sthree$   & $\MX$ & $4$ & $4$ & $-4q^{2}(\kap^{4}\thetaNY^{2}+1)/9$ & \code{L_CONDITIONALLY_ADMISSIBLE} \\
+$\Tthree$   & $\EH$ & $0$ & $0$ & n/a & \code{L_ADMISSIBLE} \\
+$\Tthree$   & $\AX$ & $0$ & $0$ & $-2$ & \code{L_ADMISSIBLE} \\
+$\Tthree$   & $\VT$ & $0$ & $0$ & $2q^{2}/9$ & \code{L_ADMISSIBLE} \\
+$\Tthree$   & $\MX$ & $0$ & $0$ & $-4q^{2}(\kap^{4}\thetaNY^{2}+1)/9$ & \code{L_CONDITIONALLY_ADMISSIBLE} \\
+$\Nilthree$ & $\EH$ & $-1/12$ & $-1/12$ & n/a & \code{L_ADMISSIBLE} \\
+$\Nilthree$ & $\AX$ & $-1/12$ & $-1/12$ & $-2$ & \code{L_ADMISSIBLE} \\
+$\Nilthree$ & $\VT$ & $-1/12$ & $-1/12$ & $2q^{2}/9$ & \code{L_ADMISSIBLE} \\
+$\Nilthree$ & $\MX$ & $-1/12$ & $-1/12$ & $-4q^{2}(\kap^{4}\thetaNY^{2}+1)/9$ & \code{L_CONDITIONALLY_ADMISSIBLE} \\
+$\Solthree$ & $\EH$ & $-1/3$ & $-1/3$ & n/a & \code{L_ADMISSIBLE} \\
+$\Solthree$ & $\AX$ & $-1/3$ & $-1/3$ & $-2$ & \code{L_ADMISSIBLE} \\
+$\Solthree$ & $\VT$ & $-1/3$ & $-1/3$ & $2q^{2}/9$ & \code{L_ADMISSIBLE} \\
+$\Solthree$ & $\MX$ & $-1/3$ & $-1/3$ & $-4q^{2}(\kap^{4}\thetaNY^{2}+1)/9$ & \code{L_CONDITIONALLY_ADMISSIBLE} \\
+\bottomrule
+\end{tabular}%
+}
+\caption{Compact full branch taxonomy.}
+\label{tab:appB1}
+\end{table}
+
+\subsection{Full orbit-sheet atlas}
+\label{app:B:orbit_atlas}
+
+The 24 branch/sheet rows of the reduced vacuum orbit atlas are given in
+Table~\ref{tab:appB2}.  $\Sthree$ and $\Tthree$ contribute one row per
+branch, while $\Nilthree$ and $\Solthree$ contribute two sheets
+(expanding / collapsing).  Table~\ref{tab:orbit_class_counts}
+(Section~\ref{sec:orbit:fullbranch}) summarises this branch/sheet count.
+The orbit equations, constraint residuals, and numerical monitors of each
+row can be reproduced with \code{orbit_atlas.py}.
+
+\begin{table}[H]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lllllc}
+\toprule
+Topology & Mode & Sheet & $\dot q_{0}$ & Orbit class & Check \\
+\midrule
+$\Sthree$   & $\EH$ & none       & no real solution & \code{NO_REAL_AUX_SHELL_ORBIT} & PASS \\
+$\Sthree$   & $\AX$ & none       & no real solution & \code{NO_REAL_AUX_SHELL_ORBIT} & PASS \\
+$\Sthree$   & $\VT$ & none       & no real solution & \code{NO_REAL_AUX_SHELL_ORBIT} & PASS \\
+$\Sthree$   & $\MX$ & none       & no real solution & \code{NO_REAL_AUX_SHELL_ORBIT} & PASS \\
+$\Tthree$   & $\EH$ & zero       & $0$              & \code{STATIC_OR_DEGENERATE}    & PASS \\
+$\Tthree$   & $\AX$ & zero       & $0$              & \code{STATIC_OR_DEGENERATE}    & PASS \\
+$\Tthree$   & $\VT$ & zero       & $0$              & \code{STATIC_OR_DEGENERATE}    & PASS \\
+$\Tthree$   & $\MX$ & zero       & $0$              & \code{STATIC_OR_DEGENERATE}    & PASS \\
+$\Nilthree$ & $\EH$ & expanding  & $\sqrt{3}/6$     & \code{MONOTONIC_EXPANSION}     & PASS \\
+$\Nilthree$ & $\EH$ & collapsing & $-\sqrt{3}/6$    & \code{SINGULAR_APPROACH}       & PASS \\
+$\Nilthree$ & $\AX$ & expanding  & $\sqrt{3}/6$     & \code{MONOTONIC_EXPANSION}     & PASS \\
+$\Nilthree$ & $\AX$ & collapsing & $-\sqrt{3}/6$    & \code{SINGULAR_APPROACH}       & PASS \\
+$\Nilthree$ & $\VT$ & expanding  & $\sqrt{3}/6$     & \code{MONOTONIC_EXPANSION}     & PASS \\
+$\Nilthree$ & $\VT$ & collapsing & $-\sqrt{3}/6$    & \code{SINGULAR_APPROACH}       & PASS \\
+$\Nilthree$ & $\MX$ & expanding  & $\sqrt{3}/6$     & \code{MONOTONIC_EXPANSION}     & PASS \\
+$\Nilthree$ & $\MX$ & collapsing & $-\sqrt{3}/6$    & \code{SINGULAR_APPROACH}       & PASS \\
+$\Solthree$ & $\EH$ & expanding  & $\sqrt{3}/3$     & \code{MONOTONIC_EXPANSION}     & PASS \\
+$\Solthree$ & $\EH$ & collapsing & $-\sqrt{3}/3$    & \code{SINGULAR_APPROACH}       & PASS \\
+$\Solthree$ & $\AX$ & expanding  & $\sqrt{3}/3$     & \code{MONOTONIC_EXPANSION}     & PASS \\
+$\Solthree$ & $\AX$ & collapsing & $-\sqrt{3}/3$    & \code{SINGULAR_APPROACH}       & PASS \\
+$\Solthree$ & $\VT$ & expanding  & $\sqrt{3}/3$     & \code{MONOTONIC_EXPANSION}     & PASS \\
+$\Solthree$ & $\VT$ & collapsing & $-\sqrt{3}/3$    & \code{SINGULAR_APPROACH}       & PASS \\
+$\Solthree$ & $\MX$ & expanding  & $\sqrt{3}/3$     & \code{MONOTONIC_EXPANSION}     & PASS \\
+$\Solthree$ & $\MX$ & collapsing & $-\sqrt{3}/3$    & \code{SINGULAR_APPROACH}       & PASS \\
+\bottomrule
+\end{tabular}%
+}
+\caption{Compact full orbit-sheet atlas.}
+\label{tab:appB2}
+\end{table}
+
+\subsection{Summary of main computational checks}
+\label{app:B:checks}
+
+Table~\ref{tab:appB3} lists the logical verification targets.  The first
+two checks are evaluated by the same symbolic script, because the
+family-level identity and its topology specialisations share the same
+derived $(a,b,c,u,v)$ data.
+
+\begin{table}[H]
+\centering
+\begingroup
+\renewcommand{\arraystretch}{2.0}
+\begin{tabularx}{\linewidth}{YYYY}
+\toprule
+Check & Content & \shortstack{Related\\section} & Script \\
+\midrule
+$\chi$-bridge derivation
+  & Extract $(a,b,c,u,v)$ for $\Sthree/\Tthree/\Nilthree/\Solthree$,
+    derive $\chi$ from the LC spatial curvature, compute the raw $\PintMX$
+    from the EC+NY MX curvature, and extract $\Ctop$
+  & Section~\ref{sec:pchannel:Pint}, \ref{sec:bridge:family}
+  & \code{chi_bridge_symbolic.py} \\
+$\Pform$ cancellation
+  & Construct the curvature with the EC+NY engine for each torsion branch
+    $\AX/\VT/\MX$ and compute $\Pform$
+  & Section~\ref{sec:pchannel:Pform}
+  & \code{pform_cancellation.py} \\
+admissibility classification
+  & Derive the lapse constraint and the auxiliary closure symbolically from
+    the engine-derived $F_{\mathrm{branch}}$
+  & Section~\ref{sec:hamiltonian}, \ref{sec:classification}
+  & \code{admissibility_classification.py} \\
+orbit atlas
+  & Derive the orbit equation and the orbit class from the auxiliary
+    shell of the engine-derived $F_{\mathrm{branch}}$
+  & Section~\ref{sec:orbit}
+  & \code{orbit_atlas.py} \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\caption{Computational checks and their roles.}
+\label{tab:appB3}
+\end{table}

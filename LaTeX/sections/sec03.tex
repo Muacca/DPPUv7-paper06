@@ -1,0 +1,112 @@
+%==============================================================================
+% Section 3: Hamiltonian admissibility by topology
+%==============================================================================
+\section{Hamiltonian admissibility by topology}
+\label{sec:hamiltonian}
+
+\subsection{Admissibility criterion}
+\label{sec:hamiltonian:criterion}
+
+In this paper, admissibility in the reduced sector is judged by the
+following three criteria.
+
+\begin{enumerate}
+  \item \emph{EH constraint closure}: the Hamiltonian constraint of the pure
+        $\EH$ part closes under the Lorentzian convention
+        (\code{EH_PASS}).
+  \item \emph{Reduced action skeleton}: the EC+NY reduced Lagrangian of each
+        torsion mode has a well-defined velocity structure
+        (\code{LRED_PASS}).
+  \item \emph{Torsion auxiliary closure}: the algebraic equations for the
+        auxiliary variables $\eta$ and $V$ admit real solutions
+        (\code{AUX_PASS} or \code{AUX_CONDITIONAL_REAL_BRANCH}).
+\end{enumerate}
+
+This notion of admissibility is not a claim of orbit stability, unitarity,
+or full constraint closure.
+
+\subsection{Hamiltonian constraint}
+\label{sec:hamiltonian:constraint}
+
+Lapse variation $\delta S/\delta N = 0$ gives the Hamiltonian constraint
+\begin{equation}
+  \Ham
+  \equiv A_{\topo}\, q\!\left(F_{\topo}+\frac{\dot q^{2}}{N^{2}}\right) = 0,
+  \qquad
+  \text{that is,}\quad F_{\topo}+\frac{\dot q^{2}}{N^{2}} = 0.
+\end{equation}
+On the $\EH$ branch ($\eta=V=0$) one has $F_{\topo}\big|_{\EH}=\chi$ (with
+the $\chi$ of Table~\ref{tab:topology_chi} substituted for each topology),
+which is the content of \code{EH_PASS}:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lcc}
+\toprule
+Topology & $F_{\EH}$ (on-shell) & Constraint residual \\
+\midrule
+$\Sthree$   & $4$      & $4N^{2}+\dot r^{2}=0$ \\
+$\Tthree$   & $0$      & $\dot r^{2}=0$ \\
+$\Nilthree$ & $-1/12$  & $N^{2}-12\dot R^{2}=0$ \\
+$\Solthree$ & $-1/3$   & $3N^{2}-9\dot q^{2}=0$\ (local/iso) \\
+\bottomrule
+\end{tabular}
+\caption{$\EH$ residuals for each topology.}
+\label{tab:eh_residual}
+\end{table}
+
+The torsion auxiliary equations are the algebraic equations
+$\delta S/\delta\eta=0$ and $\delta S/\delta V=0$.  On $\AX$ only $\eta$ is
+non-trivial and on $\VT$ only $V$, each yielding \code{AUX_PASS}.  On $\MX$
+the auxiliary Hessian determinant is
+\begin{equation}
+  \det\!\begin{pmatrix}
+    \partial_{\eta}(\partial_{\eta} F) & \partial_{V}(\partial_{\eta} F)\\
+    \partial_{\eta}(\partial_{V} F)    & \partial_{V}(\partial_{V} F)
+  \end{pmatrix}
+  = -\frac{4q^{2}(\kap^{4}\thetaNY^{2}+1)}{9} < 0.
+\end{equation}
+For $q>0$ in the reduced-sector domain and real $\kap$ and $\thetaNY$, one has
+$\kap^{4}\thetaNY^{2}+1>0$, so the auxiliary Hessian is non-degenerate.
+We retain this mixed auxiliary channel as a branch with real-branch
+selection and origin tagging, and record it as
+\code{AUX_CONDITIONAL_REAL_BRANCH}, that is, as the
+\code{H_CONDITIONAL} status of $\MX$.
+
+The negative determinant does not imply a stable minimum.  The notion of
+\emph{conditional admissibility} used here is a weak criterion requiring
+only algebraic closure and real-branch selection at the non-degenerate
+mixed auxiliary saddle, and is independent of the Hessian signature
+(dynamical stability).
+
+\subsection{Mode status}
+\label{sec:hamiltonian:mode}
+
+Collecting the above criteria gives Table~\ref{tab:ham_status}.  The result
+is the same across the four topologies.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+Mode & Hamiltonian status & Interpretation \\
+\midrule
+$\EH$ & \code{H_PASS}         & pure $\EH$ reference branch \\
+$\AX$ & \code{H_PASS}         & active-torsion admissible \\
+$\VT$ & \code{H_PASS}         & active-torsion admissible \\
+$\MX$ & \code{H_CONDITIONAL}  & conditional admissibility via real auxiliary branch \\
+\bottomrule
+\end{tabular}
+\caption{Hamiltonian status by topology and mode.}
+\label{tab:ham_status}
+\end{table}
+
+The \code{H_CONDITIONAL} label for $\MX$ is not an obstruction or a failure.
+Assuming the existence of a real auxiliary branch, the off-shell behaviour
+of the subsequent P-channel diagnostics and the $\QNY$ boundary channel is
+recorded as a diagnostic, which is the content of conditional admissibility.
+
+\paragraph{Remark.}
+\code{H_PASS} and \code{L_ADMISSIBLE} do not imply dynamical stability.  The
+$\Solthree$ table entries refer to the local/isotropic reduction and do not
+constitute a full resolution of the compact quotient.

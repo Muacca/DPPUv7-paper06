@@ -1,0 +1,20 @@
+# DPPUv7 — Dependencies
+# Install: pip install -r requirements.txt
+
+# Core scientific computing
+numpy>=1.24
+scipy>=1.11
+sympy>=1.12
+pandas>=2.0
+
+# Progress bar
+tqdm>=4.65
+
+# Plotting
+matplotlib>=3.7
+seaborn>=0.12
+
+# Jupyter interactive viewer (scripts/visualize/ only)
+# Required for DPPUv7_Paper04_Figures.ipynb (%matplotlib widget)
+ipywidgets>=8.0
+IPython>=8.0

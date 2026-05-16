@@ -1,0 +1,19 @@
+Paper06 chi-bridge derivation
+=================================================================
+row_details_begin
+  row_detail {"row_type": "family", "topology": "FIVE_PARAMETER_FAMILY", "a": "a", "b": "b", "c": "c", "u": "u", "v": "v", "chi_from_lc_curvature": "-(a**2 - 2*a*b - 2*a*c + b**2 - 2*b*c + c**2 + 4*u**2 + 4*u*v + 4*v**2)/12", "P_int_MX_raw": "-V*eta*(4*V**2*q**2 - 3*a**2 + 6*a*b + 6*a*c - 3*b**2 + 6*b*c - 3*c**2 - 36*eta**2 - 12*u**2 - 12*u*v - 12*v**2)/(18*q**3)", "C_extracted_from_P_int": "3*(a**2 - 2*a*b - 2*a*c + b**2 - 2*b*c + c**2 + 4*u**2 + 4*u*v + 4*v**2)/4", "template_residual": "0", "C_plus_9chi_residual": "0", "overall_status": "PASS"}
+  row_detail {"row_type": "specialization", "topology": "S3", "a": "4", "b": "4", "c": "4", "u": "0", "v": "0", "chi_from_lc_curvature": "4", "P_int_MX_raw": "", "C_extracted_from_P_int": "-36", "template_residual": "0", "C_plus_9chi_residual": "0", "overall_status": "PASS"}
+  row_detail {"row_type": "specialization", "topology": "T3", "a": "0", "b": "0", "c": "0", "u": "0", "v": "0", "chi_from_lc_curvature": "0", "P_int_MX_raw": "", "C_extracted_from_P_int": "0", "template_residual": "0", "C_plus_9chi_residual": "0", "overall_status": "PASS"}
+  row_detail {"row_type": "specialization", "topology": "Nil3", "a": "0", "b": "0", "c": "-1", "u": "0", "v": "0", "chi_from_lc_curvature": "-1/12", "P_int_MX_raw": "", "C_extracted_from_P_int": "3/4", "template_residual": "0", "C_plus_9chi_residual": "0", "overall_status": "PASS"}
+  row_detail {"row_type": "specialization", "topology": "Sol3", "a": "0", "b": "0", "c": "0", "u": "1", "v": "-1", "chi_from_lc_curvature": "-1/3", "P_int_MX_raw": "", "C_extracted_from_P_int": "3", "template_residual": "0", "C_plus_9chi_residual": "0", "overall_status": "PASS"}
+row_details_end
+family_status=PASS
+template_residual=0
+C_plus_9chi_residual=0
+specialization_count=4
+fail_count=0
+overall_verdict=PASS
+
+Computation time: 0.3s
+
+*Script: scripts/paper06/chi_bridge_symbolic.py

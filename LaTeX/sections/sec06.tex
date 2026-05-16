@@ -1,0 +1,56 @@
+%==============================================================================
+% Section 6: Four-topology admissibility classification
+%==============================================================================
+\section{Four-topology admissibility classification}
+\label{sec:classification}
+
+The local admissibility classification that integrates the Hamiltonian
+admissibility of Section~\ref{sec:hamiltonian} and the P-channel diagnostics
+of Section~\ref{sec:pchannel} is collected in
+Table~\ref{tab:four_topology_admissibility}.
+
+\begin{table}[H]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lllll}
+\toprule
+Topology & $\EH$ & $\AX$ & $\VT$ & $\MX$ \\
+\midrule
+$\Sthree$   & \code{L_ADMISSIBLE} & \code{L_ADMISSIBLE} & \code{L_ADMISSIBLE} & \code{L_CONDITIONALLY_ADMISSIBLE} \\
+$\Tthree$   & \code{L_ADMISSIBLE} & \code{L_ADMISSIBLE} & \code{L_ADMISSIBLE} & \code{L_CONDITIONALLY_ADMISSIBLE} \\
+$\Nilthree$ & \code{L_ADMISSIBLE} & \code{L_ADMISSIBLE} & \code{L_ADMISSIBLE} & \code{L_CONDITIONALLY_ADMISSIBLE} \\
+$\Solthree$ & \code{L_ADMISSIBLE} & \code{L_ADMISSIBLE} & \code{L_ADMISSIBLE} & \code{L_CONDITIONALLY_ADMISSIBLE} \\
+\bottomrule
+\end{tabular}%
+}
+\caption{Four-topology admissibility classification.}
+\label{tab:four_topology_admissibility}
+\end{table}
+
+The label \code{L_ADMISSIBLE} indicates that the Hamiltonian constraint
+closes (Section~\ref{sec:hamiltonian:constraint}), the active-torsion
+auxiliary closes (\code{AUX_PASS}), and the diagnostic checks
+$\Pform=0$ and $\Pint=0$ are passed.  $\EH$ is a pure-curvature reference
+to which the P-channels are not applied.  The label
+\code{L_CONDITIONALLY_ADMISSIBLE} indicates that the $\MX$ branch becomes
+admissible only under the real-auxiliary-branch condition
+$\kap^{4}\thetaNY^{2}+1>0$ and the auxiliary-shell interpretation
+$\eta=V=0$.  The off-shell $\PintMX$ and $\QNY$ are recorded as
+diagnostic / boundary channels but do not obstruct admissibility.
+
+The structural points of this table can be summarised in three statements.
+First, the $\EH$ / $\AX$ / $\VT$ / $\MX$ mode pattern agrees across the
+four topologies.  Second, the conditions of the conditional admissibility
+of $\MX$ are also common to the four topologies (see the auxiliary
+determinant in Section~\ref{sec:hamiltonian:constraint}), so topology does
+not change the presence or absence of these conditions.  Third, although
+$\Solthree$ carries a caveat regarding the compact quotient
+(see Appendix~\ref{app:A}), in the main classification table its row
+structure coincides with that of the other three topologies.
+
+This topology-robust pattern is the background for the $\chi$-universality
+of Section~\ref{sec:bridge}.  Since admissibility itself does not vary with
+topology, topology dependence appears not in the admissibility label but
+in the diagnostic / orbit quantities $\Ctop$ and $\chi$.  In this sense,
+the bridge result of Section~\ref{sec:bridge} is a natural consequence
+that rides on top of the admissibility classification.
