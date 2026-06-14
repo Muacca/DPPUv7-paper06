@@ -98,7 +98,7 @@ paper04 [5] では、同じ四つの Thurston geometry [9,10] が Euclidean resp
 3. Muacca, "Unified Geometric Landau EFT of Homogeneous $S^3\times S^1$ Minisuperspace in Einstein-Cartan + Nieh-Yan Theory," Zenodo, 10.5281/zenodo.19144481 (2026).
 4. Muacca, "Homogeneous Three-Topology Comparison and Mode Dictionary in Einstein-Cartan + Nieh-Yan Theory: Geometric Structure of EC-Weyl Coupling," Zenodo, 10.5281/zenodo.19425147 (2026).
 5. Muacca, "Euclidean Geometric Response Dictionary and Selection Rules for Four Thurston Geometries," Zenodo, 10.5281/zenodo.19775695 (2026).
-6. Muacca, "Lorentzian Einstein-Cartan Minisuperspace with Nieh-Yan Torsion: Hamiltonian Branches, Pontryagin Diagnostics, and Weyl-Source Obstructions," DPPUv7-paper05 (2026).
+6. Muacca, "Lorentzian Einstein-Cartan Minisuperspace with Nieh-Yan Torsion: Hamiltonian Branches, Pontryagin Diagnostics, and Weyl-Source Obstructions," Zenodo, 10.5281/zenodo.20084722 (2026).
 7. F. W. Hehl, P. von der Heyde, G. D. Kerlick, and J. M. Nester, "General relativity with spin and torsion: Foundations and prospects," Rev. Mod. Phys. **48**, 393–416 (1976), doi:10.1103/RevModPhys.48.393.
 8. H. T. Nieh and M. L. Yan, "An identity in Riemann-Cartan geometry," J. Math. Phys. **23**, 373–374 (1982), doi:10.1063/1.525379.
 9. W. P. Thurston, *Three-Dimensional Geometry and Topology, Volume 1*, edited by S. Levy (Princeton University Press, Princeton, NJ, 1997).
