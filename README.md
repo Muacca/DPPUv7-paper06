@@ -1,5 +1,7 @@
 # Reduced-Sector chi-Universality in Lorentzian EC+NY Minisuperspace: Topology-Robust Admissibility, P-Channel Diagnostics, and Reduced Vacuum Orbits
 
+[10.5281/zenodo.20228881](https://doi.org/10.5281/zenodo.20228881)
+
 [日本語 README](README_ja.md)
 
 ## Paper Contents
