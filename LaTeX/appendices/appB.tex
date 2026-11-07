@@ -1,162 +1,88 @@
-%==============================================================================
-% Appendix B: Computational checks and reproducibility
-%==============================================================================
-\section{Computational checks and reproducibility}
-\label{app:B}
+\section{Derivation of the curvature identities}
 
-\subsection{Algebraic core of the $\chi$-bridge identity}
-\label{app:B:bridge}
+In a diagonal frame, $de^i=H e^{0i}+(n_i/q)e^{jk}$. The spatial coefficients in (G-04) obey the following relation, so the spatial torsion from the first Cartan equation is $2\eta/q$.
 
-We record the algebraic core of the family-level identity
-$\Ctop+9\chi=0$ of Section~\ref{sec:bridge:family}.  With the auxiliary
-quantity $\Disc$ defined as
-\begin{equation}
-  \Disc = a^{2}-2ab-2ac+b^{2}-2bc+c^{2}+4u^{2}+4uv+4v^{2},
+\stepcounter{equation}
+\begin{equation}\tag{R-01}\label{eq:R-01}
+a_j+a_k=\frac{n_i-2\eta}{q},\qquad
+\frac{n_i}{q}-a_j-a_k=\frac{2\eta}{q},\qquad H-b=V/3.
 \end{equation}
-the two quantities $\chi$ and $\Ctop$ are expressed as
-\begin{equation}
-  \chi = -\frac{\Disc}{12},
-  \qquad
-  \Ctop = \frac{3\Disc}{4}.
+
+Expanding the second Cartan equation gives temporal boost coefficient $Db+Hb$ and spatial boost coefficient $b(n_i/q-a_j-a_k)$. The rotation coefficients are given below. Cancellation of the spatial term linear in $\eta$ is the key to the common formula.
+
+\stepcounter{equation}
+\begin{equation}\tag{R-02}\label{eq:R-02}
+\begin{aligned}
+Da_i+Ha_i&=-D\eta/q,\\
+b^2+\frac{n_i a_i}{q}-a_ja_k
+&=b^2+\frac{n_i\ell_i-\ell_j\ell_k-\eta^2}{q^2},\\
+\ell_j+\ell_k&=n_i.
+\end{aligned}
 \end{equation}
-Then
-\begin{equation}
-  \Ctop + 9\chi = \frac{3\Disc}{4} - \frac{9\Disc}{12} = 0.
+
+This proves (D-01). Spatial scalar and Ricci curvature follow by setting torsion, $b$ and $Db$ to zero. Summing the $k_i$ yields (G-02) and the four representatives give the displayed $\chi$ and tracefree Ricci tensors. Every real symmetric $n$ can be brought to this frame by a constant $SO(3)$ rotation, so the scalar identities are not artifacts of a preferred diagonal display.
+
+In the Pontryagin wedge summed over all internal indices, the three boost pairs contribute $-12xw$ and the rotation pairs contribute $4z\sum_i y_i$. The internal-dual contraction weights purely spatial form pairs by $+1$ and temporal form pairs by $-1$, giving $w\sum_i y_i-3xz$. These contractions prove (D-02).
+
+On the static restriction $H=Db=D\eta=0$, $b=-V/3$, one obtains $\mathcal B=3w\bar y$. Extracting the coefficient linear in $V\eta$ from this polynomial yields $C=-9\chi$.
+
+NY is also checked by direct wedge products. The $\eta V$ terms cancel between the two sides, leaving precisely the time derivative of $Q$.
+
+\stepcounter{equation}
+\begin{equation}\tag{R-03}\label{eq:R-03}
+\begin{aligned}
+T^a\wedge T_a&=\frac{4V\eta}{q}e^{0123},\\
+e^a\wedge e^b\wedge R_{ab}
+&=\left(\frac{4V\eta}{q}-\frac{6(D\eta+2H\eta)}q\right)e^{0123}.
+\end{aligned}
 \end{equation}
-This identity holds for arbitrary values of $\Disc$ and does not assume any
-specific topology.  The specialised values for the four topologies
-(Table~\ref{tab:appA_topology}) are substitutions into this identity.
 
-\subsection{Full topology branch taxonomy}
-\label{app:B:branch_taxonomy}
+Expansion of the CS form from the connection gives the following constant part at $\eta=0$. Expressing it in elementary symmetric polynomials yields $\Phi_0$ in (D-05).
 
-The main admissibility classification across all 16 branches
-($\Sthree/\Tthree/\Nilthree/\Solthree$ $\times$ $\EH/\AX/\VT/\MX$) is
-given in Table~\ref{tab:appB1}.  Table~\ref{tab:four_topology_admissibility}
-(Section~\ref{sec:classification}) is the summary of this classification
-pattern.  The full $F$-branch expressions, the Hamiltonian constraints,
-the auxiliary equations, and the auxiliary-shell solutions can be
-reproduced with \code{admissibility_classification.py}.
+\stepcounter{equation}
+\begin{equation}\tag{R-04}\label{eq:R-04}
+\Phi_0=\sum_i n_i^3-\sum_{i\ne j}n_i^2n_j+4n_1n_2n_3
+=s_1^3-4s_1s_2+10s_3.
+\end{equation}
 
-\begin{table}[H]
-\centering
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{llcccl}
-\toprule
-Topology & Mode & $\chi$ & $F_{\mathrm{shell}}$ & Hessian determinant & Label \\
-\midrule
-$\Sthree$   & $\EH$ & $4$ & $4$ & n/a & \code{L_ADMISSIBLE} \\
-$\Sthree$   & $\AX$ & $4$ & $4$ & $-2$ & \code{L_ADMISSIBLE} \\
-$\Sthree$   & $\VT$ & $4$ & $4$ & $2q^{2}/9$ & \code{L_ADMISSIBLE} \\
-$\Sthree$   & $\MX$ & $4$ & $4$ & $-4q^{2}(\kap^{4}\thetaNY^{2}+1)/9$ & \code{L_CONDITIONALLY_ADMISSIBLE} \\
-$\Tthree$   & $\EH$ & $0$ & $0$ & n/a & \code{L_ADMISSIBLE} \\
-$\Tthree$   & $\AX$ & $0$ & $0$ & $-2$ & \code{L_ADMISSIBLE} \\
-$\Tthree$   & $\VT$ & $0$ & $0$ & $2q^{2}/9$ & \code{L_ADMISSIBLE} \\
-$\Tthree$   & $\MX$ & $0$ & $0$ & $-4q^{2}(\kap^{4}\thetaNY^{2}+1)/9$ & \code{L_CONDITIONALLY_ADMISSIBLE} \\
-$\Nilthree$ & $\EH$ & $-1/12$ & $-1/12$ & n/a & \code{L_ADMISSIBLE} \\
-$\Nilthree$ & $\AX$ & $-1/12$ & $-1/12$ & $-2$ & \code{L_ADMISSIBLE} \\
-$\Nilthree$ & $\VT$ & $-1/12$ & $-1/12$ & $2q^{2}/9$ & \code{L_ADMISSIBLE} \\
-$\Nilthree$ & $\MX$ & $-1/12$ & $-1/12$ & $-4q^{2}(\kap^{4}\thetaNY^{2}+1)/9$ & \code{L_CONDITIONALLY_ADMISSIBLE} \\
-$\Solthree$ & $\EH$ & $-1/3$ & $-1/3$ & n/a & \code{L_ADMISSIBLE} \\
-$\Solthree$ & $\AX$ & $-1/3$ & $-1/3$ & $-2$ & \code{L_ADMISSIBLE} \\
-$\Solthree$ & $\VT$ & $-1/3$ & $-1/3$ & $2q^{2}/9$ & \code{L_ADMISSIBLE} \\
-$\Solthree$ & $\MX$ & $-1/3$ & $-1/3$ & $-4q^{2}(\kap^{4}\thetaNY^{2}+1)/9$ & \code{L_CONDITIONALLY_ADMISSIBLE} \\
-\bottomrule
-\end{tabular}%
-}
-\caption{Compact full branch taxonomy.}
-\label{tab:appB1}
-\end{table}
+Differentiating the remaining $\phi$ and using $Dq=Hq$, $Db=x-Hb$ gives $-12(\chi-\eta^2)D\eta-12q^2b^2D\eta-24q^2b\eta x=q^3\mathcal P$. This is also an independent comparison between the local density and the endpoint primitive.
 
-\subsection{Full orbit-sheet atlas}
-\label{app:B:orbit_atlas}
+The general relative form (D-06) follows from the connection path $\omega_\gamma=\bar\omega+\gamma K$, with $R_\gamma=\bar R+\gamma\bar D K+\gamma^2K\wedge K$. Bianchi identity and cyclicity give the formula below; integration from $\gamma=0$ to 1 proves (D-06). This argument does not depend on the four representatives.
 
-The 24 branch/sheet rows of the reduced vacuum orbit atlas are given in
-Table~\ref{tab:appB2}.  $\Sthree$ and $\Tthree$ contribute one row per
-branch, while $\Nilthree$ and $\Solthree$ contribute two sheets
-(expanding / collapsing).  Table~\ref{tab:orbit_class_counts}
-(Section~\ref{sec:orbit:fullbranch}) summarises this branch/sheet count.
-The orbit equations, constraint residuals, and numerical monitors of each
-row can be reproduced with \code{orbit_atlas.py}.
+\stepcounter{equation}
+\begin{equation}\tag{R-05}\label{eq:R-05}
+\partial_\gamma[-\mathrm{tr}(R_\gamma\wedge R_\gamma)]
+=-2d\,\mathrm{tr}(K\wedge R_\gamma).
+\end{equation}
 
-\begin{table}[H]
-\centering
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{lllllc}
-\toprule
-Topology & Mode & Sheet & $\dot q_{0}$ & Orbit class & Check \\
-\midrule
-$\Sthree$   & $\EH$ & none       & no real solution & \code{NO_REAL_AUX_SHELL_ORBIT} & PASS \\
-$\Sthree$   & $\AX$ & none       & no real solution & \code{NO_REAL_AUX_SHELL_ORBIT} & PASS \\
-$\Sthree$   & $\VT$ & none       & no real solution & \code{NO_REAL_AUX_SHELL_ORBIT} & PASS \\
-$\Sthree$   & $\MX$ & none       & no real solution & \code{NO_REAL_AUX_SHELL_ORBIT} & PASS \\
-$\Tthree$   & $\EH$ & zero       & $0$              & \code{STATIC_OR_DEGENERATE}    & PASS \\
-$\Tthree$   & $\AX$ & zero       & $0$              & \code{STATIC_OR_DEGENERATE}    & PASS \\
-$\Tthree$   & $\VT$ & zero       & $0$              & \code{STATIC_OR_DEGENERATE}    & PASS \\
-$\Tthree$   & $\MX$ & zero       & $0$              & \code{STATIC_OR_DEGENERATE}    & PASS \\
-$\Nilthree$ & $\EH$ & expanding  & $\sqrt{3}/6$     & \code{MONOTONIC_EXPANSION}     & PASS \\
-$\Nilthree$ & $\EH$ & collapsing & $-\sqrt{3}/6$    & \code{SINGULAR_APPROACH}       & PASS \\
-$\Nilthree$ & $\AX$ & expanding  & $\sqrt{3}/6$     & \code{MONOTONIC_EXPANSION}     & PASS \\
-$\Nilthree$ & $\AX$ & collapsing & $-\sqrt{3}/6$    & \code{SINGULAR_APPROACH}       & PASS \\
-$\Nilthree$ & $\VT$ & expanding  & $\sqrt{3}/6$     & \code{MONOTONIC_EXPANSION}     & PASS \\
-$\Nilthree$ & $\VT$ & collapsing & $-\sqrt{3}/6$    & \code{SINGULAR_APPROACH}       & PASS \\
-$\Nilthree$ & $\MX$ & expanding  & $\sqrt{3}/6$     & \code{MONOTONIC_EXPANSION}     & PASS \\
-$\Nilthree$ & $\MX$ & collapsing & $-\sqrt{3}/6$    & \code{SINGULAR_APPROACH}       & PASS \\
-$\Solthree$ & $\EH$ & expanding  & $\sqrt{3}/3$     & \code{MONOTONIC_EXPANSION}     & PASS \\
-$\Solthree$ & $\EH$ & collapsing & $-\sqrt{3}/3$    & \code{SINGULAR_APPROACH}       & PASS \\
-$\Solthree$ & $\AX$ & expanding  & $\sqrt{3}/3$     & \code{MONOTONIC_EXPANSION}     & PASS \\
-$\Solthree$ & $\AX$ & collapsing & $-\sqrt{3}/3$    & \code{SINGULAR_APPROACH}       & PASS \\
-$\Solthree$ & $\VT$ & expanding  & $\sqrt{3}/3$     & \code{MONOTONIC_EXPANSION}     & PASS \\
-$\Solthree$ & $\VT$ & collapsing & $-\sqrt{3}/3$    & \code{SINGULAR_APPROACH}       & PASS \\
-$\Solthree$ & $\MX$ & expanding  & $\sqrt{3}/3$     & \code{MONOTONIC_EXPANSION}     & PASS \\
-$\Solthree$ & $\MX$ & collapsing & $-\sqrt{3}/3$    & \code{SINGULAR_APPROACH}       & PASS \\
-\bottomrule
-\end{tabular}%
-}
-\caption{Compact full orbit-sheet atlas.}
-\label{tab:appB2}
-\end{table}
+\subsection{Ordered contractions and the LC Weyl square}
 
-\subsection{Summary of main computational checks}
-\label{app:B:checks}
+If $X_i$ are the eigenvalues of $X$, then $y_i=\bar y-X_i/q^2$ and $\sum_iX_i=0$. Hence $\sum y_i=3\bar y$, $\sum y_i^2=3\bar y^2+J_2/q^4$, and $\sum y_i^3=3\bar y^3+3\bar yJ_2/q^4-J_3/q^6$. Ordered-index contraction of the curvature blocks gives
 
-Table~\ref{tab:appB3} lists the logical verification targets.  The first
-two checks are evaluated by the same symbolic script, because the
-family-level identity and its topology specialisations share the same
-derived $(a,b,c,u,v)$ data.
+\stepcounter{equation}
+\begin{equation}\tag{I-06}\label{eq:I-06}
+\begin{aligned}
+I_1&=4\sum_i(x^2+y_i^2-w^2-z^2),\\
+I_2&=4\sum_i(x^2+y_i^2+2wz),\\
+C_R&=8\sum_i[x^3+y_i^3+3wz(x+y_i)],\\
+\mathrm{Ric}^a{}_b&=\mathrm{diag}
+ (3x,x+2\bar y+X_1/q^2,x+2\bar y+X_2/q^2,x+2\bar y+X_3/q^2).
+\end{aligned}
+\end{equation}
 
-\begin{table}[H]
-\centering
-\begingroup
-\renewcommand{\arraystretch}{2.0}
-\begin{tabularx}{\linewidth}{YYYY}
-\toprule
-Check & Content & \shortstack{Related\\section} & Script \\
-\midrule
-$\chi$-bridge derivation
-  & Extract $(a,b,c,u,v)$ for $\Sthree/\Tthree/\Nilthree/\Solthree$,
-    derive $\chi$ from the LC spatial curvature, compute the raw $\PintMX$
-    from the EC+NY MX curvature, and extract $\Ctop$
-  & Section~\ref{sec:pchannel:Pint}, \ref{sec:bridge:family}
-  & \code{chi_bridge_symbolic.py} \\
-$\Pform$ cancellation
-  & Construct the curvature with the EC+NY engine for each torsion branch
-    $\AX/\VT/\MX$ and compute $\Pform$
-  & Section~\ref{sec:pchannel:Pform}
-  & \code{pform_cancellation.py} \\
-admissibility classification
-  & Derive the lapse constraint and the auxiliary closure symbolically from
-    the engine-derived $F_{\mathrm{branch}}$
-  & Section~\ref{sec:hamiltonian}, \ref{sec:classification}
-  & \code{admissibility_classification.py} \\
-orbit atlas
-  & Derive the orbit equation and the orbit class from the auxiliary
-    shell of the engine-derived $F_{\mathrm{branch}}$
-  & Section~\ref{sec:orbit}
-  & \code{orbit_atlas.py} \\
-\bottomrule
-\end{tabularx}
-\endgroup
-\caption{Computational checks and their roles.}
-\label{tab:appB3}
-\end{table}
+The differing negative and cross terms in the first two lines follow from the Lorentz metric and the exchanged index pairs. Squaring and cubing the last diagonal matrix gives the Ricci contractions in (I-02), (I-03). In the LC restriction, $w=z=0$ and $R=6(x+\bar y)$. Substitution into the four-dimensional trace subtraction $C^2=I_1-2I_{\mathrm{Ric}}+R^2/3$ cancels all $x,\bar y$ terms and proves (I-04). These calculations derive the selected contractions without an external code prerequisite.
+
+\subsection{Ricci spectrum and inverse structure matrix}
+
+For real symmetric tracefree $X$, Newton identities give $\sum_{i<j}X_iX_j=-J_2/2$ and $\det X=J_3/3$, proving (I-05). Three real roots require nonnegative discriminant $J_2^3/2-3J_3^2$; conversely this condition with $J_2\ge0$ gives three real roots. The case $J_2=0$ means $X=0$, while zero discriminant means repeated roots. Neither is to be conflated with a zero Ricci eigenvalue below.
+
+At unit scale, let $r_i=X_i+2\chi$ be the spatial Ricci eigenvalues. With $s_1=\mathrm{tr}n$ and $\ell_i=s_1/2-n_i$, one has $n_i=\ell_j+\ell_k$ and $r_i=2\ell_j\ell_k$, directly by substitution into $k_j+k_k$. At physical scale $q$, the eigenvalues are $r_i/q^2$.
+
+\stepcounter{equation}
+\begin{equation}\tag{I-07}\label{eq:I-07}
+r_i\ne0\ (\forall i):\qquad r_1r_2r_3>0,\qquad \ell_i^2=\frac{r_jr_k}{2r_i},\qquad n_i=\ell_j+\ell_k.
+\end{equation}
+
+In the nondegenerate branch, positive product is necessary and also sufficient: the magnitudes in (I-07) and the sign conditions $r_i=2\ell_j\ell_k$ construct the solution. Choosing the sign of $\ell_1$ fixes $\ell_2=r_3/(2\ell_1)$ and $\ell_3=r_2/(2\ell_1)$; the remaining equation follows automatically. Thus only the overall sign and orthogonal eigenspace basis remain. Permutations and conjugacies of real symmetric matrices can be implemented by $SO(3)$ conjugacy.
+
+If two $r_i$ are nonzero, all three $\ell_i$ are nonzero, forcing the third $r_i$ to be nonzero: exactly two is impossible. If $r_1\ne0$ and $r_2=r_3=0$, then $\ell_1=0$, $\ell_2\ell_3=r_1/2$, leaving a continuous product family. For example, $\ell=(0,t,t^{-1})$, $t\ne0$, gives $n=(t+t^{-1},t^{-1},t)$ with the same $r=(2,0,0)$. If all $r_i=0$, at most one $\ell_i$ is nonzero, so $n\sim(a,a,0)$. This is an algebraic inverse problem for structure matrices, not a classification of local isometry or compact quotients.

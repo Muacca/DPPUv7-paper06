@@ -1,0 +1,262 @@
+{
+  "geometries": {
+    "T3": {
+      "n": [
+        0,
+        0,
+        0
+      ],
+      "chi": "0",
+      "volume": "8*pi**3",
+      "rank": 0,
+      "homogeneous_closed_dimension": 3,
+      "Ricci": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "tracefree": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "C_static": "0",
+      "CS_reference": "0",
+      "full_vacuum_in_scale_family": true,
+      "orbit": "static"
+    },
+    "Nil": {
+      "n": [
+        0,
+        0,
+        -1
+      ],
+      "chi": "-1/12",
+      "volume": "16*pi**4",
+      "rank": 1,
+      "homogeneous_closed_dimension": 2,
+      "Ricci": [
+        [
+          "-1/(2*q**2)",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-1/(2*q**2)",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/(2*q**2)"
+        ]
+      ],
+      "tracefree": [
+        [
+          "-1/(3*q**2)",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-1/(3*q**2)",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "2/(3*q**2)"
+        ]
+      ],
+      "C_static": "3/4",
+      "CS_reference": "-1",
+      "full_vacuum_in_scale_family": false,
+      "orbit": "linear_two_sheets"
+    },
+    "Sol": {
+      "n": [
+        0,
+        1,
+        -1
+      ],
+      "chi": "-1/3",
+      "volume": "log(sqrt(5)/2 + 3/2)",
+      "rank": 2,
+      "homogeneous_closed_dimension": 1,
+      "Ricci": [
+        [
+          "-2/q**2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "tracefree": [
+        [
+          "-4/(3*q**2)",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "2/(3*q**2)",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "2/(3*q**2)"
+        ]
+      ],
+      "C_static": "3",
+      "CS_reference": "0",
+      "full_vacuum_in_scale_family": false,
+      "orbit": "linear_two_sheets"
+    },
+    "S3": {
+      "n": [
+        2,
+        2,
+        2
+      ],
+      "chi": "1",
+      "volume": "2*pi**2",
+      "rank": 3,
+      "homogeneous_closed_dimension": 0,
+      "Ricci": [
+        [
+          "2/q**2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "2/q**2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "2/q**2"
+        ]
+      ],
+      "tracefree": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "C_static": "-9",
+      "CS_reference": "8",
+      "full_vacuum_in_scale_family": false,
+      "orbit": "no_real"
+    }
+  },
+  "equal_chi_comparison": {
+    "Nil": {
+      "chi": "-1/12",
+      "tracefree": [
+        [
+          "-1/(3*q**2)",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-1/(3*q**2)",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "2/(3*q**2)"
+        ]
+      ],
+      "CS_reference": "-1"
+    },
+    "scaled_Sol": {
+      "chi": "-1/12",
+      "tracefree": [
+        [
+          "-1/(3*q**2)",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1/(6*q**2)",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/(6*q**2)"
+        ]
+      ],
+      "CS_reference": "0"
+    }
+  },
+  "identities": [
+    "T3_EH_shell_P",
+    "T3_AX_shell_P",
+    "T3_VT_shell_P",
+    "T3_MX_shell_P",
+    "Nil_EH_shell_P",
+    "Nil_AX_shell_P",
+    "Nil_VT_shell_P",
+    "Nil_MX_shell_P",
+    "Sol_EH_shell_P",
+    "Sol_AX_shell_P",
+    "Sol_VT_shell_P",
+    "Sol_MX_shell_P",
+    "S3_EH_shell_P",
+    "S3_AX_shell_P",
+    "S3_VT_shell_P",
+    "S3_MX_shell_P"
+  ]
+}

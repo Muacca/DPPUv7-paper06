@@ -1,0 +1,88 @@
+{
+  "identities": [
+    "derived_endpoint_generator",
+    "generating_gradient_curl",
+    "symplectic_translation",
+    "translated_configuration_brackets",
+    "translated_mixed_brackets",
+    "translated_momentum_brackets",
+    "action_momentum_translation",
+    "old_Legendre_Hamiltonian",
+    "new_Legendre_Hamiltonian",
+    "lapse_primary_secondary",
+    "eta_primary_secondary",
+    "V_primary_secondary",
+    "second_class_bracket_matrix",
+    "second_class_determinant",
+    "second_class_reduced_dirac_bracket_qPq",
+    "auxiliary_shell_scale_momentum",
+    "reduced_Hamiltonian_constraint",
+    "computed_reduced_symplectic_pullback",
+    "torus_nonregular_gradient",
+    "full_torus_nonregular_gradient",
+    "lapse_absent_from_endpoint_generator",
+    "Dirichlet_endpoint_variation"
+  ],
+  "boundary_generator": "-V*V_Sigma*q**3/kappa**2 + 6*V_Sigma*eta*q**2*theta",
+  "gradient": [
+    [
+      "-3*V*V_Sigma*q**2/kappa**2 + 12*V_Sigma*eta*q*theta"
+    ],
+    [
+      "0"
+    ],
+    [
+      "6*V_Sigma*q**2*theta"
+    ],
+    [
+      "-V_Sigma*q**3/kappa**2"
+    ]
+  ],
+  "convention": "L_prime=L+dB/dt, P=p+gradient B; coordinates (q,N,eta,V)",
+  "old_constraint": "-3*V_Sigma*q*(V**2*q**2/9 + chi - eta**2)/kappa**2 - kappa**2*p_q**2/(12*V_Sigma*q)",
+  "new_constraint": "-3*V_Sigma*q*(V**2*q**2/9 + chi - eta**2)/kappa**2 - kappa**2*(P_q + 3*V*V_Sigma*q**2/kappa**2 - 12*V_Sigma*eta*q*theta)**2/(12*V_Sigma*q)",
+  "primaries": [
+    "P_N",
+    "P_eta - 6*V_Sigma*q**2*theta",
+    "P_V + V_Sigma*q**3/kappa**2"
+  ],
+  "secondaries": [
+    "-3*V_Sigma*q*(V**2*q**2/9 + chi - eta**2)/kappa**2 - kappa**2*(P_q + 3*V*V_Sigma*q**2/kappa**2 - 12*V_Sigma*eta*q*theta)**2/(12*V_Sigma*q)",
+    "eta",
+    "V"
+  ],
+  "second_class_brackets": [
+    [
+      "0",
+      "0",
+      "-1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "-1"
+    ],
+    [
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "1",
+      "0",
+      "0"
+    ]
+  ],
+  "reduced_constraint": "-P_q**2*kappa**2/(12*V_Sigma*q) - 3*V_Sigma*chi*q/kappa**2",
+  "auxiliary_shell": {
+    "P_eta": "6*V_Sigma*q**2*theta",
+    "P_V": "-V_Sigma*q**3/kappa**2",
+    "P_q": "p_q"
+  },
+  "endpoint_variation": "-V_Sigma*delta_V*q**3/kappa**2 + 6*V_Sigma*delta_eta*q**2*theta + delta_q*(-3*V*V_Sigma*q**2/kappa**2 + 12*V_Sigma*eta*q*theta)",
+  "scope": "Constant NY coupling; canonical equivalence with mapped endpoint data. Fixed new momenta and fixed old momenta are not the same boundary condition. Torus square constraint remains nonregular; no new NY dynamics."
+}

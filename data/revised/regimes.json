@@ -1,0 +1,434 @@
+[
+  {
+    "geometry": "T3",
+    "mode": "EH",
+    "regime": "dynamic",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "T3",
+    "mode": "EH",
+    "regime": "static",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "T3",
+    "mode": "EH",
+    "regime": "auxiliary_shell",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "T3",
+    "mode": "AX",
+    "regime": "dynamic",
+    "NY": "6*(2*H*eta + etaD)/q",
+    "Pontryagin": "-12*(2*H**3*eta*q**2 + H**2*etaD*q**2 + 2*H*HD*eta*q**2 - eta**2*etaD)/q**3",
+    "internal_covariant": "3*(2*H**3*eta*q**2 + H**2*etaD*q**2 - 2*H*eta**3 + HD*etaD*q**2)/q**3",
+    "Q_slice": "6*eta*q**2"
+  },
+  {
+    "geometry": "T3",
+    "mode": "AX",
+    "regime": "static",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "6*eta*q**2"
+  },
+  {
+    "geometry": "T3",
+    "mode": "AX",
+    "regime": "auxiliary_shell",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "T3",
+    "mode": "VT",
+    "regime": "dynamic",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "T3",
+    "mode": "VT",
+    "regime": "static",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "T3",
+    "mode": "VT",
+    "regime": "auxiliary_shell",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "T3",
+    "mode": "MX",
+    "regime": "dynamic",
+    "NY": "6*(2*H*eta + etaD)/q",
+    "Pontryagin": "-12*(2*H*b**2*eta*q**2 + b**2*etaD*q**2 + 2*b*bD*eta*q**2 - eta**2*etaD)/q**3",
+    "internal_covariant": "3*(H*b*etaD*q**2 + 2*b**3*eta*q**2 - 2*b*eta**3 + bD*etaD*q**2)/q**3",
+    "Q_slice": "6*eta*q**2"
+  },
+  {
+    "geometry": "T3",
+    "mode": "MX",
+    "regime": "static",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "6*b*eta*(b*q - eta)*(b*q + eta)/q**3",
+    "Q_slice": "6*eta*q**2"
+  },
+  {
+    "geometry": "T3",
+    "mode": "MX",
+    "regime": "auxiliary_shell",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "Nil",
+    "mode": "EH",
+    "regime": "dynamic",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "Nil",
+    "mode": "EH",
+    "regime": "static",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "Nil",
+    "mode": "EH",
+    "regime": "auxiliary_shell",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "Nil",
+    "mode": "AX",
+    "regime": "dynamic",
+    "NY": "6*(2*H*eta + etaD)/q",
+    "Pontryagin": "-(24*H**3*eta*q**2 + 12*H**2*etaD*q**2 + 24*H*HD*eta*q**2 - 12*eta**2*etaD - etaD)/q**3",
+    "internal_covariant": "(12*H**3*eta*q**2 + 6*H**2*etaD*q**2 - 12*H*eta**3 - H*eta + 6*HD*etaD*q**2)/(2*q**3)",
+    "Q_slice": "6*eta*q**2"
+  },
+  {
+    "geometry": "Nil",
+    "mode": "AX",
+    "regime": "static",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "6*eta*q**2"
+  },
+  {
+    "geometry": "Nil",
+    "mode": "AX",
+    "regime": "auxiliary_shell",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "Nil",
+    "mode": "VT",
+    "regime": "dynamic",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "Nil",
+    "mode": "VT",
+    "regime": "static",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "Nil",
+    "mode": "VT",
+    "regime": "auxiliary_shell",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "Nil",
+    "mode": "MX",
+    "regime": "dynamic",
+    "NY": "6*(2*H*eta + etaD)/q",
+    "Pontryagin": "-(24*H*b**2*eta*q**2 + 12*b**2*etaD*q**2 + 24*b*bD*eta*q**2 - 12*eta**2*etaD - etaD)/q**3",
+    "internal_covariant": "(6*H*b*etaD*q**2 + 12*b**3*eta*q**2 - 12*b*eta**3 - b*eta + 6*bD*etaD*q**2)/(2*q**3)",
+    "Q_slice": "6*eta*q**2"
+  },
+  {
+    "geometry": "Nil",
+    "mode": "MX",
+    "regime": "static",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "b*eta*(12*b**2*q**2 - 12*eta**2 - 1)/(2*q**3)",
+    "Q_slice": "6*eta*q**2"
+  },
+  {
+    "geometry": "Nil",
+    "mode": "MX",
+    "regime": "auxiliary_shell",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "Sol",
+    "mode": "EH",
+    "regime": "dynamic",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "Sol",
+    "mode": "EH",
+    "regime": "static",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "Sol",
+    "mode": "EH",
+    "regime": "auxiliary_shell",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "Sol",
+    "mode": "AX",
+    "regime": "dynamic",
+    "NY": "6*(2*H*eta + etaD)/q",
+    "Pontryagin": "-4*(6*H**3*eta*q**2 + 3*H**2*etaD*q**2 + 6*H*HD*eta*q**2 - 3*eta**2*etaD - etaD)/q**3",
+    "internal_covariant": "(6*H**3*eta*q**2 + 3*H**2*etaD*q**2 - 6*H*eta**3 - 2*H*eta + 3*HD*etaD*q**2)/q**3",
+    "Q_slice": "6*eta*q**2"
+  },
+  {
+    "geometry": "Sol",
+    "mode": "AX",
+    "regime": "static",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "6*eta*q**2"
+  },
+  {
+    "geometry": "Sol",
+    "mode": "AX",
+    "regime": "auxiliary_shell",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "Sol",
+    "mode": "VT",
+    "regime": "dynamic",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "Sol",
+    "mode": "VT",
+    "regime": "static",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "Sol",
+    "mode": "VT",
+    "regime": "auxiliary_shell",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "Sol",
+    "mode": "MX",
+    "regime": "dynamic",
+    "NY": "6*(2*H*eta + etaD)/q",
+    "Pontryagin": "-4*(6*H*b**2*eta*q**2 + 3*b**2*etaD*q**2 + 6*b*bD*eta*q**2 - 3*eta**2*etaD - etaD)/q**3",
+    "internal_covariant": "(3*H*b*etaD*q**2 + 6*b**3*eta*q**2 - 6*b*eta**3 - 2*b*eta + 3*bD*etaD*q**2)/q**3",
+    "Q_slice": "6*eta*q**2"
+  },
+  {
+    "geometry": "Sol",
+    "mode": "MX",
+    "regime": "static",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "2*b*eta*(3*b**2*q**2 - 3*eta**2 - 1)/q**3",
+    "Q_slice": "6*eta*q**2"
+  },
+  {
+    "geometry": "Sol",
+    "mode": "MX",
+    "regime": "auxiliary_shell",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "S3",
+    "mode": "EH",
+    "regime": "dynamic",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "S3",
+    "mode": "EH",
+    "regime": "static",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "S3",
+    "mode": "EH",
+    "regime": "auxiliary_shell",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "S3",
+    "mode": "AX",
+    "regime": "dynamic",
+    "NY": "6*(2*H*eta + etaD)/q",
+    "Pontryagin": "-12*(2*H**3*eta*q**2 + H**2*etaD*q**2 + 2*H*HD*eta*q**2 - eta**2*etaD + etaD)/q**3",
+    "internal_covariant": "3*(2*H**3*eta*q**2 + H**2*etaD*q**2 - 2*H*eta**3 + 2*H*eta + HD*etaD*q**2)/q**3",
+    "Q_slice": "6*eta*q**2"
+  },
+  {
+    "geometry": "S3",
+    "mode": "AX",
+    "regime": "static",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "6*eta*q**2"
+  },
+  {
+    "geometry": "S3",
+    "mode": "AX",
+    "regime": "auxiliary_shell",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "S3",
+    "mode": "VT",
+    "regime": "dynamic",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "S3",
+    "mode": "VT",
+    "regime": "static",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "S3",
+    "mode": "VT",
+    "regime": "auxiliary_shell",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  },
+  {
+    "geometry": "S3",
+    "mode": "MX",
+    "regime": "dynamic",
+    "NY": "6*(2*H*eta + etaD)/q",
+    "Pontryagin": "-12*(2*H*b**2*eta*q**2 + b**2*etaD*q**2 + 2*b*bD*eta*q**2 - eta**2*etaD + etaD)/q**3",
+    "internal_covariant": "3*(H*b*etaD*q**2 + 2*b**3*eta*q**2 - 2*b*eta**3 + 2*b*eta + bD*etaD*q**2)/q**3",
+    "Q_slice": "6*eta*q**2"
+  },
+  {
+    "geometry": "S3",
+    "mode": "MX",
+    "regime": "static",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "6*b*eta*(b**2*q**2 - eta**2 + 1)/q**3",
+    "Q_slice": "6*eta*q**2"
+  },
+  {
+    "geometry": "S3",
+    "mode": "MX",
+    "regime": "auxiliary_shell",
+    "NY": "0",
+    "Pontryagin": "0",
+    "internal_covariant": "0",
+    "Q_slice": "0"
+  }
+]

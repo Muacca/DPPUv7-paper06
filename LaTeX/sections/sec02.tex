@@ -1,103 +1,70 @@
-%==============================================================================
-% Section 2: Lorentzian-native setup and topology conventions
-%==============================================================================
-\section{Lorentzian-native setup and topology conventions}
-\label{sec:setup}
+\section{Geometry and variation domain}
 
-\subsection{Reduced Lorentzian frame}
-\label{sec:setup:frame}
+Use an oriented orthonormal coframe. The real symmetric spatial structure matrix $n$ is time independent and can be diagonalized by a constant $SO(3)$ frame rotation. Spatial indices run over $1,2,3$ and spacetime indices over $0,1,2,3$. Repeated spatial indices in the structure equation are summed.
 
-We use the orthonormal frame of Lorentzian signature $(-,+,+,+)$.  The
-coframe is written as
-\begin{equation}
-  e^{0} = N(t)\,dt, \qquad e^{i} = q(t)\,\sigma^{i}_{\topo},
+\stepcounter{equation}
+\begin{equation}\tag{G-01}\label{eq:G-01}
+\begin{aligned}
+g_{ab}&=\mathrm{diag}(-1,1,1,1),\qquad \epsilon_{0123}=+1,\quad \epsilon^{0123}=-1,\\
+e^0&=Ndt,\qquad e^i=q\sigma^i,\qquad
+d\sigma^i=\tfrac12 n_{ij}\epsilon_{jkl}\sigma^k\wedge\sigma^l,\\
+D&=N^{-1}d/dt,\qquad H=Dq/q,\qquad
+\mathcal V_{\Sigma}=\int_{\Sigma}\sigma^{123},\quad q,N>0.
+\end{aligned}
 \end{equation}
-where $N(t)$ is the lapse, $q(t)$ is the isotropic scale common to all
-topologies $\topo$, and $\sigma^{i}_{\topo}$ are the left-invariant coframes
-on $\topo$.  Torsion variables are taken to be the axial component $\eta(t)$
-and the vector-trace component $V(t)$, giving the pure branches $\AX$ and
-$\VT$ and the mixed branch $\MX$.
 
-The normalisation of the spatial 3-curvature is fixed by
-\begin{equation}
-  {}^{(3)}R = \frac{6\chi}{q^{2}},
-\end{equation}
-and $\chi$ is used as the topology scalar throughout this paper.  The scalar
-$\chi$ is derived from the $\EH$ (pure Einstein--Hilbert) sector only and
-does not depend on the torsion variables.
+This class-A representation satisfies the Jacobi identity. In a diagonal frame let $n_i$ be the eigenvalues and $k_i$ the sectional-curvature coefficient in the complementary spatial plane. The $i$th spatial Ricci eigenvalue is the sum of the other two $k_i$. The scalar-curvature parameter is defined by the resulting curvature.
 
-\subsection{Topology structure constants and $\chi$ values}
-\label{sec:setup:chi}
+\stepcounter{equation}
+\begin{equation}\tag{G-02}\label{eq:G-02}
+\begin{aligned}
+\ell_i&=\tfrac12(n_1+n_2+n_3)-n_i,\qquad
+k_i=n_i\ell_i-\ell_j\ell_k,\\
+{}^{(3)}R&=\frac{2(k_1+k_2+k_3)}{q^2}=\frac{6\chi}{q^2},\\
+6\chi&=\tfrac12(\mathrm{tr}\,n)^2-\mathrm{tr}(n^2),\qquad
+{}^{(3)}\mathrm{Ric}_{ii}=\frac{k_j+k_k}{q^2}.
+\end{aligned}
+\end{equation}
 
-The structure constants of the four topologies are specialisations of the
-five-parameter LZ-native isotropic family, following the class-A / class-B
-classification of Bianchi-type homogeneous spaces~\cite{EllisMacCallum1969}
-and the three-topology mode dictionary developed earlier in the DPPU
-series~\cite{paper3ec}:
-\begin{equation}
-  C^{1}{}_{23}=\frac{a}{q},\quad
-  C^{2}{}_{31}=\frac{b}{q},\quad
-  C^{3}{}_{12}=\frac{c}{q},\quad
-  C^{2}{}_{12}=\frac{u}{q},\quad
-  C^{3}{}_{13}=\frac{v}{q},
-\end{equation}
-where the subscripts are antisymmetric.  Then
-\begin{equation}
-  {}^{(3)}R\,q^{2}
-  = -\tfrac{1}{2}\!\left(a^{2}-2ab-2ac+b^{2}-2bc+c^{2}+4u^{2}+4uv+4v^{2}\right)
-  =: -\tfrac{1}{2}\,\Disc,
-\end{equation}
-and comparison with the defining relation ${}^{(3)}R=6\chi/q^{2}$ gives
-\begin{equation}
-  6\chi = -\frac{\Disc}{2},
-  \qquad
-  \chi = -\frac{\Disc}{12}.
-\end{equation}
-The specialised values for each topology are listed in
-Table~\ref{tab:topology_chi}.
+In (G-02), $(i,j,k)$ denotes each cyclic triple, with no further summation. The four reference geometries are fixed below. The spherical $q$ is the physical round radius, as in Paper05.
 
-\begin{table}[H]
-\centering
-\begingroup
-\renewcommand{\arraystretch}{2.0}
-\begin{tabularx}{\linewidth}{lcrYY}
+\begin{center}\small
+\begin{tabularx}{\textwidth}{@{}lllX@{}}
 \toprule
-Topology & $(a,b,c,u,v)$ & $\chi$ & Reduction status & Caveat \\
-\midrule
-$\Sthree$   & $(4,4,4,0,0)$  & $4$    & closed isotropic reference & --- \\
-$\Tthree$   & $(0,0,0,0,0)$  & $0$    & flat reference             & --- \\
-$\Nilthree$ & $(0,0,-1,0,0)$ & $-1/12$ & isotropic-scale local branch & anisotropic EOM left to future work \\
-$\Solthree$ & $(0,0,0,1,-1)$ & $-1/3$  & isotropic-scale local branch & compact quotient outside the scope of this paper \\
+Geometry & Eigenvalues of $n$ & $\chi$ & Reference volume $\mathcal V_{\Sigma}$\\\midrule
+T3 & $(0,0,0)$ & 0 & $(2\pi)^3$\\
+Nil & $(0,0,-1)$ & $-1/12$ & $(2\pi)^4$\\
+Sol & $(0,1,-1)$ & $-1/3$ & $\log((3+\sqrt5)/2)$\\
+S3 & $(2,2,2)$ & 1 & $2\pi^2$\\
 \bottomrule
 \end{tabularx}
-\endgroup
-\caption{Topology conventions, $\chi$ values, and caveats.}
-\label{tab:topology_chi}
-\end{table}
+\end{center}
 
-We treat all four geometries in a common reduced-topology table.  For
-$\Nilthree$ and $\Solthree$, the entries refer to the isotropic-scale
-reductions used in this paper; global quotient and anisotropic extensions
-are left to future work.
+On the torus all three angular coordinates have period $2\pi$. Spatial coordinates are written $x^1,x^2,x^3$. For Nil take the coframe $dx^1,dx^2,dx^3-x^1dx^2$ and the lattice generators $(x^1,x^2,x^3)\mapsto(x^1+2\pi,x^2,x^3+2\pi x^2)$, $(x^1,x^2,x^3)\mapsto(x^1,x^2+2\pi,x^3)$ and $(x^1,x^2,x^3)\mapsto(x^1,x^2,x^3+4\pi^2)$. Each identification preserves the coframe.
 
-\subsection{EC+NY reduced action}
-\label{sec:setup:action}
+For Sol use $dx^1,e^{x^1}dx^2,e^{-x^1}dx^3$. Let $A=\left(\begin{smallmatrix}2&1\\1&1\end{smallmatrix}\right)$, with eigenvalues $\lambda=(3+\sqrt5)/2$ and $\lambda^{-1}$. Identify a shift of $x^1$ by $\log\lambda$ with the fiber map $\mathrm{diag}(\lambda^{-1},\lambda)$, using the area-one integer lattice transported to eigen-coordinates. The coframe descends to this mapping torus. Before diagonalization, $n_{23}=n_{32}=1$ are its only nonzero entries. This is class A, type VI$_0$ \cite{paper4}.
 
-The Lorentzian EC+NY reduced action~\cite{Hehl1976,NiehYan1982} for each
-topology $\topo$ and torsion mode is written in the form
-\begin{equation}
-  S_{\topo} = \int dt\, A_{\topo}\, q\!\left(N\,F_{\topo}(q,\eta,V;\chi)
-  - \frac{\dot q^{2}}{N}\right).
+Define geometric torsion by the first Cartan equation and fix its two real amplitudes by the following ansatz. Again, the spatial wedge is displayed once for each cyclic triple.
+
+\stepcounter{equation}
+\begin{equation}\tag{G-03}\label{eq:G-03}
+T^a=de^a+\omega^a{}_{b}\wedge e^b,\qquad
+T^0=0,\qquad T^i=\frac V3e^{0i}+\frac{2\eta}{q}e^{jk}.
 \end{equation}
-Here $A_{\topo}$ is a spatial normalisation factor independent of $\chi$.
-The effective potential $F_{\topo}$ is determined by the topology and the
-torsion branch, and its explicit form is used in
-Section~\ref{sec:hamiltonian}.  The auxiliary variables $\eta(t)$ and $V(t)$
-carry no velocity terms in the action and are treated algebraically as an
-auxiliary sector.
 
-The Nieh--Yan term $\thetaNY$~\cite{NiehYan1982} does not appear in the bulk
-$F_{\topo}$ on $\AX$ and $\VT$, and appears on $\MX$ only as a mixing term
-$\propto V\eta\,\kap^{2}\thetaNY$.  In this paper the bulk dynamical
-analysis is taken as primary, and $\QNY$ is separated as an endpoint /
-boundary channel (Section~\ref{sec:pchannel:QNY}).
+\stepcounter{equation}
+\begin{equation}\tag{G-04}\label{eq:G-04}
+\begin{aligned}
+a_i&=(\ell_i-\eta)/q,\qquad b=H-V/3,\\
+\omega^0{}_{i}&=\omega^i{}_{0}=b e^i,\qquad
+\omega^j{}_{k}=a_i e^i,\qquad \omega^k{}_{j}=-a_i e^i.
+\end{aligned}
+\end{equation}
+
+Substitution of (G-04) into (G-03) reproduces the specified torsion. Profiles are sufficiently smooth, while the spatial shape and quotient lattice are fixed. Formulas for a general structure matrix are local identities; the explicit spatial integrals use the fixed compact quotients above. Section 5 tests how equations obtained after this restriction relate to the full independent connection and coframe equations.
+
+\subsection{Distinct variation domains}
+
+The common-scale, two-amplitude family uses fixed real symmetric $n$ and $q,N,\eta,V$; this is the domain of the time-dependent curvature formulas in Section 6. For shape, we first solve the independent connection equation and use the LC action with $e^i=q(e^{\mathsf B})^i{}_j\sigma^j$, $\mathsf B^T=\mathsf B$, $\mathrm{tr}\mathsf B=0$. The five-component matrix $\mathsf B$ differs from the endpoint generator $B_{\mathrm{end}}$. The physical structure matrix is $m=q^{-1}e^{\mathsf B}ne^{\mathsf B}$.
+
+A positive definite constant coefficient metric in the fixed global coframe descends to the same quotient. A constant congruence need not preserve the lattice and is not identified with a coordinate gauge transformation. The rotated coframe in Section 7 and Appendix A compares representations of the same static flat torus metric; it does not identify the entire dynamical constant-shape-coefficient families of the two frames.

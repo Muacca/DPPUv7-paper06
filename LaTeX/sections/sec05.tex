@@ -1,130 +1,112 @@
-%==============================================================================
-% Section 5: chi-universality across diagnostic and reduced-orbit levels
-%==============================================================================
-\section{$\chi$-universality across diagnostic and reduced-orbit levels}
-\label{sec:bridge}
+\section{Common-scale reduction and shape evolution}
 
-\subsection{Two independent appearances of $\chi$}
-\label{sec:bridge:two_appearances}
+Complete NY with constant coupling does not change the bulk connection equation. Independent variation of the metric-compatible connection in the EC action, with no curvature-square term or spin source, gives the Cartan equation below. For a nondegenerate coframe it sets all torsion to zero. Appendix C proves this without imposing the two-amplitude ansatz.
 
-The central claim of this paper is the bridge result that two independent
-computations converge on the same scalar $\chi$.
+\stepcounter{equation}
+\begin{equation}\tag{E-01}\label{eq:E-01}
+\epsilon_{abcd}\,e^c\wedge T^d=0
+\quad\Longrightarrow\quad T^a=0.
+\end{equation}
 
-\begin{table}[H]
+After torsion is eliminated, the full coframe equation is the vacuum Einstein equation. On the common-scale metric it splits as follows. The matrix $\Xi$ is the spatial tracefree Ricci tensor and is determined by the structure matrix.
+
+\stepcounter{equation}
+\begin{equation}\tag{E-02}\label{eq:E-02}
+\begin{aligned}
+G_{00}&=3(H^2+\chi/q^2),\qquad G_{0i}=0,\\
+G_{ij}&=(-2DH-3H^2-\chi/q^2)\delta_{ij}+\Xi_{ij},\\
+\Xi_{ij}&={}^{(3)}\mathrm{Ric}_{ij}-\frac{2\chi}{q^2}\delta_{ij}.
+\end{aligned}
+\end{equation}
+
+Imposing (H-04) removes $G_{00}$ and the spatial trace, but leaves $\Xi$. In diagonal frames the four residuals are
+
+\stepcounter{equation}
+\begin{equation}\tag{E-03}\label{eq:E-03}
+q^2\Xi_{T^3}=q^2\Xi_{S^3}=0,\qquad
+q^2\Xi_{\mathrm{Nil}}=\tfrac13\mathrm{diag}(-1,-1,2),\qquad
+q^2\Xi_{\mathrm{Sol}}=\tfrac13\mathrm{diag}(-4,2,2).
+\end{equation}
+
+Consequently the constant-scale torus satisfies the full vacuum equations, whereas the sphere has no real trajectory even in the reduction. The linear Nil and Sol trajectories are stationary curves of the fixed-shape variational problem, not full vacuum solutions. This does not exclude vacuum solutions with time-dependent anisotropic shapes on Nil or Sol.
+
+\begin{figure}[htbp]
 \centering
-\begin{tabular}{lll}
-\toprule
-Level & Equation & Derivation route \\
-\midrule
-Diagnostic     & $\Ctop=-9\chi$        & template extraction from raw $\PintMX$ \\
-Reduced orbit  & $\dot q^{2}+\chi=0$   & vacuum orbit atlas on the auxiliary shell \\
-\bottomrule
-\end{tabular}
-\caption{$\chi$-universality summary.}
-\label{tab:chi_universality_summary}
-\end{table}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.9\textwidth]{figures/fig02_chi_bridge_line.png}
-  \caption{Diagnostic bridge: the $\Ctop=-9\chi$ line.  The horizontal axis
-    is $\chi$ (derived independently from the LC spatial curvature) and the
-    vertical axis is $\Ctop$ (extracted from the raw symbolic expression of
-    $\PintMX$ by template fitting, without reference to $\chi$).  The four
-    points $\Tthree$, $\Nilthree$, $\Solthree$, $\Sthree$ all lie exactly on
-    the line $\Ctop+9\chi=0$.  The line is the graphical representation of
-    the family-level identity of Section~\ref{sec:bridge:family}; the four
-    points are its specialisations.  \emph{Scope}: a family-level identity
-    within the LZ-native isotropic $\MX$ sector; $\PintMX$ is an
-    internal-pair diagnostic, not a true Pontryagin density.}
-  \label{fig:chi_bridge_line}
+\includegraphics[width=.94\textwidth]{figures/fig03_structure_residual.pdf}
+\caption{All four representatives are class A. Left: structure eigenvalues. Right: the Euclidean norm of spatial tracefree Ricci. Where a real reduced trajectory exists, this is its remaining Einstein residual; $S^3$ has no such trajectory. Its unit-scale norm is $\sqrt{J_2}$; the negative unit-scale tensor gives the initial shape acceleration in (S-03). The norm is neither a physical mass nor an instability exponent.}\label{fig:fig03_structure_residual}
 \end{figure}
 
-The independence of these two quantities deserves emphasis.  As stated in
-Section~\ref{sec:pchannel:Pint}, $\Ctop$ is a coefficient extracted from the
-raw symbolic expression of $\PintMX$ without reference to $\chi$.  In
-contrast, $\chi$ is derived independently from the spatial-curvature sector
-as
-\begin{equation}
-  \chi = \frac{{}^{(3)}R\, q^{2}}{6}.
+For this action, the independent connection equation fixes all torsion, and the full coframe equation supplies the spatial-curvature condition remaining on a reduced trajectory. Algebraic auxiliary elimination, existence of real constraint data and satisfaction of the full field equations can thus be examined in sequence.
+
+\subsection{Condition for a common-scale vacuum family}
+
+\stepcounter{equation}
+\begin{equation}\tag{E-04}\label{eq:E-04}
+\begin{aligned}
+f(n)&=\tfrac12(\mathrm{tr}n)^2-\mathrm{tr}(n^2)=6\chi,\\
+X(n)&=q^2\Xi=2n^2-(\mathrm{tr}n)n+4\chi I,\qquad \mathrm{tr}X=0,\\
+\delta L_{\mathrm{shape}}&=-\frac{N\mathcal V_{\Sigma}q}{\kappa^2}
+ \mathrm{tr}(X\delta\mathsf B).
+\end{aligned}
 \end{equation}
-Neither computation takes the other quantity as an input, so the relation
-$\Ctop = -9\chi$ is not a rephrasing of a definition but the bridge result
-between two independent computational routes.
 
-\subsection{Five-parameter family-level identity}
-\label{sec:bridge:family}
-
-Over the full five-parameter LZ-native isotropic family of
-Section~\ref{sec:setup:chi}, the family-level expression for $\Ctop$ is
-\begin{equation}
-  \Ctop
-  = \frac{3}{4}\,\Disc
-  = \frac{3}{4}\!\left(a^{2}-2ab-2ac+b^{2}-2bc+c^{2}
-    +4u^{2}+4uv+4v^{2}\right),
+\stepcounter{equation}
+\begin{equation}\tag{E-05}\label{eq:E-05}
+X=0\quad\Longleftrightarrow\quad n\sim\mathrm{diag}(a,a,a)\ \text{or}\ \mathrm{diag}(a,a,0),\qquad a\in\mathbb R.
 \end{equation}
-and since $\chi=-\Disc/12$,
-\begin{equation}
-  \Ctop + 9\chi
-  = \frac{3\Disc}{4} - \frac{9\Disc}{12} = 0
+
+Here $\sim$ denotes constant $SO(3)$ conjugacy. The first branch has $\chi=a^2/4$, so nonzero $a$ admits no real common-scale vacuum trajectory. The second is spatially flat with $\chi=0$ and gives static real vacuum families. This is a local classification for real symmetric $n$, not an existence assertion for new compact quotients. Appendix D proves it by five-direction variation and eigenvalue differences.
+
+\subsection{Mixed constraint cone of the flat torus}
+
+On the fixed-lattice $n=0$ torus, set $q=q_0e^{\epsilon\rho}$, $\mathsf B=\epsilon\mathsf B_1$, $N=N_0+\epsilon\delta N$ and $\tau=\int N_0dt$. The quadratic action, its linear solutions and the second-order coefficient of the original lapse equation give
+
+\stepcounter{equation}
+\begin{equation}\tag{S-01}\label{eq:S-01}
+\begin{aligned}
+L^{[2]}&=\frac{A_{\Sigma}q_0^3}{6N_0}\left[\mathrm{tr}(\dot{\mathsf B}_1^2)-6\dot\rho^2\right],\\
+\rho&=\rho_0+h\tau,\qquad \mathsf B_1=\mathsf B_0+\Sigma\tau,\\
+\Sigma^T&=\Sigma,\quad\mathrm{tr}\Sigma=0,\qquad \mathrm{tr}(\Sigma^2)=6h^2.
+\end{aligned}
 \end{equation}
-holds as an exact symbolic identity.  This identity is a structural identity
-over the entire five-parameter family, not just at the four specific
-numerical values of the topologies; the algebraic core is given in
-Appendix~\ref{app:B}.
 
-\subsection{Distinguished topology loci}
-\label{sec:bridge:loci}
+If $\Sigma=0$, then $h=0$, in agreement with (H-06) through $u=q_0\rho$. Nonzero mixed directions are integrable. For each direction with $h\ne0$, define the following exact metric on the fixed lattice; $\psi^{2\mathsf P}=\exp(2\mathsf P\log\psi)$ is positive definite.
 
-The four topologies are not arbitrary sample points of the five-parameter
-family but are located at structurally distinguished loci
-(Table~\ref{tab:distinguished_loci}).
+\stepcounter{equation}
+\begin{equation}\tag{S-02}\label{eq:S-02}
+\begin{aligned}
+\mathsf P&=\tfrac13 I+\frac{\Sigma}{3h},\quad M_0=\rho_0I+\mathsf B_0,\quad \psi=1+3\epsilon h\tau>0,\\
+g_{\epsilon}(\tau)&=q_0^2e^{\epsilon M_0}\psi^{2\mathsf P}e^{\epsilon M_0},\\
+\mathrm{tr}\mathsf P&=\mathrm{tr}(\mathsf P^2)=1,\qquad
+q_{\epsilon}=q_0e^{\epsilon\rho_0}\psi^{1/3}.
+\end{aligned}
+\end{equation}
 
-\begin{table}[H]
-\centering
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{lcrrll}
-\toprule
-Topology & $(a,b,c,u,v)$ & $\chi$ & $\Ctop=-9\chi$ & Structural locus & paper~IV echo \\
-\midrule
-$\Tthree$   & $(0,0,0,0,0)$  & $0$    & $0$  & origin                          & none \\
-$\Nilthree$ & $(0,0,-1,0,0)$ & $-1/12$ & $3/4$ & single class-A axis            & uniaxial \\
-$\Sthree$   & $(4,4,4,0,0)$  & $4$    & $-36$ & isotropic class-A diagonal     & triaxial \\
-$\Solthree$ & $(0,0,0,1,-1)$ & $-1/3$ & $3$  & balanced class-B diagonal pair & biaxial \\
-\bottomrule
-\end{tabular}%
-}
-\caption{Distinguished topology loci and paper~IV echo.}
-\label{tab:distinguished_loci}
-\end{table}
+This is a Kasner-type vacuum family \cite{Kasner1921}, with tangent $\rho,\mathsf B_1$ at $\epsilon=0$. On any bounded time interval, $\psi>0$ holds uniformly for sufficiently small $\epsilon$. When $h=0$, the cone forces $\Sigma=0$ and static positive definite metric moduli realize the direction. In this homogeneous sector, the cone is thus necessary and sufficient for local integrability of each first-order tangent. This is the homogeneous form of the linearization instability of the flat torus \cite{BrillDeser1973}: the cone is the second-order condition attached to the static time translation, and the momentum constraints vanish identically for $n=0$ (Appendix D). Fixing the metric at both endpoints instead sets all affine first variations to zero. Appendix D includes noncommuting initial shape.
 
-The ``paper~IV echo'' column records an interpretive correspondence with
-the KK Higgsing response dictionary of paper~IV (none / uniaxial / triaxial
-/ biaxial); details are given in
-Section~\ref{sec:discussion:paper04echo}.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\textwidth]{figures/fig03_loci_diagram.png}
-  \caption{Distinguished loci in the five-parameter family
-    $(a,b,c,u,v)$.  \textbf{(a) class-A subspace $(a,b,c)$}: all topologies
-    lie in the plane $b=a$ and are shown in the $(a,c)$ coordinates.
-    $\Tthree$ and $\Solthree$ sit at the class-A origin, $\Nilthree$ on a
-    single axis, and $\Sthree$ on the isotropic diagonal $a=b=c$ (dashed).
-    \textbf{(b) class-B subspace $(u,v)$}: $\Tthree$, $\Nilthree$, and
-    $\Sthree$ collapse to the $u=v=0$ origin, while $\Solthree$ sits at the
-    balanced pair $(u,v)=(1,-1)$ on the line $u+v=0$ (dotted).  The four
-    points are structurally distinguished loci of the family, not arbitrary
-    samples.  \emph{Caveat}: the ``paper~IV echo'' label indicates a
-    structural resonance with the paper~IV KK Higgsing dictionary, not an
-    identification of the underlying mechanism or theorem
-    (see Section~\ref{sec:discussion:paper04echo}).  The present family is
-    the LZ-native isotropic $\MX$ family, not a full-theory universal
-    family.}
-  \label{fig:loci_diagram}
+\begin{figure}[htbp]\centering
+\includegraphics[width=.91\textwidth]{figures/fig06_torus_cone.pdf}
+\caption{Three-dimensional slice of $\mathrm{tr}(\Sigma^2)=6h^2$ using two orthonormal shear directions. The pure-scale axis meets the cone only at the origin. This is neither the full five-shape cone nor a physical degree-of-freedom space.}\label{fig:fig06_torus_cone}
 \end{figure}
 
-The scope of $\chi$-universality is restricted to the LZ-native isotropic
-$\MX$ reduced sector of this paper.  Extensions to full-theory
-universality, arbitrary anisotropic EOM, or matter-coupled sectors are not
-claimed here.
+\subsection{Initial shape evolution on Nil and Sol}
+
+In the diagonal LC vacuum sector choose $q=q_0$, $\beta_i=D\beta_i=0$ and $H_0^2=-\chi/q_0^2$ initially, with $e^i=qe^{\beta_i}\sigma^i$, $\sum_i\beta_i=0$. Set $\hat\tau=\tau/q_0$ and $h_{\ast}=H_0q_0$. The initial $X_i$ and $J_2=\mathrm{tr}(X^2)$ determine the exact Taylor coefficients
+
+\stepcounter{equation}
+\begin{equation}\tag{S-03}\label{eq:S-03}
+\begin{aligned}
+\beta_i&=-\tfrac12X_i\hat\tau^2+\tfrac56h_{\ast}X_i\hat\tau^3+O(\hat\tau^4),\\
+q/q_0&=1+h_{\ast}\hat\tau-\tfrac1{36}J_2\hat\tau^4+O(\hat\tau^5).
+\end{aligned}
+\end{equation}
+
+\begin{center}\small
+\begin{tabularx}{\textwidth}{@{}llX@{}}
+\toprule
+Geometry & $J_2$ & Coefficient of $\hat\tau^4$ in $q/q_0$\\\midrule
+Nil & $2/3$ & $-1/54$\\
+Sol & $8/3$ & $-2/27$\\
+\bottomrule\end{tabularx}\end{center}
+
+The residual $\Xi$ drives the quadratic shape evolution, while $J_2$ fixes the quartic departure from linear scale. Appendix D derives the closed ODE, constraint propagation and coefficients. The supplement compares 12 numerical points across both time orientations; these check the local coefficients and do not certify an error bound over an interval or long-time stability.

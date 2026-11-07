@@ -1,0 +1,70 @@
+{
+  "schema": "paper06-v2",
+  "geometry": "Fixed class-A homogeneous spatial metric with one time-dependent scale",
+  "pulse": {
+    "q": 1,
+    "N": 1,
+    "V": 0,
+    "eta": "(2/5)*exp(-t^2)",
+    "interval": [
+      -2,
+      2
+    ],
+    "interpretation": "Off-shell. Equal endpoint primitives; local densities need not vanish."
+  },
+  "orbit": {
+    "q0": 1,
+    "proper_time_range": [
+      0,
+      4
+    ],
+    "domain": "q>0",
+    "interpretation": "Stationary curves of the reduced action. Nil and Sol violate the omitted tracefree coframe equation."
+  },
+  "conventions": {
+    "torsion": "geometric",
+    "volume_form": "e0123",
+    "signature": "-+++",
+    "sphere": "physical radius q"
+  },
+  "shape_domain": "After full torsion elimination: homogeneous tracefree shape, local torus families and diagonal Nil/Sol evolution.",
+  "numerical_control": {
+    "method": "DOP853",
+    "q0": 1,
+    "times": [
+      0.01,
+      0.02,
+      0.04
+    ],
+    "rtol": 2e-13,
+    "atol": 2e-15,
+    "max_step": 0.002,
+    "scope": "Twelve finite-time controls, not certified interval error bounds."
+  },
+  "python": "3.12.10",
+  "dependencies": {
+    "sympy": "1.14.0",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "matplotlib": "3.10.7"
+  },
+  "check_scope": "Symbolic identities and finite numerical controls; the count is not a count of independent theorems.",
+  "sympy": "1.14.0",
+  "identities": 316,
+  "files": {
+    "canonical_representatives.json": "e9cc600a9ee49341d25ba1439f82d4372ba53ac7a9ae6640b42faf45b8091ba8",
+    "classification.json": "7c7daa72e52e45276f1c64823b90e724a7d036b61169f5ac25a193df353f05f9",
+    "curvature_invariants.json": "97f782afd0099c83343fa07b0a8ca4458219bb524cef0a30f9077f7af8a8e758",
+    "field_equations.json": "aba031df5b578f895860384d43820715f920d1f84d551f3ff440df22344a742e",
+    "geometry.json": "36aa6f68299db29e543e51dfba299f0d03734823565be6942c643968b6a75bdc",
+    "global_frames.json": "32b8a934a8e1e4d8e59b32177c179bb34606668a330a52e8aceca5f9fedf4042",
+    "orbits.csv": "c4282abf066af78076b5f249bf059ac0535d045caa4851232e44f389b13ed957",
+    "pulse.csv": "0cc229c6a2399b3655fe2c56556830396e8b543ba6ba37a2de6ba9eb6211e064",
+    "reduction.json": "e39d437ba69a4839ebe193cf1272960440a40fa59dccea06732069dca35cdd70",
+    "regimes.json": "e111502eeb2822c9ff819a27fdb5ffb1b76dcdc7f427abbb7e7c6ab74270e1ca",
+    "shape_variation.json": "8657c46fd32bfe35fad6efda5830efb93a441dbca28339e2ce5850f805b9b692",
+    "short_time_checks.csv": "6056b0e1feae60aee32aeb168e29f99f95a1d8e18f677c7c2afb36b0983b61e5",
+    "short_time_evolution.json": "3618da27e936299bdb95edd226558ee9c2f14e98b9aaeda44446eb69016fbaf4",
+    "torus_deformations.json": "75bb5466961613094b27bd02c55eed96a09568539fb1c1996aefb00c12d30bfd"
+  }
+}

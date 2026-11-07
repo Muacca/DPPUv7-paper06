@@ -1,66 +1,71 @@
-## 2. Lorentzian-native setup and topology conventions
+# 2. 幾何と変分領域
 
-### 2.1 Reduced Lorentzian frame
+向き付けた正規直交coframeを用いる。空間構造行列nは実対称で時間によらず、空間frameの一定SO(3)回転で対角化できる。空間添字は1,2,3、四次元添字は0,1,2,3であり、構造方程式の添字は総和する。
 
-本稿では Lorentzian 符号 $(-,+,+,+)$ の orthonormal frame を用いる。coframe は
-
-$$
-e^0 = N(t)\,dt, \qquad e^i = q(t)\,\sigma^i_\Sigma
-$$
-
-と書く。 $N(t)$ は lapse function、 $q(t)$ は topology $\Sigma$ に共通の isotropic scale、 $\sigma^i_\Sigma$ は $\Sigma$ の左不変 coframe である。torsion 変数は axial component $\eta(t)$ および vector-trace component $V(t)$ を用い、それぞれ AX および VT の pure branch、混合した MX branch を与える。
-
-空間 3-curvature の正規化を
+式(G-01)。
 
 $$
-{}^{(3)}R = \frac{6\chi}{q^2}
+\begin{aligned}
+g_{ab}&=\mathrm{diag}(-1,1,1,1),\qquad \epsilon_{0123}=+1,\quad \epsilon^{0123}=-1,\\
+e^0&=Ndt,\qquad e^i=q\sigma^i,\qquad
+d\sigma^i=\tfrac12 n_{ij}\epsilon_{jkl}\sigma^k\wedge\sigma^l,\\
+D&=N^{-1}d/dt,\qquad H=Dq/q,\qquad
+\mathcal V_{\Sigma}=\int_{\Sigma}\sigma^{123},\quad q,N>0.
+\end{aligned}
 $$
 
-で定義し、 $\chi$ を本稿全体の topology scalar として使う。 $\chi$ は EH（pure Einstein-Hilbert）sector からのみ導かれ、torsion 変数には依存しない。
+このclass A表示はJacobi恒等式を満たす。対角frameで固有値を $`n_i`$ とし、参照空間のsectional曲率係数を $`k_i`$ と書く。空間Ricciのi方向は残る二つの $`k_i`$ の和である。 $`\chi`$ の値はこの曲率から定義する。
 
-### 2.2 Topology structure constants and $\chi$ values
-
-四つの topology の構造定数は、Bianchi 型 homogeneous space の class-A / class-B 分類 [11] および本 DPPU 系列の三 topology mode dictionary [4] の枠組みに沿って、five-parameter LZ-native isotropic family
+式(G-02)。
 
 $$
-C^1{}_{23}=\frac{a}{q},\quad C^2{}_{31}=\frac{b}{q},\quad C^3{}_{12}=\frac{c}{q},\quad C^2{}_{12}=\frac{u}{q},\quad C^3{}_{13}=\frac{v}{q}
+\begin{aligned}
+\ell_i&=\tfrac12(n_1+n_2+n_3)-n_i,\qquad
+k_i=n_i\ell_i-\ell_j\ell_k,\\
+{}^{(3)}R&=\frac{2(k_1+k_2+k_3)}{q^2}=\frac{6\chi}{q^2},\\
+6\chi&=\tfrac12(\mathrm{tr}\thinspace n)^2-\mathrm{tr}(n^2),\qquad
+{}^{(3)}\mathrm{Ric}_{ii}=\frac{k_j+k_k}{q^2}.
+\end{aligned}
 $$
 
-の特殊化として与えられる（下添え字は反対称）。このとき
+式(G-02)のi,j,kは循環する三組を表し、追加の総和は取らない。四つの参照幾何を以下に固定する。球面のqは物理半径であり、Paper05の規約と同じである。
+
+| 幾何 | nの固有値 |  $`\chi`$  | 参照体積 |
+| --- | --- | --- | --- |
+|  $`T^3`$  | $`(0,0,0)`$ | 0 | $`(2\pi)^3`$ |
+| Nil | $`(0,0,-1)`$ | $`-1/12`$ | $`(2\pi)^4`$ |
+| Sol | $`(0,1,-1)`$ | $`-1/3`$ | $`\log((3+\sqrt5)/2)`$ |
+|  $`S^3`$  | $`(2,2,2)`$ | 1 | $`2\pi^2`$ |
+
+torusの三つの角座標の周期は2πとする。空間座標を $`x^1,x^2,x^3`$ と書く。Nilではcoframeを $`dx^1,dx^2,dx^3-x^1dx^2`$ とし、格子生成元を $`(x^1,x^2,x^3)\mapsto(x^1+2\pi,x^2,x^3+2\pi x^2)`$ 、 $`(x^1,x^2,x^3)\mapsto(x^1,x^2+2\pi,x^3)`$ 、 $`(x^1,x^2,x^3)\mapsto(x^1,x^2,x^3+4\pi^2)`$ とする。いずれの同定もcoframeを保つ。
+
+Solではcoframeを $`dx^1,e^{x^1}dx^2,e^{-x^1}dx^3`$ とする。A＝((2,1),(1,1))の固有値λ＝(3+√5)/2とλ⁻¹を使い、 $`x^1`$ を $`\log\lambda`$ だけ進めるとfiber座標をdiag(λ⁻¹,λ)で同定する。fiber格子はAの固有座標へ移した面積1の格子である。coframeはこのmapping torusへ降りる。構造行列は対角化前には23成分と32成分が1であり、class AのVI₀である[paper4]。
+
+幾何学的torsionを第一Cartan方程式で定義し、二つの実振幅を次式で固定する。ここでも空間外積は循環する各組について記す。
+
+式(G-03)。
 
 $$
-{}^{(3)}R\,q^2=
--\tfrac{1}{2}\!\left(a^2-2ab-2ac+b^2-2bc+c^2+4u^2+4uv+4v^2\right)
-=:-\tfrac{1}{2}\,\Delta,
+T^a=de^a+\omega^a{}_{b}\wedge e^b,\qquad
+T^0=0,\qquad T^i=\frac V3e^{0i}+\frac{2\eta}{q}e^{jk}.
 $$
 
-である。定義 ${}^{(3)}R=6\chi/q^2$ と比較すると
+式(G-04)。
 
 $$
-6\chi=-\frac{\Delta}{2},\qquad \chi=-\frac{\Delta}{12}
+\begin{aligned}
+a_i&=(\ell_i-\eta)/q,\qquad b=H-V/3,\\
+\omega^0{}_{i}&=\omega^i{}_{0}=b e^i,\qquad
+\omega^j{}_{k}=a_i e^i,\qquad \omega^k{}_{j}=-a_i e^i.
+\end{aligned}
 $$
 
-を得る。各 topology の特殊化値を Table 1 に示す。
+式(G-04)を(G-03)へ代入すると指定torsionが再現される。時間profileは十分滑らかとし、空間計量の形状と商の格子は固定する。一般の構造行列に対する式は局所恒等式であり、具体的な空間積分には上記の固定コンパクト商を用いる。scaleとtorsionの変分を先に制限した方程式と、独立接続・coframeの完全方程式との関係は第5節で検査する。
 
-**Table 1.** Topology conventions, $\chi$ values, and caveats.
+## 変分領域の区別
 
-| topology | $(a,b,c,u,v)$ | $\chi$ | reduction status | caveat |
-|----------|--------------|-------:|-----------------|--------|
-| $S^3$ | $(4,4,4,0,0)$ | $4$ | closed isotropic reference | — |
-| $T^3$ | $(0,0,0,0,0)$ | $0$ | flat reference | — |
-| $Nil^3$ | $(0,0,-1,0,0)$ | $-1/12$ | isotropic-scale local branch | anisotropic EOM は将来課題 |
-| $Sol^3$ | $(0,0,0,1,-1)$ | $-1/3$ | isotropic-scale local branch | compact quotient は本稿範囲外 |
+共通scale・二振幅族では固定した実対称構造行列 $`n`$ と $`q,N,\eta,V`$ を用いる。第6節の時間依存曲率公式の適用域はこの族である。shape解析では独立接続方程式を先に解き、LC作用で $`e^i=q(e^{\mathsf B})^i{}_j\sigma^j`$ 、 $`\mathsf B^{T}=\mathsf B`$ 、 $`\mathrm{tr}\mathsf B=0`$ とする。 $`\mathsf B`$ は五成分の時間依存行列であり、端点生成関数 $`B_{\mathrm{end}}`$ とは異なる。物理構造行列は $`m=q^{-1}e^{\mathsf B}ne^{\mathsf B}`$ である。
 
-四つの geometry を共通の reduced-topology table のもとで扱う。 $Nil^3$ および $Sol^3$ については、本稿で用いる isotropic-scale reduction の範囲における entry を示しており、global quotient と anisotropic 拡張は今後の課題として残す。
+固定した大域coframeに定数の正定値係数を与えた計量は同じ商上に定義できる。定数congruenceを格子保存座標変換と同一視しない。第7節・付録Aの回転coframeは同じ静的flat torus計量の表示比較であり、それぞれのframeに対する動的な定数係数shape族の同一性は仮定しない。
 
-### 2.3 EC+NY reduced action
-
-Lorentzian EC+NY reduced action [7,8] を topology $\Sigma$ と torsion mode ごとに
-
-$$
-S_\Sigma = \int dt\, A_\Sigma\, q\!\left(N\,F_\Sigma(q,\eta,V;\chi) - \frac{\dot q^2}{N}\right)
-$$
-
-の形で書く。 $A_\Sigma$ は spatial normalization factor であり $\chi$ に依存しない係数として扱う。 $F_\Sigma$ は topology と torsion branch によって決まる effective potential であり、その具体形は Section 3 で用いる。補助場 $\eta(t)$, $V(t)$ は action 中に速度項を持たず、auxiliary sector として代数的に処理する。
-
-Nieh-Yan term $\theta_{\rm NY}$ [8] は AX/VT では bulk $F_\Sigma$ に現れず、MX では mixing term $\propto V\eta\,\kappa^2\theta_{\rm NY}$ としてのみ現れる。本稿では bulk dynamical 解析を primary とし、 $Q_{\rm NY}$ を endpoint / boundary channel として分離する（Section 4.4）。
+[論文の入口](README_ja.md) / [参考文献](REFERENCES.md)

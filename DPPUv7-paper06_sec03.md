@@ -1,56 +1,87 @@
-## 3. Hamiltonian admissibility by topology
+# 3. Bulk作用と符号付き境界完成
 
-### 3.1 Admissibility criterion
+同じ接続の曲率を用い、完全NYを外微分として作用に入れる。 $`\theta_{\mathrm{NY}}`$ は定数、 $`\kappa^2`$ は正とする。境界は時間区間の両端にある空間的sliceであり、空間商は閉じている。
 
-本稿では、reduced sector における admissibility を次の基準で判定する。
-
-1. **EH constraint closure**: pure EH 部分の Hamiltonian constraint が Lorentzian convention のもとで閉じること（`EH_PASS`）。
-2. **Reduced action skeleton**: 各 torsion mode の EC+NY reduced Lagrangian が well-defined な velocity structure を持つこと（`LRED_PASS`）。
-3. **Torsion auxiliary closure**: auxiliary field $\eta$, $V$ の algebraic equations が実数解を持つこと（`AUX_PASS` または `AUX_CONDITIONAL_REAL_BRANCH`）。
-
-この admissibility は、orbit stability、unitarity、または full constraint closure の主張ではない。
-
-### 3.2 Hamiltonian constraint
-
-lapse variation $\delta S / \delta N = 0$ より Hamiltonian constraint
+式(B-01)。
 
 $$
-\mathcal{H} \equiv A_\Sigma\, q\!\left(F_\Sigma + \frac{\dot q^2}{N^2}\right) = 0,\qquad
-\text{すなわち}\quad F_\Sigma + \frac{\dot q^2}{N^2} = 0
+\begin{aligned}
+S&=\int_M e^{0123}\frac{R_{\mathrm{EC}}}{2\kappa^2}
++\theta_{\mathrm{NY}}\int_M dQ+S_{\mathrm{GHY}},\\
+R^a{}_{b}&=d\omega^a{}_{b}+\omega^a{}_{c}\wedge\omega^c{}_{b},\qquad Q=e^a\wedge T_a,\\
+dQ&=T^a\wedge T_a-e^a\wedge e^b\wedge R_{ab}.
+\end{aligned}
 $$
 
-を得る。EH branch（ $\eta=V=0$）では $F_\Sigma\big|_{\rm EH} = \chi$（各 topology で Table 1 の $\chi$ を代入）となり、これが `EH_PASS` の要件である。具体的には：
+接続を時間依存のまま微分すると、scalar曲率は次のように分解する。vector振幅の微分項とHとの積は、体積を掛けたときに一つの発散をなす。
 
-| topology | $F_{\rm EH}$ (on-shell form) | constraint residual |
-|----------|------------------------------|---------------------|
-| $S^3$ | $4$ | $4N^2 + \dot r^2 = 0$ |
-| $T^3$ | $0$ | $\dot r^2 = 0$ |
-| $Nil^3$ | $-1/12$ | $N^2 - 12\dot R^2 = 0$ |
-| $Sol^3$ | $-1/3$ | $3N^2 - 9\dot q^2 = 0$ (local/iso) |
-
-torsion auxiliary equations は $\delta S/\delta\eta=0$, $\delta S/\delta V=0$ から得られる代数方程式である。AX では $\eta$ のみ、VT では $V$ のみが非自明に現れ、それぞれ `AUX_PASS` となる。MX では $\eta$, $V$ の連立 auxiliary 行列式が
+式(B-02)。
 
 $$
-\det\!\begin{pmatrix}\partial_\eta(\partial_\eta F) & \partial_V(\partial_\eta F)\\ \partial_\eta(\partial_V F) & \partial_V(\partial_V F)\end{pmatrix}
-= -\frac{4q^2(\kappa^4\theta_{\rm NY}^2+1)}{9} < 0
+\begin{aligned}
+R_{\mathrm{LC}}&=6(DH+2H^2+\chi/q^2),\\
+R_{\mathrm{EC}}-R_{\mathrm{LC}}&=-6\eta^2/q^2+2V^2/3-2DV-6HV.
+\end{aligned}
 $$
 
-となる。 $q>0$ の reduced-sector domain と real $\kappa,\theta_{\rm NY}$ のもとでは $\kappa^4\theta_{\rm NY}^2+1>0$ なので auxiliary Hessian は非退化である。本稿では、この mixed auxiliary channel を real branch の選択と origin tagging を伴う branch として保持するため、`AUX_CONDITIONAL_REAL_BRANCH`、すなわち MX の `H_CONDITIONAL` として記録する。
-この負の determinant は安定な minimum を意味しない。ここで用いる `conditional admissibility` は、non-degenerate mixed auxiliary saddle における algebraic closure と real branch selection のみを要求する弱い基準であり、Hessian の符号（dynamical stability）とは独立である。
+式(B-03)。
 
-### 3.3 Mode status
+$$
+\begin{aligned}
+L_{\mathrm{raw}}&=L_0+\frac d{dt}(B_{\mathrm{EH}}+B_{\mathrm{EC}}+B_{\mathrm{NY}}),\\
+L_0&=A_{\Sigma}q\left(NF-\frac{\dot q^2}{N}\right),\qquad
+A_{\Sigma}=\frac{3\mathcal V_{\Sigma}}{\kappa^2},\\
+F&=\chi-\eta^2+\frac{q^2V^2}{9}.
+\end{aligned}
+$$
 
-以上の判定をまとめると Table 2 を得る。結果は四つの topology に対して一致する。
+式(B-04)。
 
-**Table 2.** Hamiltonian status by topology and mode.
+$$
+B_{\mathrm{EH}}=\frac{3\mathcal V_{\Sigma}q^2\dot q}{\kappa^2N},\qquad
+B_{\mathrm{EC}}=-\frac{\mathcal V_{\Sigma}q^3V}{\kappa^2},\qquad
+B_{\mathrm{NY}}=6\theta_{\mathrm{NY}}\mathcal V_{\Sigma}q^2\eta.
+$$
 
-| mode | Hamiltonian status | interpretation |
-|------|--------------------|----------------|
-| EH | `H_PASS` | pure EH reference branch |
-| AX | `H_PASS` | active torsion admissible |
-| VT | `H_PASS` | active torsion admissible |
-| MX | `H_CONDITIONAL` | real auxiliary branch を経由した conditional admissibility |
+式(B-03)は四幾何に共通である。構造行列はFに $`\chi`$ を通じて入り、商の体積は $`A_{\Sigma}`$ へ入る。完全NYの寄与は $`B_{\mathrm{NY}}`$ に集約されるため、bulkの補助場方程式と縮約軌道は定数NY結合によらない。
 
-MX の `H_CONDITIONAL` は obstruction や failure ではない。real auxiliary branch が存在する前提のもとで、後続の P-channel diagnostics および $Q_{\rm NY}$ boundary channel の off-shell 振る舞いを diagnostic として記録することが、admissibility の条件内容である。
+外向き単位法線は最終端で正、初期端で負の時間方向を向く。LC接続で定義した外部曲率とsignature因子を含むGHY項を用いる[GH1977,HH1996]。
 
-**注.** `H_PASS` および `L_ADMISSIBLE` は dynamical stability を意味しない。 $Sol^3$ の table entry は local/isotropic reduction の範囲内のものであり、compact quotient の完全解決を意味しない。
+式(B-05)。
+
+$$
+\begin{aligned}
+\hat n_f&=+N^{-1}\partial_t,\quad \hat n_i=-N^{-1}\partial_t,\quad
+\epsilon_n=\hat n^a\hat n_a=-1,\quad K_f=3H_f,\quad K_i=-3H_i,\\
+S_{\mathrm{GHY}}&=\frac1{\kappa^2}\sum_{s=i,f}\epsilon_n\int_{\Sigma_s}\sqrt h K_s
+=-[B_{\mathrm{EH}}]_i^f.
+\end{aligned}
+$$
+
+式(B-06)。
+
+$$
+S=\int_{t_i}^{t_f}L_0dt+[B_{\mathrm{EC}}+B_{\mathrm{NY}}]_i^f,\qquad
+\delta q=\delta\eta=\delta V=0\quad\text{at both endpoints}.
+$$
+
+この固定端点条件は完成作用の変分に十分であり、端点のlapseやscale速度を固定する必要はない。 $`L_0`$ をcanonical代表に選ぶと、残る全微分B＝ $`B_{\mathrm{EC}}`$ ＋ $`B_{\mathrm{NY}}`$ を戻した代表の運動量は次の分だけ変わる。bulk方程式は変わらない。
+
+式(B-07)。
+
+$$
+\begin{aligned}
+\Delta p_q&=-\frac{3\mathcal V_{\Sigma}q^2V}{\kappa^2}
++12\theta_{\mathrm{NY}}\mathcal V_{\Sigma}q\eta,\\
+\Delta p_{\eta}&=6\theta_{\mathrm{NY}}\mathcal V_{\Sigma}q^2,\qquad
+\Delta p_V=-\frac{\mathcal V_{\Sigma}q^3}{\kappa^2},\qquad \Delta p_N=0.
+\end{aligned}
+$$
+
+端点で非零torsionを指定することと、その端点値を持つ滑らかな停留解が存在することは別である。第4節の補助場方程式を区間全体に課すと、連続性により端点でも $`\eta=V=0`$ となる。境界sourceや不連続な層を追加する問題はここでは扱わない。
+
+## 端点代表の正準対応
+
+GHY処理後の端点関数を $`B_{\mathrm{end}}=B_{\mathrm{EC}}+B_{\mathrm{NY}}`$ と書く。 $`L_0+dB_{\mathrm{end}}/dt`$ は $`P_i=p_i+\partial_iB_{\mathrm{end}}`$ を与え、補助変数の運動量も同時に移動する。 $`\widetilde p_i=P_i-\partial_iB_{\mathrm{end}}`$ を用いると拘束は元と同じ形になる。付録Cで二形式と第二級拘束を示す。正準同値性は対応する端点データについての主張であり、旧運動量固定と新運動量固定をそのまま同じ境界条件とはしない。
+
+[論文の入口](README_ja.md) / [参考文献](REFERENCES.md)

@@ -1,0 +1,342 @@
+{
+  "first_order": {
+    "identities": [
+      "tracefree_matrix",
+      "coframe_transform_equals_delta_n",
+      "independent_full_scalar_background",
+      "independent_scalar_shape_variation",
+      "independent_spatial_Ricci",
+      "momentum_background",
+      "no_shape_velocity_or_acceleration_linear_scalar",
+      "ADM_action_equals_component_action",
+      "shape_Euler_from_full_coframe",
+      "shape_direction_0",
+      "shape_direction_1",
+      "shape_direction_2",
+      "shape_direction_3",
+      "shape_direction_4",
+      "ADM_kinetic_linear_shape",
+      "GHY_trace_linear_shape",
+      "spatial_volume_linear_shape",
+      "GHY_exact_determinant_identity",
+      "pair_difference_factorization",
+      "all_distinct_case_impossible_linear_system",
+      "two_equal_case_reduction",
+      "all_equal_branch",
+      "all_equal_chi",
+      "flat_branch_0",
+      "flat_chi_0",
+      "flat_sectional_0",
+      "flat_branch_1",
+      "flat_chi_1",
+      "flat_sectional_1",
+      "flat_branch_2",
+      "flat_chi_2",
+      "flat_sectional_2",
+      "T3_class_A_residual",
+      "Nil_class_A_residual",
+      "Sol_class_A_residual",
+      "S3_class_A_residual"
+    ],
+    "chi": "-n11**2/12 + n11*n22/6 + n11*n33/6 - n12**2/3 - n13**2/3 - n22**2/12 + n22*n33/6 - n23**2/3 - n33**2/12",
+    "q2_Xi": [
+      [
+        "5*n11**2/3 + 2*n11*n22/3 + 2*n11*n33/3 - n11*(n11 + n22 + n33) + 2*n12**2/3 + 2*n13**2/3 - n22**2/3 + 2*n22*n33/3 - 4*n23**2/3 - n33**2/3",
+        "2*n11*n12 + 2*n12*n22 - n12*(n11 + n22 + n33) + 2*n13*n23",
+        "2*n11*n13 + 2*n12*n23 + 2*n13*n33 - n13*(n11 + n22 + n33)"
+      ],
+      [
+        "2*n11*n12 + 2*n12*n22 - n12*(n11 + n22 + n33) + 2*n13*n23",
+        "-n11**2/3 + 2*n11*n22/3 + 2*n11*n33/3 + 2*n12**2/3 - 4*n13**2/3 + 5*n22**2/3 + 2*n22*n33/3 - n22*(n11 + n22 + n33) + 2*n23**2/3 - n33**2/3",
+        "2*n12*n13 + 2*n22*n23 + 2*n23*n33 - n23*(n11 + n22 + n33)"
+      ],
+      [
+        "2*n11*n13 + 2*n12*n23 + 2*n13*n33 - n13*(n11 + n22 + n33)",
+        "2*n12*n13 + 2*n22*n23 + 2*n23*n33 - n23*(n11 + n22 + n33)",
+        "-n11**2/3 + 2*n11*n22/3 + 2*n11*n33/3 - 4*n12**2/3 + 2*n13**2/3 - n22**2/3 + 2*n22*n33/3 + 2*n23**2/3 + 5*n33**2/3 - n33*(n11 + n22 + n33)"
+      ]
+    ],
+    "shape_matrix": [
+      [
+        "u0",
+        "u2",
+        "u3"
+      ],
+      [
+        "u2",
+        "u1",
+        "u4"
+      ],
+      [
+        "u3",
+        "u4",
+        "-u0 - u1"
+      ]
+    ],
+    "delta_R": "-2*n11**2*u0/q**2 - 4*n11*n12*u2/q**2 - 4*n11*n13*u3/q**2 + 2*n11*n22*u0/q**2 + 2*n11*n22*u1/q**2 + 4*n11*n23*u4/q**2 - 2*n11*n33*u1/q**2 - 4*n12**2*u0/q**2 - 4*n12**2*u1/q**2 - 8*n12*n13*u4/q**2 - 4*n12*n22*u2/q**2 - 8*n12*n23*u3/q**2 + 4*n12*n33*u2/q**2 + 4*n13**2*u1/q**2 + 4*n13*n22*u3/q**2 - 8*n13*n23*u2/q**2 - 4*n13*n33*u3/q**2 - 2*n22**2*u1/q**2 - 4*n22*n23*u4/q**2 - 2*n22*n33*u0/q**2 + 4*n23**2*u0/q**2 - 4*n23*n33*u4/q**2 + 2*n33**2*u0/q**2 + 2*n33**2*u1/q**2",
+    "delta_L": "-N*n11**2*q*u0*volume/kappa**2 - 2*N*n11*n12*q*u2*volume/kappa**2 - 2*N*n11*n13*q*u3*volume/kappa**2 + N*n11*n22*q*u0*volume/kappa**2 + N*n11*n22*q*u1*volume/kappa**2 + 2*N*n11*n23*q*u4*volume/kappa**2 - N*n11*n33*q*u1*volume/kappa**2 - 2*N*n12**2*q*u0*volume/kappa**2 - 2*N*n12**2*q*u1*volume/kappa**2 - 4*N*n12*n13*q*u4*volume/kappa**2 - 2*N*n12*n22*q*u2*volume/kappa**2 - 4*N*n12*n23*q*u3*volume/kappa**2 + 2*N*n12*n33*q*u2*volume/kappa**2 + 2*N*n13**2*q*u1*volume/kappa**2 + 2*N*n13*n22*q*u3*volume/kappa**2 - 4*N*n13*n23*q*u2*volume/kappa**2 - 2*N*n13*n33*q*u3*volume/kappa**2 - N*n22**2*q*u1*volume/kappa**2 - 2*N*n22*n23*q*u4*volume/kappa**2 - N*n22*n33*q*u0*volume/kappa**2 + 2*N*n23**2*q*u0*volume/kappa**2 - 2*N*n23*n33*q*u4*volume/kappa**2 + N*n33**2*q*u0*volume/kappa**2 + N*n33**2*q*u1*volume/kappa**2",
+    "shape_Euler": [
+      [
+        "-N*q*volume*(n11**2 - n11*n22 + 2*n12**2 + n22*n33 - 2*n23**2 - n33**2)/kappa**2"
+      ],
+      [
+        "N*q*volume*(n11*n22 - n11*n33 - 2*n12**2 + 2*n13**2 - n22**2 + n33**2)/kappa**2"
+      ],
+      [
+        "-2*N*q*volume*(n11*n12 + n12*n22 - n12*n33 + 2*n13*n23)/kappa**2"
+      ],
+      [
+        "-2*N*q*volume*(n11*n13 + 2*n12*n23 - n13*n22 + n13*n33)/kappa**2"
+      ],
+      [
+        "2*N*q*volume*(n11*n23 - 2*n12*n13 - n22*n23 - n23*n33)/kappa**2"
+      ]
+    ],
+    "momentum_linear_diagonal_frame": [
+      [
+        "ud4*(b - c)/q",
+        "-ud3*(a - c)/q",
+        "ud2*(a - b)/q"
+      ]
+    ],
+    "pair_differences": [
+      "(a - b)*(a + b - c)",
+      "-(b - c)*(a - b - c)",
+      "-(a - c)*(a - b + c)"
+    ],
+    "classification": {
+      "isotropic": "(a,a,a)",
+      "flat": "permutations of (a,a,0)",
+      "real_scale_vacuum": "flat branch only; q constant; local classification, no new compact quotient asserted"
+    },
+    "geometries": {
+      "T3": {
+        "n": [
+          0,
+          0,
+          0
+        ],
+        "chi": "0",
+        "q2_Xi": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "shape_Euler": [
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ]
+        ]
+      },
+      "Nil": {
+        "n": [
+          0,
+          0,
+          -1
+        ],
+        "chi": "-1/12",
+        "q2_Xi": [
+          [
+            "-1/3",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1/3",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "2/3"
+          ]
+        ],
+        "shape_Euler": [
+          [
+            "N*q*volume/kappa**2"
+          ],
+          [
+            "N*q*volume/kappa**2"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ]
+        ]
+      },
+      "Sol": {
+        "n": [
+          0,
+          1,
+          -1
+        ],
+        "chi": "-1/3",
+        "q2_Xi": [
+          [
+            "-4/3",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "2/3",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "2/3"
+          ]
+        ],
+        "shape_Euler": [
+          [
+            "2*N*q*volume/kappa**2"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ]
+        ]
+      },
+      "S3": {
+        "n": [
+          2,
+          2,
+          2
+        ],
+        "chi": "1",
+        "q2_Xi": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "shape_Euler": [
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ]
+        ]
+      }
+    },
+    "proof": "All distinct eigenvalues force an invertible homogeneous linear system and hence equality at zero. Thus a pair is equal; remaining equation is c*(a-c)=0."
+  },
+  "second_order": {
+    "shape": [
+      [
+        "u0",
+        "u2",
+        "u3"
+      ],
+      [
+        "u2",
+        "u1",
+        "u4"
+      ],
+      [
+        "u3",
+        "u4",
+        "-u0 - u1"
+      ]
+    ],
+    "Gram": [
+      [
+        "2",
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "2",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "2"
+      ]
+    ],
+    "U2": "-4*n11**2*u0**2 - 2*n11**2*u2**2 - 2*n11**2*u3**2 - 12*n11*n12*u0*u2 - 4*n11*n12*u1*u2 - 4*n11*n12*u3*u4 - 8*n11*n13*u0*u3 + 4*n11*n13*u1*u3 - 4*n11*n13*u2*u4 + 2*n11*n22*u0**2 + 4*n11*n22*u0*u1 + 2*n11*n22*u1**2 - 4*n11*n22*u2**2 + 2*n11*n22*u3**2 + 2*n11*n22*u4**2 + 4*n11*n23*u0*u4 - 12*n11*n23*u2*u3 + 2*n11*n33*u1**2 + 2*n11*n33*u2**2 - 4*n11*n33*u3**2 + 2*n11*n33*u4**2 - 4*n12**2*u0**2 - 8*n12**2*u0*u1 - 4*n12**2*u1**2 - 8*n12**2*u2**2 - 4*n12**2*u3**2 - 4*n12**2*u4**2 - 8*n12*n13*u0*u4 - 8*n12*n13*u2*u3 - 4*n12*n22*u0*u2 - 12*n12*n22*u1*u2 - 4*n12*n22*u3*u4 - 8*n12*n23*u1*u3 - 8*n12*n23*u2*u4 - 4*n12*n33*u0*u2 - 4*n12*n33*u1*u2 - 12*n12*n33*u3*u4 - 4*n13**2*u1**2 - 4*n13**2*u2**2 - 8*n13**2*u3**2 - 4*n13**2*u4**2 + 4*n13*n22*u1*u3 - 12*n13*n22*u2*u4 + 8*n13*n23*u0*u2 + 8*n13*n23*u1*u2 - 8*n13*n23*u3*u4 + 8*n13*n33*u0*u3 + 12*n13*n33*u1*u3 - 4*n13*n33*u2*u4 - 4*n22**2*u1**2 - 2*n22**2*u2**2 - 2*n22**2*u4**2 + 4*n22*n23*u0*u4 - 8*n22*n23*u1*u4 - 4*n22*n23*u2*u3 + 2*n22*n33*u0**2 + 2*n22*n33*u2**2 + 2*n22*n33*u3**2 - 4*n22*n33*u4**2 - 4*n23**2*u0**2 - 4*n23**2*u2**2 - 4*n23**2*u3**2 - 8*n23**2*u4**2 + 12*n23*n33*u0*u4 + 8*n23*n33*u1*u4 - 4*n23*n33*u2*u3 - 4*n33**2*u0**2 - 8*n33**2*u0*u1 - 4*n33**2*u1**2 - 2*n33**2*u3**2 - 2*n33**2*u4**2",
+    "shape_action": "V N q^3/(2 kappa^2)*[-6H^2+tr((D B)^2)+(6chi-2tr(XB)+U2)/q^2]+O(B^3)"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "R_EC": "(4*N**3*V**2*q**2 - 36*N**3*eta**2 - 3*N**3*n1**2 + 6*N**3*n1*n2 + 6*N**3*n1*n3 - 3*N**3*n2**2 + 6*N**3*n2*n3 - 3*N**3*n3**2 - 36*N**2*V*q*qd - 12*N**2*Vd*q**2 + 36*N*q*qdd + 36*N*qd**2 - 36*Nd*q*qd)/(6*N**3*q**2)",
+  "NY": "6*(ed*q + 2*eta*qd)/(N*q**2)",
+  "raw": "q*volume*(4*N**3*V**2*q**2 - 36*N**3*eta**2 - 3*N**3*n1**2 + 6*N**3*n1*n2 + 6*N**3*n1*n3 - 3*N**3*n2**2 + 6*N**3*n2*n3 - 3*N**3*n3**2 - 36*N**2*V*q*qd - 12*N**2*Vd*q**2 + 72*N**2*ed*kappa**2*q*theta + 144*N**2*eta*kappa**2*qd*theta + 36*N*q*qdd + 36*N*qd**2 - 36*Nd*q*qd)/(12*N**2*kappa**2)",
+  "bulk": "q*volume*(4*N**2*V**2*q**2 - 36*N**2*eta**2 - 3*N**2*n1**2 + 6*N**2*n1*n2 + 6*N**2*n1*n3 - 3*N**2*n2**2 + 6*N**2*n2*n3 - 3*N**2*n3**2 - 36*qd**2)/(12*N*kappa**2)",
+  "A": "3*volume/kappa**2",
+  "F": "(4*V**2*q**2 - 36*eta**2 - 3*n1**2 + 6*n1*n2 + 6*n1*n3 - 3*n2**2 + 6*n2*n3 - 3*n3**2)/36",
+  "BEH": "3*q**2*qd*volume/(N*kappa**2)",
+  "BEC": "-V*q**3*volume/kappa**2",
+  "BNY": "6*eta*q**2*theta*volume",
+  "auxiliary_Hessian": [
+    [
+      "-2",
+      "0"
+    ],
+    [
+      "0",
+      "2*q**2/9"
+    ]
+  ],
+  "auxiliary_determinant": "-4*q**2/9",
+  "auxiliary_solution": [
+    {
+      "V": "0",
+      "eta": "0"
+    }
+  ],
+  "p_q": "-6*q*qd*volume/(N*kappa**2)",
+  "Hamiltonian": "-N*(4*V**2*q**4*volume**2 - 36*eta**2*q**2*volume**2 + kappa**4*p**2 - 3*n1**2*q**2*volume**2 + 6*n1*n2*q**2*volume**2 + 6*n1*n3*q**2*volume**2 - 3*n2**2*q**2*volume**2 + 6*n2*n3*q**2*volume**2 - 3*n3**2*q**2*volume**2)/(12*kappa**2*q*volume)",
+  "constraint": "-(4*V**2*q**4*volume**2 - 36*eta**2*q**2*volume**2 + kappa**4*p**2 - 3*n1**2*q**2*volume**2 + 6*n1*n2*q**2*volume**2 + 6*n1*n3*q**2*volume**2 - 3*n2**2*q**2*volume**2 + 6*n2*n3*q**2*volume**2 - 3*n3**2*q**2*volume**2)/(12*kappa**2*q*volume)",
+  "Euler": {
+    "q": "volume*(4*N**3*V**2*q**2 - 12*N**3*eta**2 - N**3*n1**2 + 2*N**3*n1*n2 + 2*N**3*n1*n3 - N**3*n2**2 + 2*N**3*n2*n3 - N**3*n3**2 + 24*N*q*qdd + 12*N*qd**2 - 24*Nd*q*qd)/(4*N**2*kappa**2)",
+    "N": "q*volume*(4*N**2*V**2*q**2 - 36*N**2*eta**2 - 3*N**2*n1**2 + 6*N**2*n1*n2 + 6*N**2*n1*n3 - 3*N**2*n2**2 + 6*N**2*n2*n3 - 3*N**2*n3**2 + 36*qd**2)/(12*N**2*kappa**2)",
+    "eta": "-6*N*eta*q*volume/kappa**2",
+    "V": "2*N*V*q**3*volume/(3*kappa**2)"
+  },
+  "auxiliary_bracket": [
+    [
+      "0",
+      "0",
+      "-1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "-1"
+    ],
+    [
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "1",
+      "0",
+      "0"
+    ]
+  ],
+  "canonical_shift": {
+    "q": "-3*V*q**2*volume/kappa**2 + 12*eta*q*theta*volume",
+    "eta": "6*q**2*theta*volume",
+    "V": "-q**3*volume/kappa**2",
+    "N": "0"
+  },
+  "velocity_Hessian": [
+    [
+      "-6*q*volume/(N*kappa**2)",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "torus_constraint_note": "After eliminating torsion, C=-p^2/(4 A q) at chi=0 has vanishing gradient on p=0; no regular-constraint dimension count is inferred.",
+  "identities": [
+    "bulk_F",
+    "Noether_identity",
+    "auxiliary_determinant",
+    "shell_F",
+    "Hamiltonian_constraint",
+    "radius_Euler_shell",
+    "GHY_delta_qdot",
+    "GHY_delta_N",
+    "GHY_delta_q",
+    "auxiliary_second_class_det",
+    "velocity_rank_one_coefficient"
+  ]
+}

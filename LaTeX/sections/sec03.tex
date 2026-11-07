@@ -1,112 +1,78 @@
-%==============================================================================
-% Section 3: Hamiltonian admissibility by topology
-%==============================================================================
-\section{Hamiltonian admissibility by topology}
-\label{sec:hamiltonian}
+\section{Bulk action and signed boundary completion}
 
-\subsection{Admissibility criterion}
-\label{sec:hamiltonian:criterion}
+Use the curvature of the same connection and include complete NY as an exterior derivative. The coupling $\theta_{\mathrm{NY}}$ is constant and $\kappa^2>0$. The boundaries are spacelike endpoint slices; the spatial quotient is closed.
 
-In this paper, admissibility in the reduced sector is judged by the
-following three criteria.
-
-\begin{enumerate}
-  \item \emph{EH constraint closure}: the Hamiltonian constraint of the pure
-        $\EH$ part closes under the Lorentzian convention
-        (\code{EH_PASS}).
-  \item \emph{Reduced action skeleton}: the EC+NY reduced Lagrangian of each
-        torsion mode has a well-defined velocity structure
-        (\code{LRED_PASS}).
-  \item \emph{Torsion auxiliary closure}: the algebraic equations for the
-        auxiliary variables $\eta$ and $V$ admit real solutions
-        (\code{AUX_PASS} or \code{AUX_CONDITIONAL_REAL_BRANCH}).
-\end{enumerate}
-
-This notion of admissibility is not a claim of orbit stability, unitarity,
-or full constraint closure.
-
-\subsection{Hamiltonian constraint}
-\label{sec:hamiltonian:constraint}
-
-Lapse variation $\delta S/\delta N = 0$ gives the Hamiltonian constraint
-\begin{equation}
-  \Ham
-  \equiv A_{\topo}\, q\!\left(F_{\topo}+\frac{\dot q^{2}}{N^{2}}\right) = 0,
-  \qquad
-  \text{that is,}\quad F_{\topo}+\frac{\dot q^{2}}{N^{2}} = 0.
+\stepcounter{equation}
+\begin{equation}\tag{B-01}\label{eq:B-01}
+\begin{aligned}
+S&=\int_M e^{0123}\frac{R_{\mathrm{EC}}}{2\kappa^2}
++\theta_{\mathrm{NY}}\int_M dQ+S_{\mathrm{GHY}},\\
+R^a{}_{b}&=d\omega^a{}_{b}+\omega^a{}_{c}\wedge\omega^c{}_{b},\qquad Q=e^a\wedge T_a,\\
+dQ&=T^a\wedge T_a-e^a\wedge e^b\wedge R_{ab}.
+\end{aligned}
 \end{equation}
-On the $\EH$ branch ($\eta=V=0$) one has $F_{\topo}\big|_{\EH}=\chi$ (with
-the $\chi$ of Table~\ref{tab:topology_chi} substituted for each topology),
-which is the content of \code{EH_PASS}:
 
-\begin{table}[H]
-\centering
-\begin{tabular}{lcc}
-\toprule
-Topology & $F_{\EH}$ (on-shell) & Constraint residual \\
-\midrule
-$\Sthree$   & $4$      & $4N^{2}+\dot r^{2}=0$ \\
-$\Tthree$   & $0$      & $\dot r^{2}=0$ \\
-$\Nilthree$ & $-1/12$  & $N^{2}-12\dot R^{2}=0$ \\
-$\Solthree$ & $-1/3$   & $3N^{2}-9\dot q^{2}=0$\ (local/iso) \\
-\bottomrule
-\end{tabular}
-\caption{$\EH$ residuals for each topology.}
-\label{tab:eh_residual}
-\end{table}
+Differentiating the time-dependent connection gives the following scalar-curvature decomposition. The derivative of the vector amplitude and its product with $H$ form one divergence after multiplication by the volume density.
 
-The torsion auxiliary equations are the algebraic equations
-$\delta S/\delta\eta=0$ and $\delta S/\delta V=0$.  On $\AX$ only $\eta$ is
-non-trivial and on $\VT$ only $V$, each yielding \code{AUX_PASS}.  On $\MX$
-the auxiliary Hessian determinant is
-\begin{equation}
-  \det\!\begin{pmatrix}
-    \partial_{\eta}(\partial_{\eta} F) & \partial_{V}(\partial_{\eta} F)\\
-    \partial_{\eta}(\partial_{V} F)    & \partial_{V}(\partial_{V} F)
-  \end{pmatrix}
-  = -\frac{4q^{2}(\kap^{4}\thetaNY^{2}+1)}{9} < 0.
+\stepcounter{equation}
+\begin{equation}\tag{B-02}\label{eq:B-02}
+\begin{aligned}
+R_{\mathrm{LC}}&=6(DH+2H^2+\chi/q^2),\\
+R_{\mathrm{EC}}-R_{\mathrm{LC}}&=-6\eta^2/q^2+2V^2/3-2DV-6HV.
+\end{aligned}
 \end{equation}
-For $q>0$ in the reduced-sector domain and real $\kap$ and $\thetaNY$, one has
-$\kap^{4}\thetaNY^{2}+1>0$, so the auxiliary Hessian is non-degenerate.
-We retain this mixed auxiliary channel as a branch with real-branch
-selection and origin tagging, and record it as
-\code{AUX_CONDITIONAL_REAL_BRANCH}, that is, as the
-\code{H_CONDITIONAL} status of $\MX$.
 
-The negative determinant does not imply a stable minimum.  The notion of
-\emph{conditional admissibility} used here is a weak criterion requiring
-only algebraic closure and real-branch selection at the non-degenerate
-mixed auxiliary saddle, and is independent of the Hessian signature
-(dynamical stability).
+\stepcounter{equation}
+\begin{equation}\tag{B-03}\label{eq:B-03}
+\begin{aligned}
+L_{\mathrm{raw}}&=L_0+\frac d{dt}(B_{\mathrm{EH}}+B_{\mathrm{EC}}+B_{\mathrm{NY}}),\\
+L_0&=A_{\Sigma}q\left(NF-\frac{\dot q^2}{N}\right),\qquad
+A_{\Sigma}=\frac{3\mathcal V_{\Sigma}}{\kappa^2},\\
+F&=\chi-\eta^2+\frac{q^2V^2}{9}.
+\end{aligned}
+\end{equation}
 
-\subsection{Mode status}
-\label{sec:hamiltonian:mode}
+\stepcounter{equation}
+\begin{equation}\tag{B-04}\label{eq:B-04}
+B_{\mathrm{EH}}=\frac{3\mathcal V_{\Sigma}q^2\dot q}{\kappa^2N},\qquad
+B_{\mathrm{EC}}=-\frac{\mathcal V_{\Sigma}q^3V}{\kappa^2},\qquad
+B_{\mathrm{NY}}=6\theta_{\mathrm{NY}}\mathcal V_{\Sigma}q^2\eta.
+\end{equation}
 
-Collecting the above criteria gives Table~\ref{tab:ham_status}.  The result
-is the same across the four topologies.
+Equation (B-03) is common to the four geometries. The structure matrix enters $F$ through $\chi$, while the quotient volume enters $A_{\Sigma}$. Complete NY is contained in $B_{\mathrm{NY}}$, so the bulk auxiliary equations and reduced trajectories are independent of its constant coupling.
 
-\begin{table}[H]
-\centering
-\begin{tabular}{lll}
-\toprule
-Mode & Hamiltonian status & Interpretation \\
-\midrule
-$\EH$ & \code{H_PASS}         & pure $\EH$ reference branch \\
-$\AX$ & \code{H_PASS}         & active-torsion admissible \\
-$\VT$ & \code{H_PASS}         & active-torsion admissible \\
-$\MX$ & \code{H_CONDITIONAL}  & conditional admissibility via real auxiliary branch \\
-\bottomrule
-\end{tabular}
-\caption{Hamiltonian status by topology and mode.}
-\label{tab:ham_status}
-\end{table}
+The outward unit normal points to the future at the final slice and to the past at the initial slice. Use the LC extrinsic curvature and the signature factor in the GHY term \cite{GH1977,HH1996}.
 
-The \code{H_CONDITIONAL} label for $\MX$ is not an obstruction or a failure.
-Assuming the existence of a real auxiliary branch, the off-shell behaviour
-of the subsequent P-channel diagnostics and the $\QNY$ boundary channel is
-recorded as a diagnostic, which is the content of conditional admissibility.
+\stepcounter{equation}
+\begin{equation}\tag{B-05}\label{eq:B-05}
+\begin{aligned}
+\hat n_f&=+N^{-1}\partial_t,\quad \hat n_i=-N^{-1}\partial_t,\quad
+\epsilon_n=\hat n^a\hat n_a=-1,\quad K_f=3H_f,\quad K_i=-3H_i,\\
+S_{\mathrm{GHY}}&=\frac1{\kappa^2}\sum_{s=i,f}\epsilon_n\int_{\Sigma_s}\sqrt h K_s
+=-[B_{\mathrm{EH}}]_i^f.
+\end{aligned}
+\end{equation}
 
-\paragraph{Remark.}
-\code{H_PASS} and \code{L_ADMISSIBLE} do not imply dynamical stability.  The
-$\Solthree$ table entries refer to the local/isotropic reduction and do not
-constitute a full resolution of the compact quotient.
+\stepcounter{equation}
+\begin{equation}\tag{B-06}\label{eq:B-06}
+S=\int_{t_i}^{t_f}L_0dt+[B_{\mathrm{EC}}+B_{\mathrm{NY}}]_i^f,\qquad
+\delta q=\delta\eta=\delta V=0\quad\text{at both endpoints}.
+\end{equation}
+
+These fixed endpoint data suffice for the completed variational problem; neither the endpoint lapse nor the scale velocity needs to be fixed. If $L_0$ is chosen as the canonical representative, restoring the derivative of $B=B_{\mathrm{EC}}+B_{\mathrm{NY}}$ shifts the momenta as follows, without changing the bulk equations.
+
+\stepcounter{equation}
+\begin{equation}\tag{B-07}\label{eq:B-07}
+\begin{aligned}
+\Delta p_q&=-\frac{3\mathcal V_{\Sigma}q^2V}{\kappa^2}
++12\theta_{\mathrm{NY}}\mathcal V_{\Sigma}q\eta,\\
+\Delta p_{\eta}&=6\theta_{\mathrm{NY}}\mathcal V_{\Sigma}q^2,\qquad
+\Delta p_V=-\frac{\mathcal V_{\Sigma}q^3}{\kappa^2},\qquad \Delta p_N=0.
+\end{aligned}
+\end{equation}
+
+Prescribing nonzero endpoint torsion is distinct from the existence of a smooth stationary curve with those endpoint values. The auxiliary equations in Section 4 impose $\eta=V=0$ throughout the interval and, by continuity, at its endpoints. Boundary sources or discontinuous layers define different problems and are not included here.
+
+\subsection{Canonical correspondence of endpoint representatives}
+
+After GHY completion, write $B_{\mathrm{end}}=B_{\mathrm{EC}}+B_{\mathrm{NY}}$. Adding $dB_{\mathrm{end}}/dt$ gives $P_i=p_i+\partial_iB_{\mathrm{end}}$, including the auxiliary momenta. In $\widetilde p_i=P_i-\partial_iB_{\mathrm{end}}$, the constraints retain their original form. Appendix C gives the two-form and second-class constraints. Canonical equivalence refers to corresponding endpoint data: fixing the old and new momenta independently would generally define different boundary conditions.

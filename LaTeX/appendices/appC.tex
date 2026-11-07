@@ -1,58 +1,72 @@
-%==============================================================================
-% Appendix C: Bianchi I lite comparison and reduced-atlas scope
-%==============================================================================
-\section{Bianchi I lite comparison and reduced-atlas scope}
-\label{app:C}
+\section{Variations and the full connection equation}
 
-\subsection{Purpose}
-\label{app:C:purpose}
+Substitution of (B-02) into the raw scalar density and integration by parts of the EH acceleration and vector divergence give (B-03). The vector terms after spatial integration are $-\mathcal V_{\Sigma}d(q^3V)/\kappa^2$. The $HV$ term alone must not be discarded as a total derivative.
 
-The purpose of this appendix is to make explicit the scope of the present
-paper by clarifying the structural differences between the reduced vacuum
-atlas of this paper and Bianchi~I / Nieh--Yan-type systems.
+The Euler derivatives of $L_0$ are listed below. In $\partial_qF$, the amplitudes $\eta,V$ are held fixed.
 
-\subsection{Structural comparison}
-\label{app:C:comparison}
+\stepcounter{equation}
+\begin{equation}\tag{V-01}\label{eq:V-01}
+\begin{aligned}
+E_N&=A_{\Sigma}q(F+\dot q^2/N^2),\\
+E_{\eta}&=A_{\Sigma}Nq\partial_{\eta}F,\qquad
+E_V=A_{\Sigma}Nq\partial_VF,\\
+E_q&=A_{\Sigma}\left[N(F+q\partial_qF)+\frac{\dot q^2}{N}
++\frac{2q\ddot q}{N}-\frac{2q\dot q\dot N}{N^2}\right].
+\end{aligned}
+\end{equation}
 
-The reduced orbit equation of this paper is $\dot q^{2}+\chi=0$, which
-contains only the isotropic scale $q$ and the topology scalar $\chi$.  It
-contains neither matter coupling nor effective-source terms.  In contrast,
-the Bianchi~I / NY-type bounce-like
-systems~\cite{BrandenbergerPeter2017} typically involve several
-independent scale factors, matter sources, and effective potentials, and
-the existence of a turning point ($\dot q=0$, $\ddot q>0$) is a necessary
-condition for the realisation of a bounce-like orbit.
+Substituting the auxiliary solution into (V-01) yields (H-04). Under a time displacement $\xi$, the fields transform as $\delta q=\xi\dot q$, $\delta\eta=\xi\dot\eta$, $\delta V=\xi\dot V$ and $\delta N=(\xi N)^{\boldsymbol\cdot}$. Integrating the $\dot\xi$ term gives the Noether identity (H-05). Fixing $N=1$ before variation would lose $E_N$, so the gauge is selected afterwards.
 
-\begin{table}[H]
-\centering
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{lll}
-\toprule
-Item & Present reduced orbit atlas & Bianchi~I / NY type \\
-\midrule
-Orbit equation & $\dot q^{2}+\chi=0$ & involves a richer effective potential \\
-Scale factor & isotropic scalar $q$ & generally several independent factors \\
-Matter coupling & none & generally present \\
-Bounce-like turning point & not found in the present scope & depends on the potential \\
-Geometric basis & Thurston geometry $\times$ EC+NY torsion & model-dependent \\
-\bottomrule
-\end{tabular}%
-}
-\caption{Structural comparison with Bianchi~I lite.}
-\label{tab:appC_bianchi}
-\end{table}
+The endpoint one-form of the GHY-completed action is the following. It directly gives both the fixed data in (B-06) and the momentum shifts in (B-07).
 
-This comparison is a sanity benchmark, not a matching of the same model.
+\stepcounter{equation}
+\begin{equation}\tag{V-02}\label{eq:V-02}
+\Theta=\left[p_q\delta q+\delta(B_{\mathrm{EC}}+B_{\mathrm{NY}})\right]_i^f.
+\end{equation}
 
-\subsection{Scope statement}
-\label{app:C:scope}
+For the full connection equation, invert the epsilon contraction in (E-01) to obtain $e^a\wedge T^b-e^b\wedge T^a=0$. Let $\iota_a$ denote contraction with the dual frame and set $t=\sum_a\iota_aT^a$. Contracting and summing over $a$ gives $T^b=-e^b\wedge t$ in four dimensions. Contracting once more over $b$ gives $t=-3t$, hence $t=0$ and $T^b=0$. No two-amplitude restriction was used, so omitted torsion components do not remain as unconstrained solutions.
 
-The absence of \code{BOUNCE_LIKE} and \code{RECOLLAPSE_LIKE} orbit classes
-in the vacuum reduced atlas of the present paper is a property of this
-isotropic vacuum reduced setting.  This result is not a general no-go
-claim against matter-coupled, effective-source, or anisotropic extensions.
-For instance, on $\Sthree$ ($\chi>0$) the absence of real initial data on
-the vacuum reduced atlas is not a denial that the introduction of a matter
-source -- changing the structure of the Hamiltonian constraint -- could
-permit bounce-like orbits~\cite{BrandenbergerPeter2017}.  The analysis of
-these extensions is a future task.
+Finally, setting $\eta=V=0$ in the LC curvature blocks gives $\mathrm{Ric}_{00}=-3(DH+H^2)$ and $\mathrm{Ric}_{ii}=DH+3H^2+(k_j+k_k)/q^2$. Subtracting the scalar trace proves (E-02). A reduced trajectory has $D^2q=0$ and $(Dq)^2=-\chi$, so the temporal component and spatial trace vanish, leaving exactly $\Xi$.
+
+\subsection{Irregular torus constraint and endpoints}
+
+After auxiliary elimination on the torus, $C=-p_q^2/(4A_{\Sigma}q)$ has $dC=0$ and vanishing Hamiltonian vector field on its zero set. The equation $p_q=0$ defines the same set but generates a nonzero $q$ translation, so it is not the same constrained gauge system. The invertible coordinate $\mu=q^{3/2}$, $q>0$, gives
+
+\stepcounter{equation}
+\begin{equation}\tag{H-07}\label{eq:H-07}
+L=-\frac{4A_{\Sigma}}{9N}\dot\mu^2,\qquad p_\mu=-\frac{8A_{\Sigma}}{9N}\dot\mu,\qquad C=-\frac{9p_\mu^2}{16A_{\Sigma}}.
+\end{equation}
+
+The irregularity persists: a first-order affine $\mu=a_\mu+b_\mu\tau$ still requires $b_\mu=0$ at second order. The same argument holds for any positive background lapse $N_0(t)$ with $\tau=\int N_0dt$. An endpoint-fixing $\xi$ gives $\delta N=d(\xi N_0)/dt$, hence zero integral. Conversely, any zero-integral lapse variation gives $\xi=N_0^{-1}\int_{t_i}^t\delta Nds$. These gauge directions exhaust lapse variations at fixed $T$, but do not remove the $q_0$ modulus. The two-form pulled back to a fixed-time slice of the static solution family is $dq_0\wedge dp_q=0$; this degeneracy does not identify the volume modulus as gauge.
+
+\subsection{Endpoint generator and constraints}
+
+\stepcounter{equation}
+\begin{equation}\tag{K-01}\label{eq:K-01}
+\begin{aligned}
+B_{\mathrm{end}}&=-\frac{\mathcal V_{\Sigma}q^3V}{\kappa^2}
+ +6\theta_{\mathrm{NY}}\mathcal V_{\Sigma}q^2\eta,\\
+P_i&=p_i+\partial_iB_{\mathrm{end}},\qquad
+\widetilde p_i=P_i-\partial_iB_{\mathrm{end}},\quad Q^i=(q,N,\eta,V),\\
+C'&=-\frac{\widetilde p_q^2}{4A_{\Sigma}q}
+ -A_{\Sigma}q(\chi-\eta^2+q^2V^2/9).
+\end{aligned}
+\end{equation}
+
+This coordinate-dependent generator is defined after GHY completion; it excludes the velocity-dependent EH endpoint term before completion. Since $P_i\,dQ^i=p_i\,dQ^i+dB_{\mathrm{end}}$, the two-forms agree. Symmetry of the Hessian gives $\{Q^i,\widetilde p_j\}=\delta^i_j$ and $\{\widetilde p_i,\widetilde p_j\}=0$. The primary constraints are $\widetilde p_N,\widetilde p_\eta,\widetilde p_V$ and the secondary constraints are $C^{\prime},\eta,V$, with nonzero factors removed from the latter two for $N,q>0$.
+
+\stepcounter{equation}
+\begin{equation}\tag{K-02}\label{eq:K-02}
+\begin{aligned}
+\{\zeta_\alpha,\zeta_\beta\}
+&=\begin{pmatrix}0&0&-1&0\\0&0&0&-1\\1&0&0&0\\0&1&0&0\end{pmatrix},
+&\zeta&=(\widetilde p_\eta,\widetilde p_V,\eta,V),\\
+\det\{\zeta_\alpha,\zeta_\beta\}&=1,\qquad
+P_\eta=6\theta_{\mathrm{NY}}\mathcal V_{\Sigma}q^2,&
+P_V&=-\mathcal V_{\Sigma}q^3/\kappa^2,\\
+\Omega_{\mathrm{red}}&=dq\wedge dP_q+dN\wedge dP_N,&
+C_{\mathrm{red}}&=-P_q^2/(4A_{\Sigma}q)-A_{\Sigma}q\chi.
+\end{aligned}
+\end{equation}
+
+On the second-class surface, $\eta=V=0$ and $P_q=p_q$. Pulling back the two-form with $d\eta=dV=0$ immediately gives (K-02). At $\chi=0,P_q=0$, $dC_{\mathrm{red}}$ remains zero. Fixed $q,\eta,V$ suffice for $\delta B_{\mathrm{end}}=0$ without fixing lapse. Momentum endpoint conditions must instead be mapped through the translation. Changing the constant-NY endpoint representative introduces neither new bulk degrees of freedom nor regularization of the torus constraint.

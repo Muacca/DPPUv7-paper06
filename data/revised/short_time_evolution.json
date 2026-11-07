@@ -1,0 +1,130 @@
+{
+  "identities": [
+    "diagonal_time_Ricci",
+    "diagonal_spatial_Ricci",
+    "momentum_and_offdiagonal_closure",
+    "Hamiltonian_constraint_from_full_tensor",
+    "action_Euler_0",
+    "action_Euler_1",
+    "action_Euler_2",
+    "constraint_propagation",
+    "tracefree_shear_closure",
+    "Raychaudhuri_on_constraint",
+    "scale_first_three_derivatives",
+    "scale_fourth_derivative",
+    "shape_initial_acceleration_0",
+    "shape_cubic_derivative_0",
+    "shape_initial_acceleration_1",
+    "shape_cubic_derivative_1",
+    "shape_initial_acceleration_2",
+    "shape_cubic_derivative_2",
+    "initial_constraint",
+    "Nil-1_numerical_success",
+    "Nil-10.01_constraint",
+    "Nil-10.02_constraint",
+    "Nil-10.04_constraint",
+    "Nil-1_shape_scaled_remainder_bounded_at_checked_points",
+    "Nil-1_scale_scaled_remainder_bounded_at_checked_points",
+    "Nil1_numerical_success",
+    "Nil10.01_constraint",
+    "Nil10.02_constraint",
+    "Nil10.04_constraint",
+    "Nil1_shape_scaled_remainder_bounded_at_checked_points",
+    "Nil1_scale_scaled_remainder_bounded_at_checked_points",
+    "Sol-1_numerical_success",
+    "Sol-10.01_constraint",
+    "Sol-10.02_constraint",
+    "Sol-10.04_constraint",
+    "Sol-1_shape_scaled_remainder_bounded_at_checked_points",
+    "Sol-1_scale_scaled_remainder_bounded_at_checked_points",
+    "Sol1_numerical_success",
+    "Sol10.01_constraint",
+    "Sol10.02_constraint",
+    "Sol10.04_constraint",
+    "Sol1_shape_scaled_remainder_bounded_at_checked_points",
+    "Sol1_scale_scaled_remainder_bounded_at_checked_points"
+  ],
+  "states": [
+    "q",
+    "H",
+    "s1",
+    "s2",
+    "m1",
+    "m2",
+    "m3"
+  ],
+  "rhs": [
+    "H*q",
+    "-3*H**2 + m1**2/3 + m2**2/3 + m3**2/3 - (m1 + m2 + m3)**2/6",
+    "-3*H*s1 - 2*m1**2/3 + m1*m2/3 + m1*m3/3 + m2**2/3 - 2*m2*m3/3 + m3**2/3",
+    "-3*H*s2 + m1**2/3 + m1*m2/3 - 2*m1*m3/3 - 2*m2**2/3 + m2*m3/3 + m3**2/3",
+    "m1*(-H + 2*s1)",
+    "m2*(-H + 2*s2)",
+    "m3*(-H - 2*s1 - 2*s2)"
+  ],
+  "constraint": "6*H**2 - m1**2/2 + m1*m2 + m1*m3 - m2**2/2 + m2*m3 - m3**2/2 - 2*s1**2 - 2*s1*s2 - 2*s2**2",
+  "propagation": "D constraint=-6H constraint",
+  "q_derivatives": [
+    "q0",
+    "H0*q0",
+    "0",
+    "0",
+    "-4*(n1**4 - n1**3*n2 - n1**3*n3 + n1**2*n2*n3 - n1*n2**3 + n1*n2**2*n3 + n1*n2*n3**2 - n1*n3**3 + n2**4 - n2**3*n3 - n2*n3**3 + n3**4)/(9*q0**3)"
+  ],
+  "beta_derivatives": [
+    [
+      "0",
+      "0",
+      "-(2*n1**2 - n1*n2 - n1*n3 - n2**2 + 2*n2*n3 - n3**2)/(3*q0**2)",
+      "5*H0*(2*n1**2 - n1*n2 - n1*n3 - n2**2 + 2*n2*n3 - n3**2)/(3*q0**2)",
+      "(10*n1**4 + 95*n1**3*n2 + 95*n1**3*n3 - 81*n1**2*n2**2 - 38*n1**2*n2*n3 - 81*n1**2*n3**2 - 19*n1*n2**3 + 19*n1*n2**2*n3 + 19*n1*n2*n3**2 - 19*n1*n3**3 - 5*n2**4 - 76*n2**3*n3 + 162*n2**2*n3**2 - 76*n2*n3**3 - 5*n3**4)/(36*q0**4)"
+    ],
+    [
+      "0",
+      "0",
+      "(n1**2 + n1*n2 - 2*n1*n3 - 2*n2**2 + n2*n3 + n3**2)/(3*q0**2)",
+      "-5*H0*(n1**2 + n1*n2 - 2*n1*n3 - 2*n2**2 + n2*n3 + n3**2)/(3*q0**2)",
+      "-(5*n1**4 + 19*n1**3*n2 + 76*n1**3*n3 + 81*n1**2*n2**2 - 19*n1**2*n2*n3 - 162*n1**2*n3**2 - 95*n1*n2**3 + 38*n1*n2**2*n3 - 19*n1*n2*n3**2 + 76*n1*n3**3 - 10*n2**4 - 95*n2**3*n3 + 81*n2**2*n3**2 + 19*n2*n3**3 + 5*n3**4)/(36*q0**4)"
+    ],
+    [
+      "0",
+      "0",
+      "(n1**2 - 2*n1*n2 + n1*n3 + n2**2 + n2*n3 - 2*n3**2)/(3*q0**2)",
+      "-5*H0*(n1**2 - 2*n1*n2 + n1*n3 + n2**2 + n2*n3 - 2*n3**2)/(3*q0**2)",
+      "-(5*n1**4 + 76*n1**3*n2 + 19*n1**3*n3 - 162*n1**2*n2**2 - 19*n1**2*n2*n3 + 81*n1**2*n3**2 + 76*n1*n2**3 - 19*n1*n2**2*n3 + 38*n1*n2*n3**2 - 95*n1*n3**3 + 5*n2**4 + 19*n2**3*n3 + 81*n2**2*n3**2 - 95*n2*n3**3 - 10*n3**4)/(36*q0**4)"
+    ]
+  ],
+  "short_time": "u=tau/q0; beta=-X*u^2/2+5*(H0*q0)*X*u^3/6+O(u^4); q/q0=1+(H0*q0)*u-J2*u^4/36+O(u^5)",
+  "geometries": {
+    "Nil": {
+      "n": [
+        0,
+        0,
+        -1
+      ],
+      "chi": "-1/12",
+      "X": [
+        "-1/3",
+        "-1/3",
+        "2/3"
+      ],
+      "J2": "2/3"
+    },
+    "Sol": {
+      "n": [
+        0,
+        1,
+        -1
+      ],
+      "chi": "-1/3",
+      "X": [
+        "-4/3",
+        "2/3",
+        "2/3"
+      ],
+      "J2": "8/3"
+    }
+  },
+  "numerical_control": "q0=1; both H signs; DOP853; times .01,.02,.04; finite checks, not rigorous error bounds.",
+  "scope": "Constraint-compatible local diagonal vacuum development. Common-scale curves are comparison curves, not vacuum backgrounds. No stability or long-time conclusion."
+}

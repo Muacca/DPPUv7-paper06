@@ -1,56 +1,150 @@
-%==============================================================================
-% Section 6: Four-topology admissibility classification
-%==============================================================================
-\section{Four-topology admissibility classification}
-\label{sec:classification}
+\section{Time-dependent curvature and relative endpoint quantities}
 
-The local admissibility classification that integrates the Hamiltonian
-admissibility of Section~\ref{sec:hamiltonian} and the P-channel diagnostics
-of Section~\ref{sec:pchannel} is collected in
-Table~\ref{tab:four_topology_admissibility}.
+Compute the curvature of the same connection (G-04) before imposing static restrictions. The three spatial planes have distinct $y_i$, while the other blocks $x,z,w$ are common.
 
-\begin{table}[H]
-\centering
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{lllll}
+\stepcounter{equation}
+\begin{equation}\tag{D-01}\label{eq:D-01}
+\begin{aligned}
+R^0{}_{i}&=x e^{0i}+w e^{jk},\qquad R^j{}_{k}=z e^{0i}+y_i e^{jk},\\
+x&=Db+Hb,\qquad z=-D\eta/q,\qquad w=2b\eta/q,\\
+y_i&=b^2+(k_i-\eta^2)/q^2,\qquad
+\bar y=\tfrac13\sum_i y_i=b^2+(\chi-\eta^2)/q^2.
+\end{aligned}
+\end{equation}
+
+Define $Q$, complete NY and Pontryagin as oriented forms. In the internal-dual contraction $\mathcal B$, the form indices are raised with the Lorentz metric. With all internal indices summed, direct wedge products and component contractions give
+
+\stepcounter{equation}
+\begin{equation}\tag{D-02}\label{eq:D-02}
+\begin{aligned}
+Q&=\frac{6\eta}{q}e^{123},\qquad Q_{\Sigma}=6\mathcal V_{\Sigma}q^2\eta,\\
+dQ&=\mathcal N e^{0123},\qquad \mathcal N=6(D\eta+2H\eta)/q,\\
+\sum_{a,b}R_{ab}\wedge R^{ab}&=\mathcal P e^{0123},\qquad
+\mathcal P=12(\bar y z-xw),\\
+\mathcal B&=\tfrac1{16}\epsilon^{abef}R_{abcd}R_{ef}{}^{cd}
+=3(w\bar y-xz).
+\end{aligned}
+\end{equation}
+
+Summing the spatial-plane contributions gives $\sum_i y_i=3\bar y$, so the structure dependence of these scalar expressions reduces to $\chi$. This identity uses a constant class-A structure matrix, a common scale and the two-amplitude torsion ansatz. It is not an identity for arbitrary fields with time-dependent shape or tensor torsion. The duals in $\mathcal B$ and $\mathcal P$ act on different index pairs, and the two quantities are distinct.
+
+\begin{center}\small
+\begin{tabularx}{\textwidth}{@{}llX@{}}
 \toprule
-Topology & $\EH$ & $\AX$ & $\VT$ & $\MX$ \\
-\midrule
-$\Sthree$   & \code{L_ADMISSIBLE} & \code{L_ADMISSIBLE} & \code{L_ADMISSIBLE} & \code{L_CONDITIONALLY_ADMISSIBLE} \\
-$\Tthree$   & \code{L_ADMISSIBLE} & \code{L_ADMISSIBLE} & \code{L_ADMISSIBLE} & \code{L_CONDITIONALLY_ADMISSIBLE} \\
-$\Nilthree$ & \code{L_ADMISSIBLE} & \code{L_ADMISSIBLE} & \code{L_ADMISSIBLE} & \code{L_CONDITIONALLY_ADMISSIBLE} \\
-$\Solthree$ & \code{L_ADMISSIBLE} & \code{L_ADMISSIBLE} & \code{L_ADMISSIBLE} & \code{L_CONDITIONALLY_ADMISSIBLE} \\
+Family & Local quantities & Endpoint quantity\\\midrule
+Static & $\mathcal N=\mathcal P=0$ & $Q_{\Sigma}$ can be nonzero\\
+Dynamic AX & $\mathcal N,\mathcal P,\mathcal B$ need not vanish & $Q_{\Sigma}$ can be nonzero\\
+Dynamic VT & $\mathcal N=\mathcal P=\mathcal B=0$ & $Q_{\Sigma}=0$\\
+Dynamic MX & Given by (D-02) & $Q_{\Sigma}$ can be nonzero\\
+Smooth auxiliary shell & $\mathcal N=\mathcal P=\mathcal B=0$ & $Q_{\Sigma}=0$\\
 \bottomrule
-\end{tabular}%
-}
-\caption{Four-topology admissibility classification.}
-\label{tab:four_topology_admissibility}
-\end{table}
+\end{tabularx}
+\end{center}
 
-The label \code{L_ADMISSIBLE} indicates that the Hamiltonian constraint
-closes (Section~\ref{sec:hamiltonian:constraint}), the active-torsion
-auxiliary closes (\code{AUX_PASS}), and the diagnostic checks
-$\Pform=0$ and $\Pint=0$ are passed.  $\EH$ is a pure-curvature reference
-to which the P-channels are not applied.  The label
-\code{L_CONDITIONALLY_ADMISSIBLE} indicates that the $\MX$ branch becomes
-admissible only under the real-auxiliary-branch condition
-$\kap^{4}\thetaNY^{2}+1>0$ and the auxiliary-shell interpretation
-$\eta=V=0$.  The off-shell $\PintMX$ and $\QNY$ are recorded as
-diagnostic / boundary channels but do not obstruct admissibility.
+Static means that all time derivatives of $q,\eta,V$ vanish. For dynamic VT, $\eta$ vanishes identically throughout the interval, so $D\eta=0$ as well. The auxiliary shell likewise imposes $\eta=V=0$ identically. A profile whose amplitudes vanish at only one instant is not the same restriction.
 
-The structural points of this table can be summarised in three statements.
-First, the $\EH$ / $\AX$ / $\VT$ / $\MX$ mode pattern agrees across the
-four topologies.  Second, the conditions of the conditional admissibility
-of $\MX$ are also common to the four topologies (see the auxiliary
-determinant in Section~\ref{sec:hamiltonian:constraint}), so topology does
-not change the presence or absence of these conditions.  Third, although
-$\Solthree$ carries a caveat regarding the compact quotient
-(see Appendix~\ref{app:A}), in the main classification table its row
-structure coincides with that of the other three topologies.
+\stepcounter{equation}
+\begin{equation}\tag{D-03}\label{eq:D-03}
+\left.\mathcal B\right|_{\mathrm{static}}
+=\frac{2V\eta}{9q^3}(-V^2q^2+9\eta^2+C),\qquad C=-9\chi.
+\end{equation}
 
-This topology-robust pattern is the background for the $\chi$-universality
-of Section~\ref{sec:bridge}.  Since admissibility itself does not vary with
-topology, topology dependence appears not in the admissibility label but
-in the diagnostic / orbit quantities $\Ctop$ and $\chi$.  In this sense,
-the bridge result of Section~\ref{sec:bridge} is a natural consequence
-that rides on top of the admissibility classification.
+Equation (D-03) is the static limit of the covariant internal-dual contraction. Static AX and VT give zero, while static MX can be nonzero. Extracting the $V\eta$ coefficient of the curvature contraction determines $C$, as derived in Appendix B.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.72\textwidth]{figures/fig04_static_bridge.pdf}
+\caption{The coefficient $C$ extracted from the covariant static internal-dual contraction versus $\chi$ derived from LC spatial curvature. The physical-radius sphere has $\chi=1$ and $C=-9$.}\label{fig:fig04_static_bridge}
+\end{figure}
+
+Time dependence also contributes to the Pontryagin density. The following jet, realizable by a smooth off-shell profile, gives $\mathcal P=-9$ on the sphere.
+
+\stepcounter{equation}
+\begin{equation}\tag{D-04}\label{eq:D-04}
+q=N=1,\quad \dot q=\ddot q=\dot N=V=\dot V=0,\quad
+\eta=\tfrac12,\quad D\eta=1
+\quad\Longrightarrow\quad \mathcal P=3-12\chi,\quad \mathcal N=6.
+\end{equation}
+
+\subsection{Absolute and relative primitives}
+
+Use the local CS form of the same connection. Let $s_1,s_2,s_3$ be the elementary symmetric polynomials in the diagonal structure eigenvalues. Direct calculation gives the slice primitive
+
+\stepcounter{equation}
+\begin{equation}\tag{D-05}\label{eq:D-05}
+\begin{aligned}
+\mathrm{CS}_{\mathcal P}&=-\mathrm{tr}(\omega\wedge d\omega+\tfrac23\omega\wedge\omega\wedge\omega),\\
+\int_{\Sigma}\mathrm{CS}_{\mathcal P}&=\mathcal V_{\Sigma}(\Phi_0+\phi),\\
+\Phi_0&=s_1^3-4s_1s_2+10s_3,\qquad
+s_1=\sum_i n_i,\quad s_2=\sum_{i<j}n_in_j,\quad s_3=n_1n_2n_3,\\
+\phi&=-12\chi\eta+4\eta^3-12\eta q^2b^2,\qquad
+D\phi=q^3\mathcal P.
+\end{aligned}
+\end{equation}
+
+The constant $\Phi_0$ is the LC reference value in the specified homogeneous frame. It equals $0,-1,0,8$ for $T^3$, Nil, Sol and $S^3$, respectively. It drops out of endpoint differences on a fixed-structure time interval, but is not determined by $\chi$ alone. Absolute CS values in changing local framings are not assigned the meaning of invariant charges.
+
+Choose the LC connection $\bar\omega$ of the same coframe as reference and set $K=\omega-\bar\omega$. With both connections compared in the same frame identification, define the relative form
+
+\stepcounter{equation}
+\begin{equation}\tag{D-06}\label{eq:D-06}
+\begin{aligned}
+\mathcal T_{\mathcal P}&=-2\mathrm{tr}(K\wedge\bar R)-\mathrm{tr}(K\wedge\bar D K)
+-\tfrac23\mathrm{tr}(K\wedge K\wedge K),\\
+d\mathcal T_{\mathcal P}&=-\mathrm{tr}(R\wedge R)+\mathrm{tr}(\bar R\wedge\bar R),\\
+\int_{\Sigma}\mathcal T_{\mathcal P}&=\mathcal V_{\Sigma}\phi,\qquad
+\int_M\mathcal P e^{0123}=\mathcal V_{\Sigma}[\phi]_i^f.
+\end{aligned}
+\end{equation}
+
+LC Pontryagin vanishes on this family, so the relative primitive differentiates to $\mathcal P$. Under a simultaneous local Lorentz transformation, $K,\bar R,\bar D K$ transform by conjugation; cyclicity of the trace makes the relative form invariant. This does not compare independently chosen endpoint frames without an identification or assert quantization. The NY integral likewise equals the oriented difference of $Q_{\Sigma}$.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.94\textwidth]{figures/fig05_dynamic_endpoints.pdf}
+\caption{An off-shell pulse at fixed scale. Local $\mathcal P$ is generally nonzero, but its interval integral vanishes because the even profile has equal relative primitives at the endpoints. Local densities and endpoint quantities are not identified with physical response.}\label{fig:fig05_dynamic_endpoints}
+\end{figure}
+
+\subsection{Selected quadratic and cubic contractions}
+
+This subsection concerns the common-scale, two-amplitude family. Use $x=Db+Hb$, $\bar y=b^2+(\chi-\eta^2)/q^2$, $z=-D\eta/q$, $w=2b\eta/q$. All indices are raised and lowered with the Lorentz metric; pair-exchange symmetry of EC curvature is not assumed.
+
+\stepcounter{equation}
+\begin{equation}\tag{I-01}\label{eq:I-01}
+\begin{aligned}
+J_2&=\mathrm{tr}(X^2),& J_3&=\mathrm{tr}(X^3),\\
+I_1&=R_{abcd}R^{abcd},& I_2&=R_{abcd}R^{cdab},\\
+I_{\mathrm{Ric}}&=\mathrm{Ric}_{ab}\mathrm{Ric}^{ab},&
+C_{\mathrm{Ric}}&=\mathrm{Ric}^a{}_b\mathrm{Ric}^b{}_c\mathrm{Ric}^c{}_a,\\
+C_R&=R_{ab}{}^{cd}R_{cd}{}^{ef}R_{ef}{}^{ab}.&&
+\end{aligned}
+\end{equation}
+
+$C_R$ sums all ordered indices, without the factors of $1/2$ sometimes used for curvature operators on two-forms. Direct contraction of the curvature blocks gives
+
+\stepcounter{equation}
+\begin{equation}\tag{I-02}\label{eq:I-02}
+\begin{aligned}
+I_1&=12(x^2+\bar y^2-w^2-z^2)+4J_2/q^4,\\
+I_2&=12(x^2+\bar y^2+2wz)+4J_2/q^4,\\
+I_{\mathrm{Ric}}&=12(x^2+x\bar y+\bar y^2)+J_2/q^4,\\
+I_1-I_2&=-12(w+z)^2.
+\end{aligned}
+\end{equation}
+
+\stepcounter{equation}
+\begin{equation}\tag{I-03}\label{eq:I-03}
+\begin{aligned}
+C_{\mathrm{Ric}}&=27x^3+3(x+2\bar y)^3
+ +3(x+2\bar y)J_2/q^4+J_3/q^6,\\
+C_R&=24[x^3+\bar y^3+3wz(x+\bar y)]
+ +24\bar y J_2/q^4-8J_3/q^6.
+\end{aligned}
+\end{equation}
+
+\stepcounter{equation}
+\begin{equation}\tag{I-04}\label{eq:I-04}
+\left.C_{abcd}C^{abcd}\right|_{\mathrm{LC}}=2J_2/q^4.
+\end{equation}
+
+Here $C_{abcd}$ is the LC Weyl tensor; no EC Weyl interpretation is implied. On the linear reduced Nil and Sol trajectories, $x=\bar y=w=z=0$ still leaves $I_{\mathrm{Ric}}=J_2/q^4\ne0$. Vanishing selected reduced scalars therefore does not imply vanishing curvature. Appendix B derives the contractions and trace subtraction.

@@ -1,0 +1,122 @@
+{
+  "identities": [
+    "same_flat_metric",
+    "oriented_coframe",
+    "periodic_global_frame",
+    "structure_1",
+    "structure_2",
+    "structure_3",
+    "connection_gauge_transform",
+    "torsion_0",
+    "torsion_1",
+    "torsion_2",
+    "coordinate_connection_constant",
+    "coordinate_curvature",
+    "independent_Koszul_connection",
+    "independent_full_curvature",
+    "parallel_transport_equation",
+    "z_vector_holonomy",
+    "xy_connection_integrands",
+    "constant_coefficient_closed_test",
+    "restricted_closed_dim_nonzero",
+    "restricted_closed_dim_zero",
+    "structure_rank_nonzero",
+    "structure_rank_zero",
+    "all_three_global_closed_forms",
+    "cartesian_form_closed_0",
+    "cartesian_form_closed_1",
+    "cartesian_form_closed_2",
+    "de_Rham_independent_periods",
+    "flat_Fourier_Laplacian",
+    "flat_invariants"
+  ],
+  "periods": "x,y,z each have period 2*pi",
+  "coframe": [
+    [
+      "cos(m*z)",
+      "sin(m*z)",
+      "0"
+    ],
+    [
+      "-sin(m*z)",
+      "cos(m*z)",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "1"
+    ]
+  ],
+  "structure_matrix": [
+    [
+      "-m",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "-m",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "connection_dz": [
+    [
+      "0",
+      "-m",
+      "0"
+    ],
+    [
+      "m",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "curvature": "zero",
+  "metric": "dx^2+dy^2+dz^2",
+  "global_condition": "m integer; noninteger m fails single-valued coframe on this fixed torus",
+  "comparison": [
+    {
+      "m": 0,
+      "rank_n": 0,
+      "constant_coefficient_closed_dimension": 3,
+      "b1_T3": 3,
+      "vector_holonomy": "identity"
+    },
+    {
+      "m": "nonzero integer",
+      "rank_n": 2,
+      "constant_coefficient_closed_dimension": 1,
+      "b1_T3": 3,
+      "vector_holonomy": "identity"
+    }
+  ],
+  "periods_matrix": [
+    [
+      "2*pi",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "2*pi",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "2*pi"
+    ]
+  ],
+  "scope": "One fixed flat T3 metric and its global oriented coframes. No spin holonomy or quotient classification; rank n belongs to the chosen homogeneous presentation."
+}

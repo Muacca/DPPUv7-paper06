@@ -1,80 +1,61 @@
-## 7. Reduced orbit atlas and $\chi$ -sign separation
+# 7. 曲率情報と幾何の表示
 
-### 7.1 Derivation of the auxiliary-shell orbit equation
+式(B-03)、(D-02)、(D-05)は、このclass A族のbulk縮約、局所NY・Pontryagin・内部双対量、単位参照体積あたりの相対primitiveを $`\chi`$ で整理する。曲率tensorそのものは三つの $`k_i`$ を別々に保持する。したがって「 $`\chi`$ で整理できる」は、幾何全体や完全方程式が同一という意味ではない。
 
-Section 2.3 の reduced action から lapse variation を取ると Hamiltonian constraint は
+同じ $`\chi`$ で異なる情報が残る例として、Nilの $`n=\mathrm{diag}(0,0,-1)`$ と、Sol型の $`n=\mathrm{diag}(0,1/2,-1/2)`$ を比較する。後者は表の標準Solとは異なる参照規格化である。両者の $`\chi`$ は $`-1/12`$ だが、次の量は異なる。
 
-$$
-\dot q^2 + F_\Sigma(q,\eta,V;\chi) = 0\qquad\text{（ $N=1$ gauge）}
-$$
-
-となる（符号は Section 3.2 と一致）。各 torsion branch の auxiliary field は $\delta S/\delta\eta=\delta S/\delta V=0$ から代数的に決まる。本稿で用いる branch functions は
+式(U-01)。
 
 $$
-F_{\rm EH}=\chi,\qquad
-F_{\rm AX}=\chi-\eta^2,\qquad
-F_{\rm VT}=\chi+\frac{q^2V^2}{9},
+\begin{aligned}
+q^2\Xi_{\mathrm{Nil}}&=\mathrm{diag}(-1/3,-1/3,2/3),&\Phi_{0,\mathrm{Nil}}&=-1,\\
+q^2\Xi_{\mathrm{Sol}/2}&=\mathrm{diag}(-1/3,1/6,1/6),&\Phi_{0,\mathrm{Sol}/2}&=0.
+\end{aligned}
 $$
 
+この比較は局所構造行列についての対照であり、同じ空間体積や格子を指定するものではない。積分作用・端点量には必ず $`\mathcal V_{\Sigma}`$ を掛ける。四幾何の $`\chi`$ の符号は縮約軌道を区別するが、絶対作用の大小によるtopology選択を導かない。
+
+Paper04のコンパクト幾何との対応は、構造行列と閉1形式を通じて記述できる。 $`T^3`$ 、Nil、Sol、 $`S^3`$ の構造行列のrankは0,1,2,3、斉次閉1形式の次元は3,2,1,0である。Paper04は、指定したコンパクト商における調和1形式と二次形式を論じている。これらは本稿の固定coframeを特徴付ける幾何データである。
+
+Bianchi classは構造定数のtraceによって判定する。付録Aでは五係数による表示でJacobi条件とtraceを求め、Solを含むclass Aの領域を示す。
+
+## 限定されたχ依存と情報の階層
+
+本稿で restricted $`\chi`$-universality と呼ぶのは、指定した共通scale・二振幅族におけるbulk作用、局所NY・Pontryagin・内部双対スカラー、および参照体積当たりの相対primitiveが、 $`n`$ に $`\chi`$ を通じて依存することに限る。任意の曲率縮約やshape方程式の普遍性は意味しない。
+
+| 量 | 必要な構造情報 |
+| --- | --- |
+| 縮約作用と式(D-02)、(D-05) | $`\chi`$ |
+| 選定二次縮約、LC Weyl二乗 | $`\chi,J_2`$ |
+| 選定三次縮約 | $`\chi,J_2,J_3`$ |
+| 絶対CS、積分量 | frame・構造式・商体積も必要 |
+
+式(U-01)の同じ $`\chi`$ の二例は $`J_2=2/3`$ と $`1/6`$ で区別される。さらに次の同じ $`\chi,J_2`$ の二例を $`J_3`$ が区別する。正の $`\chi`$ の局所off-shell曲率比較であり、共通scale実真空解の対例ではない。
+
+| $`n`$ | $`X`$ | $`(\chi,J_2,J_3)`$ |
+| --- | --- | --- |
+| $`(4,4,1)`$ | $`(1,1,-2)`$ | $`(5/4,6,-6)`$ |
+| $`(2,2,3)`$ | $`(-1,-1,2)`$ | $`(5/4,6,6)`$ |
+
+同じ時間変数を用い、第一例から第二例を引くと $`\Delta C_{\mathrm{Ric}}=-12/q^6`$ 、 $`\Delta C_R=96/q^6`$ である。tracefree Ricciのスペクトルは次の多項式で定まり、単位scaleの空間Ricci固有値はその根に $`2\chi`$ を加えたものである。
+
+式(I-05)。
+
 $$
-F_{\rm MX}=
-\chi-\eta^2+\frac{q^2V^2}{9}
-+\frac{2}{3}qV\eta\,\kappa^2\theta_{\rm NY}
+\det(\lambda I-X)=\lambda^3-\tfrac12J_2\lambda-\tfrac13J_3,\qquad J_2\ge0,\quad \tfrac12J_2^3-3J_3^2\ge0.
 $$
 
-である。AX/VT/MX の auxiliary equations はそれぞれ $\eta=0$, $V=0$, $(\eta,V)=(0,0)$ を与える。MX では Section 3.2 の real branch 条件を保持する。したがって全 mode・全 topology を通じて
+この復元は一点のRicciスペクトルの復元である。 $`n`$ の逆問題では、Ricci固有値がすべて非零なら、存在条件は積が正であること、解は共役と全体符号を除いて一意である。一つだけ非零の枝では連続的な非一意性があり、二つだけ非零の枝は存在しない。Ricciが全零ならflat枝となる。付録Bで導く。非一意な $`n`$ の族を局所非等長な計量の族と断定しない。
 
-$$
-F_\Sigma\big|_{\rm aux\text{-}shell} = \chi
-$$
+## 同じflat torus上のframe比較
 
-が成立し、
+周期 $`2\pi`$ の同じ $`T^3`$ で、座標coframeを $`x^3`$ に沿って角度 $`\nu x^3`$ 、 $`\nu\in\mathbb Z`$ だけ回転する。得られる構造行列は $`n=(-\nu,-\nu,0)`$ であり、元の $`n=0`$ と同じ静的flat計量を表す。接続はpure gauge、vector holonomyは全周期で恒等である。具体式とperiod計算は付録Aに置く。
 
-$$
-\boxed{\dot q^2 + \chi = 0}
-$$
+| frame | $`\mathrm{rank}\,n`$ | 定数係数の閉1形式 | $`b_1(T^3)`$ |
+| --- | --- | --- | --- |
+| 座標 | 0 | 3 | 3 |
+| 回転、 $`\nu\ne0`$ | 2 | 1 | 3 |
 
-を得る。この結果は Section 4.3 の diagnostic level の bridge result $C_{\rm topology}=-9\chi$ とは独立に得られており、χ-universality の dynamical 側の証拠を構成する（Section 5.1）。
+したがって固定coframe内の閉形式数とde Rham cohomologyは区別する。これはPaper04の指定coframe・商に関する結果を変更するものではなく、表示への依存を明確にする例である。spin holonomyについては主張しない。
 
-### 7.2 χ-sign separation
-
-auxiliary-shell orbit equation を $\chi$ の符号で分類すると Table 7 を得る。
-
-**Table 7.** χ-sign reduced orbit atlas.
-
-| $\chi$ の符号 | 代表 topology | reduced vacuum behavior | 補足 |
-|-------------|-------------|------------------------|------|
-| $\chi>0$ | $S^3$ | $\dot q^2=-\chi<0$：実数初期データが存在しない | Hamiltonian admissibility（Table 6）とは独立な vacuum orbit の特徴 |
-| $\chi=0$ | $T^3$ | $\dot q^2=0$：static / degenerate | 安定性の議論は本稿の範囲外 |
-| $\chi<0$ | $Nil^3/Sol^3$ | $\dot q^2=-\chi>0$：monotonic expansion と $q\to0$ singular-approach collapse | 本稿の vacuum reduced atlas における軌道分類 |
-
----
-
-![Fig. 4: χ-sign reduced orbit atlas schematic](LaTeX/figures/fig04_chi_sign_orbit_atlas.png)
-
-**Fig. 4** $\chi$-sign reduced orbit atlas schematic（定性的 $q$ – $t$ 図）。**(a) $\chi>0$（ $S^3$, $\chi=4$）**: $\dot{q}^2 = -\chi < 0$ のため実数初期データが存在しない（ハッチ領域）。**(b) $\chi=0$（ $T^3$, $\chi=0$）**: $\dot{q}=0$ → static / degenerate。**(c) $\chi<0$（ $Nil^3$, $Sol^3$）**: $\dot{q} = \pm\sqrt{-\chi}$ の二シート（expanding / collapsing）。 $Nil^3$（ $|\dot{q}|=\sqrt{1/12}\approx0.289$、破線）と $Sol^3$（ $|\dot{q}|=\sqrt{1/3}\approx0.577$、実線）の傾きの大きさが $|\chi|$ で決まることを示す。Bounce-like / recollapse-like クラスはいずれのパネルにも現れない。*Caveats*: 本図は $\dot{q}^2+\chi=0$ の constant-velocity 解の定性的模式図であり、effective potential を含まない。Scope guard: matter coupling / anisotropic / effective-source 拡張は軌道クラスを変え得る（Sec 7.4, App. C 参照）。
-
----
-
-$\chi>0$（ $S^3$）の場合、real vacuum initial data が存在しないことは vacuum reduced atlas の特徴であり、Table 6 の admissibility 分類（EH/AX/VT/MX すべて admissible）とは独立である。matter coupling や effective source を導入すれば $S^3$ でも実数軌道が得られ得るが、それは本稿の範囲外の拡張である。
-
-### 7.3 Full-branch sweep summary
-
-全 16 branch（ $S^3/T^3/Nil^3/Sol^3$ $\times$ EH/AX/VT/MX）にわたる reduced vacuum orbit の分類は以下の通りである。 $\chi<0$ の各 branch は expanding sheet と collapsing sheet の二つを持つため、Table 8 は 16 branch そのものではなく、24 個の branch/sheet entries を数えている。
-
-**Table 8.** Full-branch orbit class counts.
-
-| orbit class | count |
-|-------------|------:|
-| `NO_REAL_AUX_SHELL_ORBIT` | 4 |
-| `STATIC_OR_DEGENERATE` | 4 |
-| `MONOTONIC_EXPANSION` | 8 |
-| `SINGULAR_APPROACH` | 8 |
-| `BOUNCE_LIKE` | 0 |
-| `RECOLLAPSE_LIKE` | 0 |
-
-`NO_REAL_AUX_SHELL_ORBIT` は $S^3$（ $\chi>0$）における実数初期データの不在を反映する。`SINGULAR_APPROACH` は $Nil^3/Sol^3$（ $\chi<0$）の collapse sheet が $q\to0$ に近づく軌道分類であり、有限時間 singularity や観測宇宙論の議論ではない。いずれのクラスも Table 6 の admissibility 分類とは別の問いに対応する。
-
-### 7.4 Scope guard
-
-本稿の reduced vacuum atlas には `BOUNCE_LIKE` および `RECOLLAPSE_LIKE` クラスは含まれない。これは vacuum isotropic reduced setting に関する記述であり、matter-coupled / anisotropic / effective-source モデルへ拡張するものではない。これらの setting へ到達するために必要な拡張は Section 8.3 で論じる。
+[論文の入口](README_ja.md) / [参考文献](REFERENCES.md)

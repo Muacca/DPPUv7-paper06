@@ -1,108 +1,33 @@
-# DPPUv7-paper06: Reduced-Sector $\chi$ -Universality in Lorentzian EC+NY Minisuperspace
+# 1. 導入
 
-*Topology-Robust Admissibility, P-Channel Diagnostics, and Reduced Vacuum Orbits*
+**Muacca — Version 2、2026-11-07。初版：2026-05-16。**
 
----
+## 要旨
 
-## Abstract
+固定した $`T^3`$ 、Nil、Sol、 $`S^3`$ のコンパクト参照幾何について、定数の完全Nieh–Yan結合を持つLorentzian Einstein–Cartan作用を比較する。共通scale・二振幅族ではtorsionが補助場として消え、 $`\chi`$ が縮約軌道と指定曲率スカラーを整理する。全接続方程式と五方向のshape変分を合わせ、実の共通scale真空族が局所flatな静的族であることを示す。flat torusでは純粋scale接方向の二次障害を混合scale–shear拘束錐へ拡張し、その各方向を厳密な局所真空解族で実現する。Nil・Solの初期tracefree Ricciはshapeの二次発展とscaleの四次のずれを決める。選定二次・三次曲率縮約は $`\chi`$ に加えて $`J_2,J_3`$ を必要とし、これらは一点の空間Ricciスペクトルを復元する。構造行列の逆問題の退化枝、同じflat torusの大域frame、端点代表の正準対応を導き、縮約軌道・完全真空解・構造表示・境界データの役割を明確にする。
 
-本稿では、Lorentzian DPPU の Einstein-Cartan + Nieh-Yan（EC+NY）reduced sector における topology dependence を、 $S^3$, $T^3$, $Nil^3$, $Sol^3$ の四つの homogeneous three-geometry にわたって解析する。対象は $\alpha=0$ の EC+NY reduced branch であり、 $Nil^3$ と $Sol^3$ については isotropic-scale reduction の範囲に限定する。
+Lorentzian Einstein–Cartan重力の斉次縮約では、同じ作用から得られる局所曲率量、空間積分、縮約軌道、完全な場の方程式を区別する必要がある。本稿は $`T^3`$ 、Nil、Sol、 $`S^3`$ を固定した参照幾何として比較し、空間曲率の指標 $`\chi`$ がどこまで結果を整理するかを調べる。曲率二乗項、matter、宇宙項は導入せず、完全Nieh–Yan（NY）結合を定数とする。基本的なECおよびNYの規約は[Hehl1976, NiehYan1982]を参照する。
 
-この reduced sector では、Hamiltonian constraint と torsion auxiliary equations は topology に対して頑健な admissibility pattern を示す。すなわち EH, AX, VT branches は admissible であり、MX branch は real auxiliary branch を通じて conditionally admissible である。Pontryagin 型の量については、form-Hodge density $P_{\rm form}$、internal-pair diagnostic $P_{\rm int}$、Nieh-Yan endpoint channel $Q_{\rm NY}$ を分離する。 $P_{\rm form}$ は active torsion branches において block orthogonality により厳密に消える。 $P_{\rm int}$ は MX branch の internal-pair diagnostic であり、その topology dependence は
+基本となる族は、一定のclass A構造行列を持つ空間計量に、一つの時間依存scaleと二つの幾何学的torsion振幅を加えたものである。NilとSolには本来異方的な空間曲率がある。「一様scale」は全方向を同じ比率で拡大する意味であり、空間計量が等方的であることを意味しない。 $`\chi`$ は規格化した参照計量の指標であり、一般の位相不変量ではない。
 
-$$
-C_{\rm topology}=-9\chi
-$$
+先行研究[paper1–paper3ec]は、縮約potential、曲率恒等式、斉次変形、torsion変分を扱う。Paper04は四つの固定コンパクト商における構造行列・二次形式・境界量を、Paper05は物理半径で規格化した球面のLorentzian作用・端点変分・斉次変分を論じた。本稿では、一定class A構造行列の曲率公式を導き、四幾何の縮約軌道と完全な場の方程式を比較する。
 
-に局在する。さらに、auxiliary shell 上の reduced vacuum orbit atlas は
+## 主な結果
 
-$$
-\dot q^2+\chi=0
-$$
+完全NYを端点へ分離すると、二つのtorsion振幅は一意に零となる補助場である。残るlapse拘束は $`\chi`$ の符号によって実軌道を分類する。球面では実拘束面が空、torusでは正の定数scale、NilとSolでは固有時間に線形な二方向の軌道となる。ただしNilとSolの軌道には非零の空間tracefree Einstein残差があり、完全なsource-free真空解ではない。
 
-に帰着する。したがって $\chi>0$ では reduced vacuum atlas に実数初期データが存在せず、 $\chi=0$ では static / degenerate behavior、 $\chi<0$ では monotonic expansion と singular-approach collapse sheets が得られる。
+任意時間profileでのNY、Pontryagin、共変な内部双対量と相対Pontryagin primitiveを導く。この族では、それらの局所スカラー式に構造行列が $`\chi`$ を通じて現れ、静的MX内部量の係数は $`C=-9\chi`$ となる。絶対CS primitive、空間tracefree Ricci、積分量の体積は、スカラー曲率に加えて必要となる幾何情報を示す。
 
-$C_{\rm topology}=-9\chi$ と $\dot q^2+\chi=0$ はそれぞれ独立な計算経路から得られ、両者が同一 scalar $\chi$ に帰着することが $\chi$ -controlled topology universality の内容である。これらの結果は reduced Lorentzian EC+NY sector における分類結果であり、global/anisotropic/matter-coupled 拡張は将来課題として残す。
+![fig01_structure](LaTeX/figures/fig01_structure.png)
 
----
+比較の構成。torsionを含む共通scale族、torsion消去後のshape拡張、静的frame比較はそれぞれ異なる適用域を持つ。共通scale族の中で、 $`\chi`$ で決まる量と、 $`J_2,J_3`$ や商のデータを必要とする縮約を分ける。
 
-## 1. Introduction
+第2節で幾何を固定し、第3–4節で作用・端点・縮約軌道を導く。第5節は共通scaleの成立条件とshape発展、第6節は動的曲率・選定不変量・相対端点量、第7節は $`\chi`$ による整理の範囲を扱う。付録は規約換算、曲率恒等式、変分と再現方法を補う。
 
-### 1.1 Background and motivation
+## 比較の範囲
 
-DPPU series では、Einstein-Cartan + Nieh-Yan 型 [7,8] の homogeneous geometry・torsion modes・Pontryagin-type diagnostics・topology response が段階的に整理されてきた [1–5]。paper05 [6] では、 $\alpha=0$ EC+NY baseline を Lorentzian signature の $S^3$ closed-FLRW branch に構成し、Hamiltonian constraint・torsion auxiliary sector・ $P_{\rm form}$ / $P_{\rm int}$ / $Q_{\rm NY}$ の channel separation を確立した。
+本稿の主線は、共通scale縮約の成立条件とshape方向への拡張、および $`\chi,J_2,J_3`$ が保持する曲率情報である。共通scale・二振幅族の公式とは別に、torsion消去後の五つの斉次shape方向を変分する。torusでは純粋scale接方向に二次障害があるが、scaleとshearの混合拘束錐の各方向を厳密真空解族が実現する。Nil・Solでは残差が初期shape加速度とscaleの四次係数を決める。
 
-本稿の目的は、この baseline を四つの topology
+左不変計量の曲率はMilnorの枠組み、厳密解族はKasner関係式に接続する[Milnor1976, Kasner1921]。線形化された解の積分可能性は一般相対論で既知の問題である。閉じたflat torusは線形化不安定性の標準例であり[BrillDeser1973]、平均曲率一定のコンパクトCauchy面とKilling場を持つ真空時空は解空間の錐状点となる[FischerMarsdenMoncrief1980, ArmsMarsdenMoncrief1982]。本稿ではその一般論を適用する代わりに、固定格子上の有限次元斉次sectorについて必要条件と十分性を直接示す。第5節と付録Dにshape解析、第6–7節と付録Bに不変量と逆問題を置く。
 
-$$
-S^3,\quad T^3,\quad Nil^3,\quad Sol^3
-$$
-
-に拡張し、topology dependence が branch classification と diagnostic structure にどのように現れるかを明確にすることである。本稿の主題は bounce cosmology の model building ではなく、reduced sector における $\chi$ -controlled topology universality の分類的解析である。
-
-### 1.2 Main results
-
-本稿の主結果を以下に列挙する。
-
-1. Lorentzian EC+NY reduced setting では、 $S^3/T^3/Nil^3/Sol^3$ は同一の local admissibility pattern を共有する。EH/AX/VT は admissible、MX は conditionally admissible である。
-
-2. active torsion branches において、 $P_{\rm form}$ は block orthogonality により厳密に消える。
-
-3. $P_{\rm int}^{\rm MX}$ は topology-universal な functional template を持ち、topology 依存は $C_{\rm topology}=-9\chi$ に局在する。
-
-4. $Q_{\rm NY}$ は endpoint / boundary channel であり、VT では zero、AX では on-shell trivial、MX では boundary-conditional である。
-
-5. auxiliary shell 上の reduced vacuum orbit は $\dot q^2+\chi=0$ によって制御される。
-
-6. 上記の vacuum reduced atlas では、bounce-like または recollapse-like な軌道クラスは見つからない。
-
-結果 3 と 5 の $\chi$ はそれぞれ独立な経路（ $P_{\rm int}^{\rm MX}$ の symbolic 解析と EH/spatial-curvature sector からの導出）から得られており、両者の一致が $\chi$ -universality の実質を構成する。
-
-つまり Lorentzian EC+NY reduced sector では topology は代数的 admissibility pattern を変えないが、MX internal diagnostic と vacuum auxiliary-shell orbit を同じ scalar $\chi$ を通じて制御する。
-
----
-
-![Fig. 1: Three-level architecture of χ-controlled topology universality](LaTeX/figures/fig01_three_level_architecture.png)
-
-**Fig. 1** Three-level architecture of $\chi$-controlled topology universality in the reduced LZ-native isotropic EC+NY sector. 上段の five-parameter family $(a,b,c,u,v)$ から curvature reduction によって scalar $\chi$ が導出され、そこから三つの独立な帰結（Admissibility の topology-robust pattern、MX diagnostic $C_{\rm top}=-9\chi$、reduced vacuum orbit $\dot{q}^2+\chi=0$）が生じる。Admissibility への矢印（破線）は topology によって変化しない（ $\chi$ 非依存）ことを示す。 $P_{\rm int}^{\rm MX}$ と reduced orbit への矢印（実線）は $\chi$ を通じた制御を示す。*Scope*: reduced LZ-native isotropic EC+NY sector に限定する。Global / anisotropic / matter-coupled 拡張は本稿の範囲外。
-
----
-
-### 1.3 Relation to earlier DPPU papers
-
-paper05 [6] は $S^3$ における Lorentzian $\alpha=0$ EC+NY baseline を構成し、 $P_{\rm form}$ と $P_{\rm int}$ を分離した。本稿はその baseline を四 topology table に拡張する。
-
-特に、本稿の $S^3$ 行は paper05 の $\alpha=0$ Lorentzian baseline を再現する。Table B1 の $S^3$ entry では $F_{\rm shell}=4$ であり、MX auxiliary Hessian は $-4q^2(\kappa^4\theta_{\rm NY}^2+1)/9$、classification は `L_CONDITIONALLY_ADMISSIBLE` となる。本稿の新規部分は、この同じ pattern が $T^3/Nil^3/Sol^3$ にも拡張される点である。
-
-paper04 [5] では、同じ四つの Thurston geometry [9,10] が Euclidean response dictionary において none/uniaxial/triaxial/biaxial の四類型を与えた。本稿の Section 5.3 で述べるように、同じ四つの geometry が LZ-native isotropic five-parameter family の構造的に区別される loci として再出現する。この対応は structural resonance であり、Section 8.2 でその解釈を論じる。
-
-### 1.4 Paper organization
-
-- [Section 2](DPPUv7-paper06_sec02.md) は Lorentzian-native setup と topology conventions を固定する。
-- [Section 3](DPPUv7-paper06_sec03.md) は Hamiltonian admissibility backbone を述べる。
-- [Section 4](DPPUv7-paper06_sec04.md) は $P_{\rm form}$, $P_{\rm int}$, $Q_{\rm NY}$ の channel dictionary を整理する。
-- [Section 5](DPPUv7-paper06_sec05.md) は diagnostic level と reduced-orbit level の χ-universality を接続する。
-- [Section 6](DPPUv7-paper06_sec06.md) は four-topology admissibility classification をまとめる。
-- [Section 7](DPPUv7-paper06_sec07.md) は reduced orbit atlas と χ-sign separation を述べる。
-- [Section 8](DPPUv7-paper06_sec08.md) は χ-universality の意味・paper04 との関係・将来課題を議論する。
-- [Appendix A](DPPUv7-paper06_appA.md) は topology conventions, local reductions, and caveats を補足する。
-- [Appendix B](DPPUv7-paper06_appB.md) は tables, computational checks, and reproducibility notes をまとめる。
-- [Appendix C](DPPUv7-paper06_appC.md) は Bianchi I lite comparison と reduced-atlas scope guard を述べる。
-
----
-
-## References
-
-1. Muacca, "Topology-Dependent Phase Classification of Effective Potentials in Einstein-Cartan + Nieh-Yan Minisuperspace," Zenodo, 10.5281/zenodo.18213677 (2026).
-2. Muacca, "Structural Robustness of Isotropic $S^3$ Vacua in Einstein-Cartan Minisuperspace via Chiral Equilibrium and Weyl Stability," Zenodo, 10.5281/zenodo.18815498 (2026).
-3. Muacca, "Unified Geometric Landau EFT of Homogeneous $S^3\times S^1$ Minisuperspace in Einstein-Cartan + Nieh-Yan Theory," Zenodo, 10.5281/zenodo.19144481 (2026).
-4. Muacca, "Homogeneous Three-Topology Comparison and Mode Dictionary in Einstein-Cartan + Nieh-Yan Theory: Geometric Structure of EC-Weyl Coupling," Zenodo, 10.5281/zenodo.19425147 (2026).
-5. Muacca, "Euclidean Geometric Response Dictionary and Selection Rules for Four Thurston Geometries," Zenodo, 10.5281/zenodo.19775695 (2026).
-6. Muacca, "Lorentzian Einstein-Cartan Minisuperspace with Nieh-Yan Torsion: Hamiltonian Branches, Pontryagin Diagnostics, and Weyl-Source Obstructions," Zenodo, 10.5281/zenodo.20084722 (2026).
-7. F. W. Hehl, P. von der Heyde, G. D. Kerlick, and J. M. Nester, "General relativity with spin and torsion: Foundations and prospects," Rev. Mod. Phys. **48**, 393–416 (1976), doi:10.1103/RevModPhys.48.393.
-8. H. T. Nieh and M. L. Yan, "An identity in Riemann-Cartan geometry," J. Math. Phys. **23**, 373–374 (1982), doi:10.1063/1.525379.
-9. W. P. Thurston, *Three-Dimensional Geometry and Topology, Volume 1*, edited by S. Levy (Princeton University Press, Princeton, NJ, 1997).
-10. P. Scott, "The geometries of 3-manifolds," Bull. London Math. Soc. **15**, 401–487 (1983), doi:10.1112/blms/15.5.401.
-11. G. F. R. Ellis and M. A. H. MacCallum, "A class of homogeneous cosmological models," Commun. Math. Phys. **12**, 108–141 (1969), doi:10.1007/BF01645908.
-12. R. Brandenberger and P. Peter, "Bouncing Cosmologies: Progress and Problems," Found. Phys. **47**, 797–850 (2017), arXiv:1603.05834, doi:10.1007/s10701-016-0057-0.
-13. O. Chandía and J. Zanelli, "Topological invariants, instantons, and the chiral anomaly on spaces with torsion," Phys. Rev. D **55**, 7580–7585 (1997), arXiv:hep-th/9702025, doi:10.1103/PhysRevD.55.7580.
+[論文の入口](README_ja.md) / [参考文献](REFERENCES.md)
